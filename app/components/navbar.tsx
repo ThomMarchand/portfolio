@@ -24,9 +24,15 @@ export default function Navbar() {
         </a>
       </div>
       <div className="flex gap-20 mt-50">
-        <IconeCode />
-        <IconGitHub />
-        <IconLinkedin />
+        <a href="https://www.codewars.com/users/WhyNoThom">
+          <IconeCode />
+        </a>
+        <a href="https://github.com/ThomMarchand">
+          <IconGitHub />
+        </a>
+        <a href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-pro">
+          <IconLinkedin />
+        </a>
       </div>
     </div>
   );
