@@ -1,4 +1,4 @@
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
@@ -62,7 +62,7 @@ export default function Home() {
             Expériences
           </h2>
 
-          <p className="text-lg">">
+          <p className="text-lg">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
             nulla, obcaecati error rem aut tempora officia nostrum dolorum unde
             ea! Magni ad fugit ipsam labore vitae rerum minima, inventore,
