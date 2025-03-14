@@ -1,8 +1,18 @@
+"use client";
+
+import Link from "next/link";
+
 import IconeCode from "./IconCode";
 import IconGitHub from "./IconGitHub";
 import IconLinkedin from "./IconLinkedin";
 
 export default function Navbar() {
+  const scrollToSection = (id: string) => {
+    // console.log(document.getElementById(id));
+
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="bg-gray-800 text-white p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 md:flex md:flex-col md:justify-between md:py-10 md:inset-y-0 md:w-64 lg:w-80 xl:w-130">
       <div className="flex justify-around md:flex-col md:jutify-center md:h-1/2">
@@ -21,17 +31,26 @@ export default function Navbar() {
         </div>
 
         <div className="flex flex-col lg:pl-3 xl:pl-8">
-          <a className="text-sm md:text-sm xl:text-xl" href="#about">
+          <p
+            className="text-sm md:text-sm xl:text-xl"
+            onClick={() => scrollToSection("about")}
+          >
             À propos
-          </a>
+          </p>
 
-          <a className="text-sm my-1 md:text-sm md:my-2 xl:text-xl" href="#xp">
+          <p
+            className="text-sm my-1 md:text-sm md:my-2 xl:text-xl"
+            onClick={() => scrollToSection("xp")}
+          >
             Expériences
-          </a>
+          </p>
 
-          <a className="text-sm md:text-sm xl:text-xl" href="#project">
+          <p
+            className="text-sm md:text-sm xl:text-xl"
+            onClick={() => scrollToSection("project")}
+          >
             Projets
-          </a>
+          </p>
         </div>
       </div>
 

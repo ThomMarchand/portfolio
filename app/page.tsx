@@ -16,11 +16,11 @@ export default function Home() {
         <Navbar />
 
         <div className="flex-1 overflow-auto px-5 md:ml-70 md:h-screen lg:ml-85 xl:ml-140">
-          <section>
-            <h2
-              id="about"
-              className="mb-5 text-4xl font-bold mt-4 scroll-mt-64 md:scroll-mt-30 md:mt-30"
-            >
+          <section
+            id="about"
+            className="scroll-smooth scroll-mt-64 md:scroll-mt-30 md:mt-30"
+          >
+            <h2 className="mb-5 text-4xl font-bold mt-4 scroll-smooth scroll-mt-64 md:scroll-mt-30 md:mt-30">
               À propos
             </h2>
 
@@ -54,13 +54,11 @@ export default function Home() {
             </p>
           </section>
 
-          <section className="my-20">
-            <h2
-              id="xp"
-              className="mb-5 text-4xl font-bold scroll-mt-64 md:scroll-mt-30"
-            >
-              Expériences
-            </h2>
+          <section
+            id="xp"
+            className="my-20 scroll-smooth scroll-mt-64 md:scroll-mt-30"
+          >
+            <h2 className="mb-5 text-4xl font-bold">Expériences</h2>
 
             <p className="text-lg pt-5">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -114,13 +112,11 @@ export default function Home() {
             </p>
           </section>
 
-          <section>
-            <h2
-              id="project"
-              className="mb-5 text-4xl font-bold scroll-mt-64 md:scroll-mt-30"
-            >
-              Projects
-            </h2>
+          <section
+            id="project"
+            className="scroll-smooth scroll-mt-64 md:scroll-mt-30"
+          >
+            <h2 className="mb-5 text-4xl font-bold">Projects</h2>
 
             <p className="text-lg pt-5">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
