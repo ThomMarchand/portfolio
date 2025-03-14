@@ -1,16 +1,20 @@
 "use client";
 
-import Link from "next/link";
-
 import IconeCode from "./IconCode";
 import IconGitHub from "./IconGitHub";
 import IconLinkedin from "./IconLinkedin";
 
 export default function Navbar() {
   const scrollToSection = (id: string) => {
-    // console.log(document.getElementById(id));
-
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToAboutSection = () => {
+    if (window.innerWidth >= 768) {
+      scrollToSection("about");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -21,36 +25,22 @@ export default function Navbar() {
             Thomas Marchand
           </h1>
 
-          <h2 className="text-wrap text-sm font-medium md:text-sm lg:text-lg xl:text-3xl">
-            Developpeur JavaScript
-          </h2>
+          <div className="text-xs font-medium xs:flex xs:gap-2 sm:text-sm lg:text-lg xl:text-3xl">
+            <p>Developpeur</p>
+            <p>JavaScript</p>
+          </div>
 
-          <p className="text-sm md:text-sm font-medium lg:text-lg xl:text-3xl">
+          <p className="text-xs sm:text-sm font-medium lg:text-lg xl:text-3xl">
             Spé. Back-end
           </p>
         </div>
 
-        <div className="flex flex-col lg:pl-3 xl:pl-8">
-          <p
-            className="text-sm md:text-sm xl:text-xl"
-            onClick={() => scrollToSection("about")}
-          >
-            À propos
-          </p>
+        <div className="flex flex-col text-xs gap-2 sm:text-sm lg:pl-3 xl:text-xl xl:pl-8">
+          <p onClick={() => scrollToAboutSection()}>À propos</p>
 
-          <p
-            className="text-sm my-1 md:text-sm md:my-2 xl:text-xl"
-            onClick={() => scrollToSection("xp")}
-          >
-            Expériences
-          </p>
+          <p onClick={() => scrollToSection("xp")}>Expériences</p>
 
-          <p
-            className="text-sm md:text-sm xl:text-xl"
-            onClick={() => scrollToSection("project")}
-          >
-            Projets
-          </p>
+          <p onClick={() => scrollToSection("project")}>Projets</p>
         </div>
       </div>
 

@@ -4,7 +4,7 @@ export default function IconGitHub() {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="fill-white h-10 w-10"
+        className="fill-white h-7 w-7 1xs:h-10 1xs:w-10"
       >
         <g data-name="Layer 2">
           <rect

@@ -18,46 +18,45 @@ export default function Home() {
         <div className="flex-1 overflow-auto px-5 md:ml-70 md:h-screen lg:ml-85 xl:ml-140">
           <section
             id="about"
-            className="scroll-smooth scroll-mt-64 md:scroll-mt-30 md:mt-30"
+            className="scroll-mt-[300px] md:scroll-mt-64 md:mt-30"
           >
-            <h2 className="mb-5 text-4xl font-bold mt-4 scroll-smooth scroll-mt-64 md:scroll-mt-30 md:mt-30">
-              À propos
-            </h2>
+            <h2 className="mb-5 text-4xl font-bold mt-4">À propos</h2>
 
-            <p className="text-lg pt-5">
-              Créer des applications de A à Z, développer des fonctionnalités
-              performantes et enquêter sur les bugs pour en identifier l’origine
-              et les corriger avec précision est ce qui me passionne.
-            </p>
+            <div className="text-justify text-lg pt-5">
+              <p>
+                Créer des applications de A à Z, développer des fonctionnalités
+                performantes et enquêter sur les bugs pour en identifier
+                l’origine et les corriger avec précision est ce qui me
+                passionne.
+              </p>
 
-            <p className="text-lg pt-2">
-              Depuis toujours, l’informatique me passionne, que ce soit sur le
-              plan personnel, à travers les jeux vidéo et ma curiosité pour
-              Internet, ou dans ma vie professionnelle. Lors de mon passage chez
-              les Compagnons du Devoir, j’ai découvert la conception assistée
-              par ordinateur (CAO). Plus tard, chez Euromaster, l’omniprésence
-              de l’informatique a renforcé mon attrait pour ce domaine.
-            </p>
+              <p>
+                Depuis toujours, l’informatique me passionne, que ce soit sur le
+                plan personnel, à travers les jeux vidéo et ma curiosité pour
+                Internet, ou dans ma vie professionnelle. Lors de mon passage
+                chez les Compagnons du Devoir, j’ai découvert la conception
+                assistée par ordinateur (CAO). Plus tard, chez Euromaster,
+                l’omniprésence de l’informatique a renforcé mon attrait pour ce
+                domaine.
+              </p>
 
-            <p className="text-lg pt-2">
-              C’est un ami administrateur système qui m’a permis de mieux
-              comprendre le métier de développeur et de réaliser qu’il était
-              accessible.
-            </p>
+              <p>
+                C’est un ami administrateur système qui m’a permis de mieux
+                comprendre le métier de développeur et de réaliser qu’il était
+                accessible.
+              </p>
 
-            <p className="text-lg pt-2">
-              J’ai alors commencé par apprendre les bases du développement Web
-              en construisant des applications Front-end. Après plusieurs mois
-              d’apprentissage en autodidacte, j’ai choisi d’approfondir mes
-              compétences en intégrant la formation de Concepteur Développeur
-              d’Applications en alternance à la Wild Code School.
-            </p>
+              <p>
+                J’ai alors commencé par apprendre les bases du développement Web
+                en construisant des applications Front-end. Après plusieurs mois
+                d’apprentissage en autodidacte, j’ai choisi d’approfondir mes
+                compétences en intégrant la formation de Concepteur Développeur
+                d’Applications en alternance à la Wild Code School.
+              </p>
+            </div>
           </section>
 
-          <section
-            id="xp"
-            className="my-20 scroll-smooth scroll-mt-64 md:scroll-mt-30"
-          >
+          <section id="xp" className="my-20 scroll-mt-64 md:scroll-mt-30">
             <h2 className="mb-5 text-4xl font-bold">Expériences</h2>
 
             <p className="text-lg pt-5">
@@ -112,10 +111,7 @@ export default function Home() {
             </p>
           </section>
 
-          <section
-            id="project"
-            className="scroll-smooth scroll-mt-64 md:scroll-mt-30"
-          >
+          <section id="project" className="scroll-mt-64 md:scroll-mt-30">
             <h2 className="mb-5 text-4xl font-bold">Projects</h2>
 
             <p className="text-lg pt-5">
