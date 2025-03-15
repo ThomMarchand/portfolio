@@ -25,7 +25,7 @@ export default function Home() {
               et les corriger avec précision est ce qui me passionne.
             </p>
 
-            <p className="text-justify text-sm 1xs:text-[15px] md:text-lg mt-1">
+            <p className="text-justify text-sm mt-2 1xs:text-[15px] md:text-lg">
               Depuis toujours, l’informatique me passionne, que ce soit sur le
               plan personnel, à travers les jeux vidéo et ma curiosité pour
               Internet, ou dans ma vie professionnelle. Lors de mon passage chez
@@ -34,13 +34,13 @@ export default function Home() {
               de l’informatique a renforcé mon attrait pour ce domaine.
             </p>
 
-            <p className="text-justify text-sm 1xs:text-[15px] md:text-lg mt-1">
+            <p className="text-justify text-sm mt-2 1xs:text-[15px] md:text-lg">
               C’est un ami administrateur système qui m’a permis de mieux
               comprendre le métier de développeur et de réaliser qu’il était
               accessible.
             </p>
 
-            <p className="text-justify text-sm 1xs:text-[15px] md:text-lg mt-1">
+            <p className="text-justify text-sm mt-2 1xs:text-[15px] md:text-lg">
               J’ai alors commencé par apprendre les bases du développement Web
               en construisant des applications Front-end. Après plusieurs mois
               d’apprentissage en autodidacte, j’ai choisi d’approfondir mes

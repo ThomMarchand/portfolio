@@ -6,7 +6,7 @@ export default function IconeCode() {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="h-7 w-7 1xs:h-10 1xs:w-10"
+      className="h-7 w-7 1xs:h-10 1xs:w-10 xl:h-20 xl:w-20"
     >
       <path
         strokeLinecap="round"

@@ -1,25 +1,12 @@
-"use client";
-
+import AnchorNavigation from "./AnchorNavigation";
 import IconeCode from "./IconCode";
 import IconGitHub from "./IconGitHub";
 import IconLinkedin from "./IconLinkedin";
 
 export default function Navbar() {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToAboutSection = () => {
-    if (window.innerWidth >= 768) {
-      scrollToSection("about");
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
   return (
     <div className="bg-gray-800 text-white p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 md:flex md:flex-col md:justify-between md:py-10 md:inset-y-0 md:w-64 lg:w-80 xl:w-130">
-      <div className="flex justify-around md:flex-col md:jutify-center md:h-1/2">
+      <div className="flex justify-between md:flex-col md:jutify-center md:h-1/2 xl:h-7/12">
         <div className="md:mx-auto">
           <h1 className="md:text-2xl lg:text-3xl xl:text-5xl font-bold">
             Thomas Marchand
@@ -35,13 +22,7 @@ export default function Navbar() {
           </p>
         </div>
 
-        <div className="flex flex-col text-xs gap-2 sm:text-sm lg:pl-3 xl:text-xl xl:pl-8">
-          <p onClick={() => scrollToAboutSection()}>À propos</p>
-
-          <p onClick={() => scrollToSection("xp")}>Expériences</p>
-
-          <p onClick={() => scrollToSection("project")}>Projets</p>
-        </div>
+        <AnchorNavigation />
       </div>
 
       <div className="flex justify-around pt-4">
