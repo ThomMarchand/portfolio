@@ -17,7 +17,7 @@ export default function AnchorNavigation() {
     <div className="cursor-pointer flex flex-col text-xs gap-2 sm:text-sm lg:pl-3 xl:gap-6 xl:text-2xl xl:pl-8">
       <p onClick={() => scrollToAboutSection()}>À propos</p>
 
-      <p onClick={() => scrollToSection("xp")}>Expériences</p>
+      <p onClick={() => scrollToSection("skills")}>Compétences</p>
 
       <p onClick={() => scrollToSection("project")}>Projets</p>
     </div>
