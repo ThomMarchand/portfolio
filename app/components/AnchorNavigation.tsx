@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import IconChevronRight from "./icons/IconChevronRight";
 import IconChevronDown from "./icons/IconChevronDown";
 
@@ -51,10 +51,10 @@ export default function AnchorNavigation() {
         </p>
         {openSkills && (
           <>
-            <p className="pl-2" onClick={() => scrollToSection("skills")}>
+            <p className="pl-4" onClick={() => scrollToSection("skills")}>
               Hard Skills
             </p>
-            <p className="pl-2" onClick={() => scrollToSection("soft-skills")}>
+            <p className="pl-4" onClick={() => scrollToSection("soft-skills")}>
               Soft Skills
             </p>
           </>
@@ -67,10 +67,10 @@ export default function AnchorNavigation() {
         </p>
         {openProjects && (
           <>
-            <p className="pl-2" onClick={() => scrollToSection("jc")}>
+            <p className="pl-4" onClick={() => scrollToSection("jc")}>
               Just Coaching
             </p>
-            <p className="pl-2" onClick={() => scrollToSection("wild")}>
+            <p className="pl-4" onClick={() => scrollToSection("wild")}>
               Wild Code {window.innerWidth < 350 ? "…" : "Online"}
             </p>
           </>

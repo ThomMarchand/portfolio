@@ -3,7 +3,7 @@ export default function IconChevronRight() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      className="fill-indigo-50 size-5 sm:size-6 lg:size-10"
+      className="fill-indigo-50 size-5 sm:size-6 xl:size-10"
     >
       <g data-name="Layer 2">
         <g data-name="chevron-right">
