@@ -4,7 +4,7 @@ import IconBeaker from "@/app/components/icons/IconBeaker";
 import IconCornerUpRight from "@/app/components/icons/IconCornerUpRight";
 import IconSparkles from "@/app/components/icons/IconSparkles";
 
-export default function SkillsSection() {
+export default function SectionSkills() {
   return (
     <section className="my-20">
       <h2 className="mb-5 text-4xl font-bold">Compétences</h2>

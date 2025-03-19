@@ -3,9 +3,9 @@ import Image from "next/image";
 import profilPic from "@/public/images/profil.png";
 
 import Navbar from "@/app/components/Navbar";
-import AboutSection from "@/app/components/AboutSection";
-import SkillsSection from "@/app/components/SkillsSection";
-import SectionProject from "./components/SectionProject";
+import SectionAbout from "@/app/components/SectionAbout";
+import SectionSkills from "@/app/components/SectionSkills";
+import SectionProject from "@/app/components/SectionProject";
 
 export default function Home() {
   return (
@@ -20,9 +20,9 @@ export default function Home() {
         <Navbar />
 
         <div className="flex-1 overflow-auto px-5 md:ml-70 md:h-screen lg:ml-85 xl:ml-140">
-          <AboutSection />
+          <SectionAbout />
 
-          <SkillsSection />
+          <SectionSkills />
 
           <SectionProject />
         </div>
