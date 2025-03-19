@@ -1,27 +1,12 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --breakpoint-xs: 380px;
   --breakpoint-1xs: 500px;
   --shadow-3xl: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: oklch(0.93 0.034 272.788);
-  color: var(--foreground);
   font-family: monospace, Helvetica, sans-serif;
 }
