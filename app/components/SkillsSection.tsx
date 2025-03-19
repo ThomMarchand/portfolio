@@ -6,10 +6,15 @@ import IconSparkles from "@/app/components/icons/IconSparkles";
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="my-20 scroll-mt-64 md:scroll-mt-30">
+    <section className="my-20">
       <h2 className="mb-5 text-4xl font-bold">Compétences</h2>
 
-      <h3 className="flex justify-center text-3xl font-bold">Hard skills</h3>
+      <h3
+        id="skills"
+        className="flex justify-center text-3xl font-bold scroll-mt-64 md:scroll-mt-30"
+      >
+        Hard skills
+      </h3>
 
       <div className="2xl:flex 2xl:justify-around">
         <div>
@@ -127,8 +132,11 @@ export default function SkillsSection() {
         </div>
       </div>
 
-      <div id="soft-skills">
-        <h3 className="flex justify-center text-2xl font-semibold my-4">
+      <div>
+        <h3
+          id="soft-skills"
+          className="flex justify-center text-3xl font-semibold my-4 scroll-mt-64 md:scroll-mt-30"
+        >
           Soft Skills
         </h3>
 
