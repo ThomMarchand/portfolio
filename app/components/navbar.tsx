@@ -1,7 +1,7 @@
-import AnchorNavigation from "./AnchorNavigation";
-import IconeCode from "./IconCode";
-import IconGitHub from "./IconGitHub";
-import IconLinkedin from "./IconLinkedin";
+import AnchorNavigation from "@/app/components/AnchorNavigation";
+import IconeCode from "@/app/components/icons/IconCode";
+import IconGitHub from "@/app/components/icons/IconGitHub";
+import IconLinkedin from "@/app/components/icons/IconLinkedin";
 
 export default function Navbar() {
   return (

@@ -1,9 +1,10 @@
 import Image from "next/image";
 
 import profilPic from "@/public/images/profil.png";
+
 import Navbar from "@/app/components/Navbar";
 import AboutSection from "@/app/components/AboutSection";
-import SkillsSection from "./components/SkillsSection";
+import SkillsSection from "@/app/components/SkillsSection";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
 
           <SkillsSection />
 
-          <section id="project" className="scroll-mt-64 md:scroll-mt-30">
+          <section id="project" className="pb-15 scroll-mt-64 md:scroll-mt-30">
             <h2 className="mb-5 text-4xl font-bold">Projects</h2>
 
             <p className="text-lg pt-5">

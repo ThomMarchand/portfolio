@@ -1,8 +1,8 @@
 import { knowSkills, softSkills, useSkills } from "../data/skills";
 
-import IconBeaker from "./IconBeaker";
-import IconCornerUpRight from "./IconCornerUpRight";
-import IconSparkles from "./IconSparkles";
+import IconBeaker from "@/app/components/icons/IconBeaker";
+import IconCornerUpRight from "@/app/components/icons/IconCornerUpRight";
+import IconSparkles from "@/app/components/icons/IconSparkles";
 
 export default function SkillsSection() {
   return (
