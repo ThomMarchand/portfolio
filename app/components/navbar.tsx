@@ -6,7 +6,7 @@ import IconLinkedin from "@/app/components/icons/IconLinkedin";
 export default function Navbar() {
   return (
     <div
-      className="bg-indigo-900 text-indigo-50 p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 
+      className="bg-indigo-900 text-indigo-50 shadow-3xl p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 
     md:flex md:flex-col md:justify-between md:py-10 md:inset-y-0 md:w-64 lg:w-80 xl:w-130"
     >
       <div className="flex justify-between xs:justify-around md:flex-col md:jutify-center md:h-1/2 xl:h-7/12">
