@@ -1,7 +1,7 @@
 import { knowSkills, softSkills, useSkills } from "../data/skills";
 
 import IconBeaker from "./IconBeaker";
-import IconCommandLine from "./IconCommandLine";
+import IconCornerUpRight from "./IconCornerUpRight";
 import IconSparkles from "./IconSparkles";
 
 export default function SkillsSection() {
@@ -27,7 +27,7 @@ export default function SkillsSection() {
               <div>
                 {useSkills.technos.map((skill) => (
                   <p key={skill} className="flex items-center">
-                    <IconCommandLine />
+                    <IconSparkles />
                     <span className="pl-2">{skill}</span>
                   </p>
                 ))}
@@ -38,7 +38,7 @@ export default function SkillsSection() {
               <div>
                 {useSkills.versioning.map((skill) => (
                   <p key={skill} className="flex items-center">
-                    <IconCommandLine />
+                    <IconSparkles />
                     <span className="pl-2">{skill}</span>
                   </p>
                 ))}
@@ -51,7 +51,7 @@ export default function SkillsSection() {
               <div>
                 {useSkills.tools.map((skill) => (
                   <p key={skill} className="flex items-center">
-                    <IconCommandLine />
+                    <IconSparkles />
                     <span className="pl-2">{skill}</span>
                   </p>
                 ))}
@@ -62,7 +62,7 @@ export default function SkillsSection() {
               <div>
                 {useSkills.management.map((skill) => (
                   <p key={skill} className="flex items-center">
-                    <IconCommandLine />
+                    <IconSparkles />
                     <span className="pl-2">{skill}</span>
                   </p>
                 ))}
@@ -136,7 +136,7 @@ export default function SkillsSection() {
           <div>
             {softSkills.transversal.map((skill) => (
               <p key={skill} className="flex items-center">
-                <IconSparkles />
+                <IconCornerUpRight />
                 <span className="pl-2">{skill}</span>
               </p>
             ))}
@@ -145,7 +145,7 @@ export default function SkillsSection() {
           <div>
             {softSkills.soft.map((skill) => (
               <p key={skill} className="flex items-center">
-                <IconSparkles />
+                <IconCornerUpRight />
                 <span className="pl-2">{skill}</span>
               </p>
             ))}
