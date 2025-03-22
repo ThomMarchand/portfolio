@@ -13,7 +13,7 @@ export default function CardSingleList({
 }: CardListProps) {
   return (
     <div
-      className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-lg w-full flex justify-center text-sm 
+      className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl w-full flex justify-center text-sm 
     1xs:text-[15px] sm:w-max sm:px-32 md:text-lg 2xl:py-10 2xl:px-42"
     >
       <div>

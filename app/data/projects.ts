@@ -88,26 +88,35 @@ export const justCoaching = {
 export const wildCodeOnline = {
   description:
     "L’application a pour objectif de créer une plateforme de code en ligne permettant de développer, tester et partager du code facilement. Dans ce projet, j’ai réalisé la modélisation des données en utilisant UML et Merise, tout en contribuant à la gestion et au suivi du développement. J’ai participé à l’implémentation de nouvelles fonctionnalités et fait évoluer l’architecture en adoptant le modèle MVC. Afin de garantir la qualité du code, j’ai mis en place l’intégration continue (CI) et réalisé des tests unitaires et d’intégration.",
-  technos: {
-    back: [
-      "Appolo Server",
-      "GraphQL",
-      "Express",
-      "TypeScript",
-      "TypeORM",
-      "PostgreSQL",
-      "Jest",
-    ],
-    front: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "Zod",
-      "Apollo Client",
-      "Jest",
-      "Playwright",
-    ],
-    server: ["Nginx", "Caddy"],
-    outils: ["GitHub", "Docker", "Husky"],
-  },
+  technos1: [
+    {
+      title: "Front",
+      itemsList: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Zod",
+        "Apollo Client",
+        "Jest",
+        "Playwright",
+      ],
+    },
+
+    { title: "Outils", itemsList: ["GitHub", "Docker", "Husky"] },
+  ],
+  technos2: [
+    {
+      title: "Back",
+      itemsList: [
+        "Appolo Server",
+        "GraphQL",
+        "Express",
+        "TypeScript",
+        "TypeORM",
+        "PostgreSQL",
+        "Jest",
+      ],
+    },
+    { title: "Serveur", itemsList: ["Nginx", "Caddy"] },
+  ],
 };

@@ -15,7 +15,6 @@ export const useSkills = {
   versioning: ["Git", "GitHub"],
   tools: [
     "Docker",
-    "Docker compose",
     "macOs",
     "iterm2",
     "zsh",
