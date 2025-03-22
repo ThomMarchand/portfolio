@@ -1,35 +1,36 @@
-import IconBeaker from "./icons/IconBeaker";
-import IconCornerUpRight from "./icons/IconCornerUpRight";
-import IconSparkles from "./icons/IconSparkles";
+// import IconBeaker from "./icons/IconBeaker";
+// import IconCornerUpRight from "./icons/IconCornerUpRight";
+// import IconSparkles from "./icons/IconSparkles";
 
-const icons = {
-  sparkles: IconSparkles,
-  beaker: IconBeaker,
-  cornerUpRight: IconCornerUpRight,
-} as const;
+import DisplayItem from "./DisplayItem";
 
-type IconType = keyof typeof icons;
+// const icons = {
+//   sparkles: IconSparkles,
+//   beaker: IconBeaker,
+//   cornerUpRight: IconCornerUpRight,
+// } as const;
+
+// type IconType = keyof typeof icons;
 
 interface CardListProps {
   title: string;
   itemsList: string[];
-  icon: IconType;
+  icon: "sparkles" | "beaker" | "cornerUpRight";
 }
 
 export default function CardList({ title, itemsList, icon }: CardListProps) {
-  const selectedIcon = icons[icon];
-
   return (
-    <div className="p-5 shadow-3xl mt-4 bg-indigo-300 rounded-lg w-max text-sm 1xs:text-[15px] md:text-lg">
-      <h4 className="text-2xl font-semibold">{title}</h4>
+    <div
+      className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-lg w-full flex justify-center text-sm 
+    1xs:text-[15px] sm:w-max sm:px-32 md:text-lg 2xl:py-10 2xl:px-42"
+    >
+      <div>
+        <h4 className="text-2xl font-semibold">{title}</h4>
 
-      {itemsList.map((item, index) => (
-        <p key={item + index} className="flex items-center">
-          {selectedIcon()}
-
-          <span className="pl-2">{item}</span>
-        </p>
-      ))}
+        {itemsList.map((item, index) => (
+          <DisplayItem key={item + index} item={item} icon={icon} />
+        ))}
+      </div>
     </div>
   );
 }

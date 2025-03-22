@@ -12,13 +12,12 @@ export const justCoaching = {
           "Refactorisation des composants d'affichage afin d'utiliser la bibliothèque de composants commune à l'ensemble de l'application.",
       },
       {
-        title: "Remplacement de node-sass par sass",
+        title: "Changement de preprocesseur CSS",
         description:
           "Remplacement de node-sass par sass pour la compilation des fichiers SCSS, car node-sass n’étant plus maintenu, il provoquait des plantages de l’application.",
       },
     ],
   },
-
   api: {
     description:
       "L'API permet aux autres applications de gérer les différentes données. J’interviens sur le développement de nouvelles fonctionnalités, la correction de bugs (fix, hotfix) et l’amélioration continue des performances.",
@@ -33,7 +32,7 @@ export const justCoaching = {
       {
         title: "Synchronisation avec Brevo (outil marketing)",
         description:
-          "Lorsque les client sont créés, modifiés ou supprimés dans  CRM, les données sont synchronisées avec Brevo.",
+          "Lorsque les client sont créés, modifiés ou supprimés dans le CRM, les données sont synchronisées avec Brevo.",
       },
       {
         title: "Optimisation de requêtes",

@@ -1,5 +1,5 @@
 const titleStyle = {
-  h1: "md:text-2xl lg:text-3xl xl:text-5xl font-bold",
+  h1: "font-bold md:text-2xl lg:text-3xl xl:text-5xl",
   h2: "mb-5 text-4xl font-bold",
   h3: "text-3xl font-bold scroll-mt-64 md:scroll-mt-30",
   h4: "text-2xl font-semibold",
