@@ -1,9 +1,9 @@
-import { justCoaching } from "../data/projects";
-import Text from "./atoms/Text";
-import Title from "./atoms/Title";
-import CardHighlights from "./CardHighlights";
+import { justCoaching } from "@/app/data/projects";
 
-import CardList from "./CardList";
+import Text from "@/app/components/atoms/Text";
+import Title from "@/app/components/atoms/Title";
+import CardHighlights from "@/app/components/molecules/CardHighlights";
+import CardList from "@/app/components/molecules/CardSingleList";
 
 export default function SectionProject() {
   const { manager, api, visio, coach, client } = justCoaching;
@@ -136,7 +136,7 @@ export default function SectionProject() {
           Wild Code Online
         </Title>
 
-        <Text>
+        {/* <Text>
           L’application a pour but de créer une plateforme de code en ligne
           permettant de développer, tester et partager du code facilement et
           accessible de n&apos;importe quel endroit. En arrivant sur
@@ -150,7 +150,7 @@ export default function SectionProject() {
           d&apos;interactions sociales autour des codes à condition que ces
           interactions respectent bien les droits de visibilité (codes publics
           ou privés).
-        </Text>
+        </Text> */}
       </section>
     </section>
   );

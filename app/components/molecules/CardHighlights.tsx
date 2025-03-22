@@ -1,4 +1,4 @@
-import Text from "./atoms/Text";
+import Text from "@/app/components/atoms/Text";
 
 interface CardListProps {
   title: string;

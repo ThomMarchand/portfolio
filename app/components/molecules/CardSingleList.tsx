@@ -1,16 +1,4 @@
-// import IconBeaker from "./icons/IconBeaker";
-// import IconCornerUpRight from "./icons/IconCornerUpRight";
-// import IconSparkles from "./icons/IconSparkles";
-
-import DisplayItem from "./DisplayItem";
-
-// const icons = {
-//   sparkles: IconSparkles,
-//   beaker: IconBeaker,
-//   cornerUpRight: IconCornerUpRight,
-// } as const;
-
-// type IconType = keyof typeof icons;
+import DisplayItem from "@/app/components/atoms/DisplayItem";
 
 interface CardListProps {
   title: string;
@@ -18,7 +6,11 @@ interface CardListProps {
   icon: "sparkles" | "beaker" | "cornerUpRight";
 }
 
-export default function CardList({ title, itemsList, icon }: CardListProps) {
+export default function CardSingleList({
+  title,
+  itemsList,
+  icon,
+}: CardListProps) {
   return (
     <div
       className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-lg w-full flex justify-center text-sm 

@@ -1,6 +1,6 @@
-import IconBeaker from "./icons/IconBeaker";
-import IconCornerUpRight from "./icons/IconCornerUpRight";
-import IconSparkles from "./icons/IconSparkles";
+import IconBeaker from "@/app/components/atoms/icons/IconBeaker";
+import IconCornerUpRight from "@/app/components/atoms/icons/IconCornerUpRight";
+import IconSparkles from "@/app/components/atoms/icons/IconSparkles";
 
 const icons = {
   sparkles: IconSparkles,

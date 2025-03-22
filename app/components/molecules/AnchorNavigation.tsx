@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import IconChevronRight from "./icons/IconChevronRight";
-import IconChevronDown from "./icons/IconChevronDown";
+
+import IconChevronRight from "@/app/components/atoms/icons/IconChevronRight";
+import IconChevronDown from "@/app/components/atoms/icons/IconChevronDown";
 
 export default function AnchorNavigation() {
   const [openSkills, setOpenSkills] = useState(false);

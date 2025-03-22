@@ -27,6 +27,7 @@ export const justCoaching = {
       "Express",
       "RethinkDB",
       "ThinkyORM",
+      "Docker",
     ],
     highlights: [
       {
@@ -50,7 +51,14 @@ export const justCoaching = {
     description:
       "Permet d'effectuer des visioconférences à deux ou en groupe. J'interviens sur le développement de nouvelles fonctionnalités ainsi que sur la réalisation de tests unitaires.",
 
-    technos: ["AdonisJS", "Next.js", "Tailwind"],
+    technos: [
+      "Monolith",
+      "AdonisJS",
+      "PostgreSQL",
+      "Docker",
+      "Next.js",
+      "Tailwind",
+    ],
 
     highlights: [
       {
@@ -77,8 +85,29 @@ export const justCoaching = {
   },
 };
 
-export const wildCodeOnline = [
-  {
-    description: "",
+export const wildCodeOnline = {
+  description:
+    "L’application a pour objectif de créer une plateforme de code en ligne permettant de développer, tester et partager du code facilement. Dans ce projet, j’ai réalisé la modélisation des données en utilisant UML et Merise, tout en contribuant à la gestion et au suivi du développement. J’ai participé à l’implémentation de nouvelles fonctionnalités et fait évoluer l’architecture en adoptant le modèle MVC. Afin de garantir la qualité du code, j’ai mis en place l’intégration continue (CI) et réalisé des tests unitaires et d’intégration.",
+  technos: {
+    back: [
+      "Appolo Server",
+      "GraphQL",
+      "Express",
+      "TypeScript",
+      "TypeORM",
+      "PostgreSQL",
+      "Jest",
+    ],
+    front: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Zod",
+      "Apollo Client",
+      "Jest",
+      "Playwright",
+    ],
+    server: ["Nginx", "Caddy"],
+    outils: ["GitHub", "Docker", "Husky"],
   },
-];
+};

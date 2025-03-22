@@ -2,10 +2,10 @@ import Image from "next/image";
 
 import profilPic from "@/public/images/profil.png";
 
-import Navbar from "@/app/components/Navbar";
-import SectionAbout from "@/app/components/SectionAbout";
-import SectionSkills from "@/app/components/SectionSkills";
-import SectionProject from "@/app/components/SectionProject";
+import Navbar from "@/app/components/molecules/Navbar";
+import SectionAbout from "@/app/components/templates/SectionAbout";
+import SectionSkills from "@/app/components/templates/SectionSkills";
+import SectionProject from "@/app/components/templates/SectionProject";
 
 export default function Home() {
   return (
