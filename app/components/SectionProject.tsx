@@ -1,113 +1,60 @@
+import { justCoaching } from "../data/projects";
+import Text from "./atoms/Text";
+import Title from "./atoms/Title";
+
+import CardList from "./CardList";
+
 export default function SectionProject() {
+  const { manager } = justCoaching;
   return (
     <section className="pb-15">
-      <h2 className="mb-5 text-4xl font-bold">Projects</h2>
+      <Title renderAs="h2">Projets</Title>
 
-      <h3
-        id="jc"
-        className="flex justify-center text-3xl font-bold scroll-mt-64 md:scroll-mt-30"
-      >
-        Just Coaching
-      </h3>
+      <div>
+        <Title id="jc" renderAs="h3">
+          Just Coaching
+        </Title>
 
-      <p className="text-lg pt-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
-        nulla, obcaecati error rem aut tempora officia nostrum dolorum unde ea!
-        Magni ad fugit ipsam labore vitae rerum minima, inventore, explicabo est
-        iure, enim omnis. Voluptatum iusto fugit doloribus delectus modi,
-        officiis, repellat officia vel reprehenderit, sapiente assumenda? Quo
-        fuga voluptates aliquam pariatur, sequi, molestiae nulla necessitatibus,
-        autem repudiandae eaque delectus quasi beatae quibusdam nobis magnam
-        ducimus minus similique ex facere culpa nisi alias sint laborum!
-        Voluptatem, vel quaerat illo velit iusto illum provident aut nesciunt,
-        commodi vero sit aliquam tempora, nisi inventore! Veniam ex deserunt ut
-        officia cumque nihil alias hic dignissimos iusto harum libero, earum
-        sint expedita quos vitae explicabo vero atque necessitatibus pariatur
-        voluptas consequuntur. Necessitatibus vitae sit voluptatum ex provident
-        eveniet inventore porro. Officia eveniet temporibus odio non alias harum
-        sequi nobis soluta, aliquam similique ullam veritatis porro nihil
-        provident quas sed fugiat voluptatum maiores laudantium consequuntur
-        iure rerum! Sint officia incidunt numquam quo aliquid fugit? Perferendis
-        deserunt voluptas, eligendi similique labore ipsam sequi cupiditate
-        temporibus id itaque, quod suscipit ea placeat eaque doloribus,
-        doloremque delectus non neque culpa provident accusamus pariatur omnis
-        enim! Nostrum, molestias obcaecati optio repudiandae soluta illo enim
-        reprehenderit delectus cumque reiciendis iste incidunt, tempora
-        exercitationem facilis eligendi non numquam deserunt omnis tempore
-        aliquid, atque culpa accusantium. Aliquam nam sunt facere officiis
-        excepturi nostrum quisquam laborum facilis quas. Nam aliquam totam vel
-        et voluptates quas earum, voluptatem exercitationem quia laborum. Illo,
-        harum quisquam commodi quasi totam nisi officiis nam provident maiores
-        quam quas, quod dolorem soluta, nobis distinctio possimus perferendis!
-        Accusamus eos dicta aliquam libero dignissimos illum nostrum illo id
-        vitae quaerat pariatur temporibus explicabo, inventore sint natus vel ab
-        quis fuga. Maxime quis tempore quibusdam perspiciatis eius saepe tempora
-        sapiente quae ex praesentium unde ipsum nobis totam repellendus non
-        rerum quo, veniam autem laudantium omnis fuga eaque architecto soluta.
-        Deleniti dignissimos velit vel, ad explicabo consectetur facilis natus
-        consequatur omnis facere quos, perferendis inventore, veniam voluptates
-        distinctio cumque mollitia dolore minima. Iste magnam id delectus?
-        Possimus, quasi adipisci. Repudiandae ad at maxime! Quibusdam doloribus
-        deserunt et quis ex cum odio dicta nemo vel, officia natus porro aliquid
-        quidem voluptatem ut dignissimos, eos quaerat totam iusto consequuntur
-        repellendus reiciendis! Magni, vero. Cum quisquam cumque et, eos debitis
-        esse eum soluta quod veniam rem. In asperiores laborum quia cum eveniet
-        facere consectetur, ducimus eum vel inventore voluptatibus, sit illum
-        molestiae repudiandae, odio optio. Vitae?
-      </p>
+        <Text>
+          J’ai rejoint Just Coaching en alternance en octobre 2023, puis en CDI
+          depuis novembre 2024 en tant que développeur web. J’interviens sur
+          plusieurs projets, notamment le développement d’API, le CRM, une
+          application client, une application dédiée aux coachs ainsi qu’un
+          projet de visioconférence.
+        </Text>
+      </div>
 
-      <h3
-        id="wild"
-        className="flex justify-center text-3xl font-bold mt-7 scroll-mt-64 md:scroll-mt-30"
-      >
-        Wild Code Online
-      </h3>
+      <div className="my-6">
+        <Title id="jc" renderAs="h3">
+          Manager
+        </Title>
 
-      <p className="text-lg pt-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
-        nulla, obcaecati error rem aut tempora officia nostrum dolorum unde ea!
-        Magni ad fugit ipsam labore vitae rerum minima, inventore, explicabo est
-        iure, enim omnis. Voluptatum iusto fugit doloribus delectus modi,
-        officiis, repellat officia vel reprehenderit, sapiente assumenda? Quo
-        fuga voluptates aliquam pariatur, sequi, molestiae nulla necessitatibus,
-        autem repudiandae eaque delectus quasi beatae quibusdam nobis magnam
-        ducimus minus similique ex facere culpa nisi alias sint laborum!
-        Voluptatem, vel quaerat illo velit iusto illum provident aut nesciunt,
-        commodi vero sit aliquam tempora, nisi inventore! Veniam ex deserunt ut
-        officia cumque nihil alias hic dignissimos iusto harum libero, earum
-        sint expedita quos vitae explicabo vero atque necessitatibus pariatur
-        voluptas consequuntur. Necessitatibus vitae sit voluptatum ex provident
-        eveniet inventore porro. Officia eveniet temporibus odio non alias harum
-        sequi nobis soluta, aliquam similique ullam veritatis porro nihil
-        provident quas sed fugiat voluptatum maiores laudantium consequuntur
-        iure rerum! Sint officia incidunt numquam quo aliquid fugit? Perferendis
-        deserunt voluptas, eligendi similique labore ipsam sequi cupiditate
-        temporibus id itaque, quod suscipit ea placeat eaque doloribus,
-        doloremque delectus non neque culpa provident accusamus pariatur omnis
-        enim! Nostrum, molestias obcaecati optio repudiandae soluta illo enim
-        reprehenderit delectus cumque reiciendis iste incidunt, tempora
-        exercitationem facilis eligendi non numquam deserunt omnis tempore
-        aliquid, atque culpa accusantium. Aliquam nam sunt facere officiis
-        excepturi nostrum quisquam laborum facilis quas. Nam aliquam totam vel
-        et voluptates quas earum, voluptatem exercitationem quia laborum. Illo,
-        harum quisquam commodi quasi totam nisi officiis nam provident maiores
-        quam quas, quod dolorem soluta, nobis distinctio possimus perferendis!
-        Accusamus eos dicta aliquam libero dignissimos illum nostrum illo id
-        vitae quaerat pariatur temporibus explicabo, inventore sint natus vel ab
-        quis fuga. Maxime quis tempore quibusdam perspiciatis eius saepe tempora
-        sapiente quae ex praesentium unde ipsum nobis totam repellendus non
-        rerum quo, veniam autem laudantium omnis fuga eaque architecto soluta.
-        Deleniti dignissimos velit vel, ad explicabo consectetur facilis natus
-        consequatur omnis facere quos, perferendis inventore, veniam voluptates
-        distinctio cumque mollitia dolore minima. Iste magnam id delectus?
-        Possimus, quasi adipisci. Repudiandae ad at maxime! Quibusdam doloribus
-        deserunt et quis ex cum odio dicta nemo vel, officia natus porro aliquid
-        quidem voluptatem ut dignissimos, eos quaerat totam iusto consequuntur
-        repellendus reiciendis! Magni, vero. Cum quisquam cumque et, eos debitis
-        esse eum soluta quod veniam rem. In asperiores laborum quia cum eveniet
-        facere consectetur, ducimus eum vel inventore voluptatibus, sit illum
-        molestiae repudiandae, odio optio. Vitae?
-      </p>
+        <Text>{manager.description}</Text>
+
+        <CardList title="Technos" itemsList={manager.technos} icon="sparkles" />
+      </div>
+
+      <div>
+        <Title id="wild" renderAs="h3">
+          Wild Code Online
+        </Title>
+
+        <Text>
+          L’application a pour but de créer une plateforme de code en ligne
+          permettant de développer, tester et partager du code facilement et
+          accessible de n&apos;importe quel endroit. En arrivant sur
+          l’application, l&apos;utilisateur a accès à un éditeur de code lui
+          permettant de commencer à travailler directement, sans avoir à mettre
+          en place un environnement de développement. En cliquant sur un bouton
+          (50/jour pour un compte gratuit, sans limite avec un compte premium)
+          le résultat s&apos;affiche à l&apos;écran. L’utilisateur peut
+          s’inscrire sur l’app, sauvegarder, partager, privatiser, télécharger
+          son travail. La solution peut inclure toutes sortes
+          d&apos;interactions sociales autour des codes à condition que ces
+          interactions respectent bien les droits de visibilité (codes publics
+          ou privés).
+        </Text>
+      </div>
     </section>
   );
 }
