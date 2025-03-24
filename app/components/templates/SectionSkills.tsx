@@ -1,6 +1,5 @@
 import { knowSkills, softSkills, useSkills } from "@/app/data/skills";
 
-import IconCornerUpRight from "@/app/components/atoms/icons/IconCornerUpRight";
 import DisplayItem from "@/app/components/atoms/DisplayItem";
 import Title from "../atoms/Title";
 
@@ -68,7 +67,7 @@ export default function SectionSkills() {
 
           <div className="flex justify-evenly text-sm 1xs:text-[15px] sm:justify-around md:text-lg 2xl:gap-20 ">
             <div>
-              <Title renderAs="h5">Technos :</Title>
+              <Title renderAs="h5">Technos:</Title>
 
               <div>
                 {knowSkills.technos.map((skill) => (
@@ -76,7 +75,7 @@ export default function SectionSkills() {
                 ))}
               </div>
 
-              <Title renderAs="h5">Serveur :</Title>
+              <Title renderAs="h5">Serveur:</Title>
 
               <div>
                 {knowSkills.server.map((skill) => (
@@ -86,7 +85,7 @@ export default function SectionSkills() {
             </div>
 
             <div>
-              <Title renderAs="h5">Outils :</Title>
+              <Title renderAs="h5">Outils:</Title>
 
               <div>
                 {knowSkills.tools.map((skill) => (
@@ -94,7 +93,7 @@ export default function SectionSkills() {
                 ))}
               </div>
 
-              <Title renderAs="h5">Gestion :</Title>
+              <Title renderAs="h5">Gestion:</Title>
 
               <div>
                 {knowSkills.management.map((skill) => (
@@ -111,22 +110,16 @@ export default function SectionSkills() {
           Soft Skills
         </Title>
 
-        <div className="pl-4 sm:flex justify-around text-sm 1xs:justify-around 1xs:text-[15px] md:flex-col lg:flex-row lg:justify-around md:text-lg 2xl:gap-20">
+        <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl pl-4 text-sm  1xs:justify-around 1xs:text-[15px] sm:flex md:flex-col md:text-lg lg:flex-row lg:justify-around 2xl:gap-20">
           <div>
             {softSkills.transversal.map((skill) => (
-              <p key={skill} className="flex items-center">
-                <IconCornerUpRight />
-                <span className="pl-2">{skill}</span>
-              </p>
+              <DisplayItem key={skill} item={skill} icon="cornerUpRight" />
             ))}
           </div>
 
           <div>
             {softSkills.soft.map((skill) => (
-              <p key={skill} className="flex items-center">
-                <IconCornerUpRight />
-                <span className="pl-2">{skill}</span>
-              </p>
+              <DisplayItem key={skill} item={skill} icon="cornerUpRight" />
             ))}
           </div>
         </div>
