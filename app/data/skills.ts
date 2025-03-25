@@ -35,8 +35,7 @@ export const knowSkills = {
     "Shasdcn",
   ],
   server: ["NGINX", "Caddy"],
-  tools: ["Ubuntu", "GitHub Actions", "Figma"],
-  management: ["GitHub issues", "GitHub overview"],
+  tools: ["Ubuntu", "Figma"],
 };
 
 export const softSkills = {

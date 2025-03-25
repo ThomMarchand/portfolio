@@ -2,7 +2,6 @@ import { wildCodeOnline } from "@/app/data/projects";
 
 import Text from "@/app/components/atoms/Text";
 import Title from "@/app/components/atoms/Title";
-// import CardMultipleList from "@/app/components/molecules/CardMultipleList";
 
 export default function WildCodeSchool() {
   return (
@@ -23,16 +22,6 @@ export default function WildCodeSchool() {
         <Title id="wild" renderAs="h3">
           Wild Code Online
         </Title>
-
-        <div className="">
-          {/* <CardMultipleList technos={wildCodeOnline.technos1} icon="sparkles">
-            Technos
-          </CardMultipleList> */}
-
-          {/* <CardMultipleList technos={wildCodeOnline.technos2} icon="sparkles">
-            Technos
-          </CardMultipleList> */}
-        </div>
 
         <Text>{wildCodeOnline.description}</Text>
       </section>

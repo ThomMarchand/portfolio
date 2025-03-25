@@ -18,7 +18,7 @@ export default function SectionSkills() {
             J&apos;utilise
           </h4>
 
-          <div className="flex justify-evenly text-sm 1xs:text-[15px] sm:justify-around md:text-lg 2xl:gap-20 ">
+          <div className="flex justify-evenly text-sm 1xs:text-[15px] sm:justify-around md:text-lg ">
             <div>
               <Title renderAs="h5">Technos:</Title>
 
@@ -65,20 +65,12 @@ export default function SectionSkills() {
             Je connais
           </h4>
 
-          <div className="flex justify-evenly text-sm 1xs:text-[15px] sm:justify-around md:text-lg 2xl:gap-20 ">
+          <div className="flex justify-evenly items-center text-sm 1xs:text-[15px] sm:justify-around md:text-lg ">
             <div>
               <Title renderAs="h5">Technos:</Title>
 
               <div>
                 {knowSkills.technos.map((skill) => (
-                  <DisplayItem key={skill} item={skill} icon="beaker" />
-                ))}
-              </div>
-
-              <Title renderAs="h5">Serveur:</Title>
-
-              <div>
-                {knowSkills.server.map((skill) => (
                   <DisplayItem key={skill} item={skill} icon="beaker" />
                 ))}
               </div>
@@ -93,10 +85,10 @@ export default function SectionSkills() {
                 ))}
               </div>
 
-              <Title renderAs="h5">Gestion:</Title>
+              <Title renderAs="h5">Serveur:</Title>
 
               <div>
-                {knowSkills.management.map((skill) => (
+                {knowSkills.server.map((skill) => (
                   <DisplayItem key={skill} item={skill} icon="beaker" />
                 ))}
               </div>
@@ -105,22 +97,24 @@ export default function SectionSkills() {
         </div>
       </div>
 
-      <div>
+      <div className="">
         <Title renderAs="h3" id="soft-skills">
           Soft Skills
         </Title>
 
-        <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl pl-4 text-sm  1xs:justify-around 1xs:text-[15px] sm:flex md:flex-col md:text-lg lg:flex-row lg:justify-around 2xl:gap-20">
-          <div>
-            {softSkills.transversal.map((skill) => (
-              <DisplayItem key={skill} item={skill} icon="cornerUpRight" />
-            ))}
-          </div>
+        <div className="xs:flex xs:flex-col xs:items-center">
+          <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl pl-4 text-sm xs:w-fit xs:px-10 1xs:text-[15px] md:text-lg 2xl:w-3xl 2xl:flex 2xl:justify-around">
+            <div>
+              {softSkills.transversal.map((skill) => (
+                <DisplayItem key={skill} item={skill} icon="cornerUpRight" />
+              ))}
+            </div>
 
-          <div>
-            {softSkills.soft.map((skill) => (
-              <DisplayItem key={skill} item={skill} icon="cornerUpRight" />
-            ))}
+            <div>
+              {softSkills.soft.map((skill) => (
+                <DisplayItem key={skill} item={skill} icon="cornerUpRight" />
+              ))}
+            </div>
           </div>
         </div>
       </div>
