@@ -10,7 +10,7 @@ import IconsNavbar from "@/app/components/molecules/IconsNavbar";
 
 export default function Navbar() {
   const [openNavbar, setOpenNavbar] = useState(true);
-  const [scrollY, setScrollY] = useState(window.scrollY);
+  const [scrollY, setScrollY] = useState(0);
 
   console.log(scrollY);
   useEffect(() => {
