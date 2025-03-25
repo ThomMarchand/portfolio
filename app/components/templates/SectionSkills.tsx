@@ -38,7 +38,7 @@ export default function SectionSkills() {
             </div>
 
             <div>
-              <h5 className="text-xl font-medium mt-4">Outils:</h5>
+              <Title renderAs="h5">Outils:</Title>
 
               <div>
                 {useSkills.tools.map((skill) => (
@@ -46,7 +46,7 @@ export default function SectionSkills() {
                 ))}
               </div>
 
-              <h5 className="text-xl font-medium mt-4">Gestion:</h5>
+              <Title renderAs="h5">Gestion:</Title>
 
               <div>
                 {useSkills.management.map((skill) => (
