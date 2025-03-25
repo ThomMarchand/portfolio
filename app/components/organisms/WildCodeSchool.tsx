@@ -26,7 +26,7 @@ export default function WildCodeSchool() {
         </Title>
 
         <div className="flex flex-col items-center my-10">
-          <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl 2xl:w-5/12">
+          <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl w-full lg:w-[600px] 2xl:w-[800px]">
             <h4 id="use" className="flex justify-center text-2xl font-semibold">
               J&apos;utilise
             </h4>
