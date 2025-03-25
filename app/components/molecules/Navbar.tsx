@@ -12,7 +12,6 @@ export default function Navbar() {
   const [openNavbar, setOpenNavbar] = useState(true);
   const [scrollY, setScrollY] = useState(0);
 
-  console.log(scrollY);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
