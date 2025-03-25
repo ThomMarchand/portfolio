@@ -1,46 +1,64 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
+import IconBarsArrowUp from "@/app/components/atoms/icons/IconBarsArrowUp";
+import IconBarsArrowDown from "@/app/components/atoms/icons/IconBarsArrowDown";
 import AnchorNavigation from "@/app/components/molecules/AnchorNavigation";
-import IconeCode from "@/app/components/atoms/icons/IconCode";
-import IconGitHub from "@/app/components/atoms/icons/IconGitHub";
-import IconLinkedin from "@/app/components/atoms/icons/IconLinkedin";
+import HeaderNavbar from "@/app/components/molecules/HeaderNavbar";
+import IconsNavbar from "@/app/components/molecules/IconsNavbar";
 
 export default function Navbar() {
+  const [openNavbar, setOpenNavbar] = useState(true);
+  const [scrollY, setScrollY] = useState(window.scrollY);
+
+  console.log(scrollY);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+
+      setOpenNavbar(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useMemo(() => {
+    if (scrollY === 0) {
+      setOpenNavbar(true);
+    }
+  }, [scrollY]);
+
+  const style = openNavbar
+    ? "pt-10 sm:pt-5 md:flex md:flex-col md:justify-between md:py-10 md:inset-y-0 md:w-64 lg:w-80 xl:w-130"
+    : "w-10 h-10";
+
   return (
     <div
-      className="bg-indigo-900 text-indigo-50 shadow-3xl p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 
-    md:flex md:flex-col md:justify-between md:py-10 md:inset-y-0 md:w-64 lg:w-80 xl:w-130"
+      className={`bg-indigo-900 text-indigo-50 shadow-dark p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 ${style}`}
     >
-      <div className="flex justify-between xs:justify-around md:flex-col md:jutify-center md:h-1/2 xl:h-7/12">
-        <div className="md:mx-auto">
-          <h1 className="md:text-2xl lg:text-3xl xl:text-5xl font-bold">
-            Thomas Marchand
-          </h1>
+      <button
+        className="absolute top-0 left-0 transform translate-x-[9px] translate-y-[9px] md:hidden"
+        onClick={() => setOpenNavbar(!openNavbar)}
+      >
+        {openNavbar ? <IconBarsArrowUp /> : <IconBarsArrowDown />}
+      </button>
 
-          <div className="text-xs font-medium xs:flex sm:text-sm lg:text-lg xl:text-3xl">
-            <p>Developpeur</p>
-            <p className="pl-2">JavaScript</p>
+      {openNavbar && (
+        <>
+          <div className="flex justify-between xs:justify-around md:flex-col md:justify-between md:h-1/2 xl:h-7/12">
+            <HeaderNavbar />
+
+            <AnchorNavigation />
           </div>
 
-          <p className="text-xs sm:text-sm font-medium lg:text-lg xl:text-3xl">
-            Spé. Back-end
-          </p>
-        </div>
-
-        <AnchorNavigation />
-      </div>
-
-      <div className="flex justify-around pt-4">
-        <a href="https://www.codewars.com/users/WhyNoThom">
-          <IconeCode />
-        </a>
-
-        <a href="https://github.com/ThomMarchand">
-          <IconGitHub />
-        </a>
-
-        <a href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-pro">
-          <IconLinkedin />
-        </a>
-      </div>
+          <IconsNavbar />
+        </>
+      )}
     </div>
   );
 }

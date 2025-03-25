@@ -44,7 +44,9 @@ export default function AnchorNavigation() {
 
   return (
     <div className="cursor-pointer flex flex-col text-xs gap-2 sm:text-sm lg:pl-3 xl:gap-6 xl:text-2xl xl:pl-8">
-      <p onClick={() => scrollToAboutSection()}>À propos</p>
+      <p className="ml-4" onClick={() => scrollToAboutSection()}>
+        À propos
+      </p>
 
       <div>
         <p className="flex items-center" onClick={handleOpenSkills}>
