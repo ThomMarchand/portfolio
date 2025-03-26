@@ -4,7 +4,6 @@
   --breakpoint-xs: 380px;
   --breakpoint-1xs: 500px;
   --shadow-3xl: 0 0 10px rgba(0, 0, 0, 0.8);
-  --shadow-dark: 0 0 20px rgba(0, 0, 0);
 }
 
 body {

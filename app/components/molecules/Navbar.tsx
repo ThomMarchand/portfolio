@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`bg-indigo-900 text-indigo-50 shadow-dark p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 ${style}`}
+      className={`bg-indigo-900 text-indigo-50 shadow-3xl p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 ${style}`}
     >
       <button
         className="absolute top-0 left-0 transform translate-x-[9px] translate-y-[9px] md:hidden"
