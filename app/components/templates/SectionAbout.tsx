@@ -1,4 +1,4 @@
-import Title from "../atoms/Title";
+import Title from "@/app/components/atoms/Title";
 
 export default function SectionAbout() {
   return (
@@ -12,12 +12,12 @@ export default function SectionAbout() {
       </p>
 
       <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
-        Depuis toujours, l’informatique me passionne, que ce soit sur le plan
-        personnel, à travers les jeux vidéo et ma curiosité pour Internet, ou
-        dans ma vie professionnelle. Lors de mon passage chez les Compagnons du
-        Devoir, j’ai découvert la conception assistée par ordinateur (CAO). Plus
-        tard, chez Euromaster, l’omniprésence de l’informatique a renforcé mon
-        attrait pour ce domaine.
+        Depuis toujours, j&apos;ai un fort attachement pour l’informatique, que
+        ce soit sur le plan personnel, à travers les jeux vidéo et ma curiosité
+        pour Internet, ou dans ma vie professionnelle. Lors de mon passage chez
+        les Compagnons du Devoir, j’ai découvert la conception assistée par
+        ordinateur (CAO). Plus tard, chez Euromaster, l’omniprésence de
+        l’informatique a renforcé mon attrait pour ce domaine.
       </p>
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex justify-center">
@@ -26,7 +26,7 @@ export default function SectionAbout() {
       </p>
 
       <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
-        J’ai alors commencé par apprendre les bases du développement Web en
+        J’ai, alors, commencé par apprendre les bases du développement Web en
         septembre 2022 en construisant des applications Front-end. Après
         plusieurs mois d’apprentissage en autodidacte, j’ai choisi d’approfondir
         mes compétences en intégrant la formation de Concepteur Développeur

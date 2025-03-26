@@ -1,7 +1,7 @@
 import { knowSkills, softSkills, useSkills } from "@/app/data/skills";
 
 import DisplayItem from "@/app/components/atoms/DisplayItem";
-import Title from "../atoms/Title";
+import Title from "@/app/components/atoms/Title";
 
 export default function SectionSkills() {
   return (
@@ -13,7 +13,7 @@ export default function SectionSkills() {
       </Title>
 
       <div className="2xl:flex 2xl:justify-around">
-        <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl 2xl:w-5/12">
+        <div className="py-5 bg-white border border-indigo-500 my-7 rounded-2xl 2xl:w-5/12">
           <h4 id="use" className="flex justify-center text-2xl font-semibold">
             J&apos;utilise
           </h4>
@@ -57,7 +57,7 @@ export default function SectionSkills() {
           </div>
         </div>
 
-        <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl 2xl:w-5/12">
+        <div className="py-5 bg-white border border-indigo-500 my-7 rounded-2xl 2xl:w-5/12">
           <h4
             id="know"
             className="flex justify-center text-2xl font-semibold mt-4"
@@ -103,7 +103,7 @@ export default function SectionSkills() {
         </Title>
 
         <div className="xs:flex xs:flex-col xs:items-center">
-          <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl pl-4 text-sm xs:w-fit xs:px-10 1xs:text-[15px] md:text-lg 2xl:w-3xl 2xl:flex 2xl:justify-around">
+          <div className="py-5 bg-white border border-indigo-500 my-7 rounded-2xl pl-4 text-sm xs:w-fit xs:px-10 1xs:text-[15px] md:text-lg 2xl:w-3xl 2xl:flex 2xl:justify-around">
             <div>
               {softSkills.transversal.map((skill) => (
                 <DisplayItem key={skill} item={skill} icon="cornerUpRight" />

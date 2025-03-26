@@ -2,7 +2,7 @@ import { wildCodeOnline } from "@/app/data/projects";
 
 import Text from "@/app/components/atoms/Text";
 import Title from "@/app/components/atoms/Title";
-import DisplayItem from "../atoms/DisplayItem";
+import DisplayItem from "@/app/components/atoms/DisplayItem";
 
 export default function WildCodeSchool() {
   const { back, server, front, tools } = wildCodeOnline.technos;
@@ -26,9 +26,9 @@ export default function WildCodeSchool() {
         </Title>
 
         <div className="flex flex-col items-center my-10">
-          <div className="py-5 shadow-3xl my-7 bg-indigo-300 rounded-2xl w-full lg:w-[600px] 2xl:w-[800px]">
+          <div className="py-5 bg-white border border-indigo-500 my-7 rounded-2xl w-full lg:w-[600px] 2xl:w-[800px]">
             <h4 id="use" className="flex justify-center text-2xl font-semibold">
-              J&apos;utilise
+              Technos
             </h4>
 
             <div className="flex justify-evenly text-sm 1xs:text-[15px] sm:justify-around md:text-lg ">
