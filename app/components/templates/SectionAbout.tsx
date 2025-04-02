@@ -1,53 +1,91 @@
 import Title from "@/app/components/atoms/Title";
+import DisplayItem from "../atoms/DisplayItem";
+import IconCornerUpRight from "../atoms/icons/IconCornerUpRight";
 
 export default function SectionAbout() {
+  const xp = [
+    "Mon parcours compagnonique à duré 6 années durant lesquels je me suis formé en carrosserie (réparation et construction) au sein de diverses structures (Groupe national et PME).",
+    "Pendant mes années Euromaster (leader européen de la distribution de pneumtiques – filiale du groupe Michelin) j'ai travaillé dans un département de services aux clients autour du pneu industriel.",
+    "Enfin, pendant 3 ans j'ai exercé dans une TPE spécialisée dans l’agencement intérieur.",
+  ];
   return (
     <section id="about" className="md:scroll-mt-64 md:mt-30">
       <Title renderAs="h2">À propos</Title>
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg mt-25 flex justify-center">
         Créer des applications de A à Z, développer des fonctionnalités
-        performantes et enquêter sur les bugs pour en identifier l’origine et
-        les corriger avec précision est ce qui me passionne.
+        performantes et enquêter sur les bugs pour identifier les origines et
+        les corriger avec précision sont des sujets ce qui me passionne.
       </p>
 
       <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
-        Depuis toujours, j&apos;ai un fort attachement pour l’informatique, que
-        ce soit sur le plan personnel, à travers les jeux vidéo et ma curiosité
-        pour Internet, ou dans ma vie professionnelle. Lors de mon passage chez
+        Depuis toujours, j'ai un fort attachement pour l’informatique, que ce
+        soit sur le plan personnel, à travers les jeux vidéo et ma curiosité
+        pour Internet, ou dans ma vie professionnelle. Lors de mon cursus chez
         les Compagnons du Devoir, j’ai découvert la conception assistée par
-        ordinateur (CAO). Plus tard, chez Euromaster, l’omniprésence de
+        ordinateur (CAO) et plus tard, chez Euromaster, l’omniprésence de
         l’informatique a renforcé mon attrait pour ce domaine.
       </p>
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex justify-center">
         C’est un ami administrateur système qui m’a permis de mieux comprendre
-        le métier de développeur et de réaliser qu’il était accessible.
+        le métier de développeur et de réaliser qu’il m'était accessible.
       </p>
 
       <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
-        J’ai, alors, commencé par apprendre les bases du développement Web en
-        septembre 2022 en construisant des applications Front-end. Après
-        plusieurs mois d’apprentissage en autodidacte, j’ai choisi d’approfondir
-        mes compétences en intégrant la formation de Concepteur Développeur
-        d’Applications en alternance à la Wild Code School.
+        J’ai commencé en autodidacte, en apprenant les bases du développement
+        Web à partir de septembre 2022 en construisant des applications
+        Front-end. Après environ 1 an sur ce modèle, j’ai décidé de donner une
+        autre dimension à mon apprentissage en lui donnant un objectif
+        professionnel en intégrant la formation de Concepteur Développeur
+        d’Applications en alternance à la Wild Code School fin 2023.
       </p>
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex justify-center">
-        Ah oui, j’allais oublier un point important : ma vie ne commence pas en
-        septembre 2022 ! Elle est riche de 19 années d’expérience
-        professionnelle. J’ai travaillé en carrosserie, dans le service au sein
-        d’une entreprise internationale de pneumatiques, ainsi que dans
-        l’agencement intérieur au sein d’une TPE. Ces expériences variées
-        témoignent de ma capacité à me remettre en question et à ne jamais
-        rester dans ma zone de confort.
+        Ah oui! J’allais oublier un point important: ma vie professionnelle ne
+        commence pas en septembre 2022 ! Elle est déjà riche de 20 années
+        d’expériences professionnelles:
       </p>
 
-      <p className="text-justify text-sm mt-10 1xs:text-[15px] md:text-lg flex justify-center">
-        Les compétences relationnelles que j’ai développées tout au long de ma
-        carrière, combinées à ma passion et à ma capacité d’adaptation, sont de
-        véritables atouts que je souhaite mettre à profit dans mon avenir de
+      <div className="p-5 bg-white border border-indigo-500 rounded-2xl mt-7 xs:w-10/12 xs:flex xs:flex-col xs:mx-auto">
+        <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
+          <IconCornerUpRight />{" "}
+          <span className="flex flex-col pl-2 w-fit">
+            Mon parcours compagnonique à duré 6 années durant lesquels je me
+            suis formé en carrosserie (réparation et construction) au sein de
+            diverses structures (Groupe national et PME).
+          </span>
+        </p>
+
+        <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
+          <IconCornerUpRight />{" "}
+          <span className="flex flex-col pl-2 w-fit">
+            Pendant mes années Euromaster (leader européen de la distribution de
+            pneumtiques – filiale du groupe Michelin) j'ai travaillé dans un
+            département de services aux clients autour du pneu industriel.
+          </span>
+        </p>
+
+        <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
+          <IconCornerUpRight />{" "}
+          <span className="flex flex-col pl-2 w-fit">
+            Enfin, pendant 3 ans j'ai exercé dans une TPE spécialisée dans
+            l’agencement intérieur.
+          </span>
+        </p>
+      </div>
+
+      <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
+        Ces expériences diverses et variées témoignent de ma capacité à me
+        remettre en question et à ne jamais rester dans ma zone de confort. Les
+        compétences relationnelles que j’ai su développer tout au long de ce
+        cursus, combinées à ma passion et à ma capacité d’adaptation, sont de
+        véritables atouts que je souhaite mettre à profit dans mon futur de
         développeur.
+      </p>
+
+      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex">
+        Mais revenons à mon actualité:
       </p>
     </section>
   );
