@@ -1,13 +1,7 @@
 import Title from "@/app/components/atoms/Title";
-import DisplayItem from "../atoms/DisplayItem";
-import IconCornerUpRight from "../atoms/icons/IconCornerUpRight";
+import IconCornerUpRight from "@/app/components/atoms/icons/IconCornerUpRight";
 
 export default function SectionAbout() {
-  const xp = [
-    "Mon parcours compagnonique à duré 6 années durant lesquels je me suis formé en carrosserie (réparation et construction) au sein de diverses structures (Groupe national et PME).",
-    "Pendant mes années Euromaster (leader européen de la distribution de pneumtiques – filiale du groupe Michelin) j'ai travaillé dans un département de services aux clients autour du pneu industriel.",
-    "Enfin, pendant 3 ans j'ai exercé dans une TPE spécialisée dans l’agencement intérieur.",
-  ];
   return (
     <section id="about" className="md:scroll-mt-64 md:mt-30">
       <Title renderAs="h2">À propos</Title>
@@ -19,8 +13,8 @@ export default function SectionAbout() {
       </p>
 
       <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
-        Depuis toujours, j'ai un fort attachement pour l’informatique, que ce
-        soit sur le plan personnel, à travers les jeux vidéo et ma curiosité
+        Depuis toujours, j&apos;ai un fort attachement pour l’informatique, que
+        ce soit sur le plan personnel, à travers les jeux vidéo et ma curiosité
         pour Internet, ou dans ma vie professionnelle. Lors de mon cursus chez
         les Compagnons du Devoir, j’ai découvert la conception assistée par
         ordinateur (CAO) et plus tard, chez Euromaster, l’omniprésence de
@@ -29,7 +23,7 @@ export default function SectionAbout() {
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex justify-center">
         C’est un ami administrateur système qui m’a permis de mieux comprendre
-        le métier de développeur et de réaliser qu’il m'était accessible.
+        le métier de développeur et de réaliser qu’il m&apos;était accessible.
       </p>
 
       <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
@@ -61,15 +55,15 @@ export default function SectionAbout() {
           <IconCornerUpRight />{" "}
           <span className="flex flex-col pl-2 w-fit">
             Pendant mes années Euromaster (leader européen de la distribution de
-            pneumtiques – filiale du groupe Michelin) j'ai travaillé dans un
-            département de services aux clients autour du pneu industriel.
+            pneumtiques – filiale du groupe Michelin) j&apos;ai travaillé dans
+            un département de services aux clients autour du pneu industriel.
           </span>
         </p>
 
         <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
           <IconCornerUpRight />{" "}
           <span className="flex flex-col pl-2 w-fit">
-            Enfin, pendant 3 ans j'ai exercé dans une TPE spécialisée dans
+            Enfin, pendant 3 ans j&apos;ai exercé dans une TPE spécialisée dans
             l’agencement intérieur.
           </span>
         </p>
@@ -85,7 +79,7 @@ export default function SectionAbout() {
       </p>
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex">
-        Mais revenons à mon actualité:
+        Mais revenons à mon actualité,
       </p>
     </section>
   );
