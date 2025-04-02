@@ -76,16 +76,52 @@ export default function WildCodeSchool() {
           permettant de développer, tester et partager du code facilement.
         </Text>
 
-        <div className="mt-10">
-          <Text>
-            Dans ce projet, j’ai réalisé la modélisation des données en
-            utilisant UML et Merise, tout en contribuant à la gestion et au
-            suivi du développement. J’ai participé à l’implémentation de
-            nouvelles fonctionnalités et fait évoluer l’architecture en adoptant
-            le modèle MVC. Afin de garantir la qualité du code, j’ai mis en
-            place l’intégration continue (CI) et réalisé des tests unitaires et
-            d’intégration.
-          </Text>
+        <div className="mt-10 p-5 bg-white border border-indigo-500 rounded-2xl xs:w-11/12 xs:flex xs:flex-col xs:mx-auto xl:w-fit">
+          <div className="flex justify-start">
+            <Text>Dans ce projet, j’ai réalisé:</Text>
+          </div>
+
+          <div className="pl-6 1xs:pl-7">
+            <DisplayItem
+              item="J’ai contribué à la gestion et
+              au suivi du développement,"
+              icon="cornerDownRight"
+              displayText
+            />
+
+            <DisplayItem
+              item="J'ai réalisé la modélisation des données en
+              utilisant UML et Merise,"
+              icon="cornerDownRight"
+              displayText
+            />
+
+            <DisplayItem
+              item="J’ai implémenté de
+              nouvelles fonctionnalités,"
+              icon="cornerDownRight"
+              displayText
+            />
+
+            <DisplayItem
+              item="J’ai fait évoluer l’architecture en
+              adoptant le modèle MVC,"
+              icon="cornerDownRight"
+              displayText
+            />
+
+            <DisplayItem
+              item="J’ai mis en place l’intégration continue (CI),"
+              icon="cornerDownRight"
+              displayText
+            />
+
+            <DisplayItem
+              item="J'ai réalisé des tests unitaires et d’intégration."
+              icon="cornerDownRight"
+              displayText
+            />
+          </div>
         </div>
       </section>
     </section>
