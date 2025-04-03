@@ -71,57 +71,58 @@ export default function WildCodeSchool() {
           </div>
         </div>
 
-        <Text>
-          L’application a pour objectif de créer une plateforme de code en ligne
-          permettant de développer, tester et partager du code facilement.
-        </Text>
+        <div className="flex flex-col items-center">
+          <div>
+            <Text>
+              L’application a pour objectif de créer une plateforme de code en
+              ligne permettant de développer, tester et partager du code
+              facilement.
+            </Text>
+
+            <Text textCenter={false}>Dans ce projet, j’ai réalisé:</Text>
+          </div>
+        </div>
 
         <div className="mt-10 p-5 bg-white border border-indigo-500 rounded-2xl xs:w-11/12 xs:flex xs:flex-col xs:mx-auto xl:w-fit">
-          <div className="flex justify-start">
-            <Text>Dans ce projet, j’ai réalisé:</Text>
-          </div>
-
-          <div className="pl-6 1xs:pl-7">
-            <DisplayItem
-              item="J’ai contribué à la gestion et
+          <DisplayItem
+            item="J’ai contribué à la gestion et
               au suivi du développement,"
-              icon="cornerDownRight"
-              displayText
-            />
+            icon="cornerDownRight"
+            displayText
+          />
 
-            <DisplayItem
-              item="J'ai réalisé la modélisation des données en
+          <DisplayItem
+            item="J'ai réalisé la modélisation des données en
               utilisant UML et Merise,"
-              icon="cornerDownRight"
-              displayText
-            />
+            icon="cornerDownRight"
+            displayText
+          />
 
-            <DisplayItem
-              item="J’ai implémenté de
+          <DisplayItem
+            item="J’ai implémenté de
               nouvelles fonctionnalités,"
-              icon="cornerDownRight"
-              displayText
-            />
+            icon="cornerDownRight"
+            displayText
+          />
 
-            <DisplayItem
-              item="J’ai fait évoluer l’architecture en
+          <DisplayItem
+            item="J’ai fait évoluer l’architecture en
               adoptant le modèle MVC,"
-              icon="cornerDownRight"
-              displayText
-            />
+            icon="cornerDownRight"
+            displayText
+          />
 
-            <DisplayItem
-              item="J’ai mis en place l’intégration continue (CI),"
-              icon="cornerDownRight"
-              displayText
-            />
+          <DisplayItem
+            item="J’ai mis en place l’intégration continue (CI),"
+            icon="cornerDownRight"
+            displayText
+          />
 
-            <DisplayItem
-              item="J'ai réalisé des tests unitaires et d’intégration."
-              icon="cornerDownRight"
-              displayText
-            />
-          </div>
+          <DisplayItem
+            item="J'ai réalisé des tests unitaires et d’intégration."
+            icon="cornerDownRight"
+            displayText
+          />
         </div>
       </section>
     </section>

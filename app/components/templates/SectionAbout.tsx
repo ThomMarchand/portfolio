@@ -21,7 +21,7 @@ export default function SectionAbout() {
         l’informatique a renforcé mon attrait pour ce domaine.
       </p>
 
-      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex justify-center">
+      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg">
         C’est un ami administrateur système qui m’a permis de mieux comprendre
         le métier de développeur et de réaliser qu’il m&apos;était accessible.
       </p>
@@ -35,7 +35,7 @@ export default function SectionAbout() {
         d’Applications en alternance à la Wild Code School fin 2023.
       </p>
 
-      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex justify-center">
+      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg">
         Ah oui! J’allais oublier un point important: ma vie professionnelle ne
         commence pas en septembre 2022 ! Elle est déjà riche de 20 années
         d’expériences professionnelles:
