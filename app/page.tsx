@@ -6,6 +6,7 @@ import Navbar from "@/app/components/molecules/Navbar";
 import SectionAbout from "@/app/components/templates/SectionAbout";
 import SectionSkills from "@/app/components/templates/SectionSkills";
 import SectionProject from "@/app/components/templates/SectionProject";
+import SectionContact from "@/app/components/templates/SectionContact";
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
           <SectionSkills />
 
           <SectionProject />
+
+          <SectionContact />
         </div>
       </div>
     </main>
