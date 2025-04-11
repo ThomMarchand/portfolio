@@ -16,44 +16,87 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
-  const [formError, setFormError] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [inputNameError, setInputNameError] = useState("");
+  const [inputEmailError, setInputEmailError] = useState("");
+  const [inputMessageError, setInputMessageError] = useState("");
 
-  const handleErrors = () => {
-    const { name, email, message } = formData;
-
-    if (name.length < 1 || email.length < 1 || message.length < 1) {
-      return setFormError({
-        ...formError,
-        name: name.length > 0 ? "" : "Le nom est requis",
-        email: email.length > 0 ? "" : "L'email est requis",
-        message: message.length > 0 ? "" : "Le message est requis",
-      });
+  const validatedName = () => {
+    const { name } = formData;
+    if (!name) {
+      return setInputNameError("Le nom est requis");
     }
 
-    if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      setFormError({ ...formError, email: "L'email est invalide" });
+    if (name.length < 2) {
+      return setInputNameError("Le nom doit contenir plus de 2 caractères");
     }
 
-    // return name.length < 1 && email.length < 1 && message.length < 1;
+    if (name.length > 50) {
+      return setInputNameError("Le nom doit contenir au maximum 50 caractères");
+    }
+
+    return setInputNameError("");
+  };
+
+  const validatedEmail = () => {
+    const { email } = formData;
+    const regex = /^(?![a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$).+$/;
+
+    if (!email) {
+      return setInputEmailError("L'email est requis");
+    }
+
+    if (regex.test(email)) {
+      return setInputEmailError("L'email est invalide");
+    }
+
+    return setInputEmailError("");
+  };
+
+  const validatedMessage = () => {
+    const { message } = formData;
+    if (!message) {
+      return setInputMessageError("Le message est requis");
+    }
+
+    if (message.length < 10) {
+      return setInputMessageError(
+        "Le message doit contenir au moins 10 caractères"
+      );
+    }
+
+    if (message.length > 1000) {
+      return setInputMessageError(
+        "Le message doit contenir au maximum 1000 caractères"
+      );
+    }
+
+    return setInputMessageError("");
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
+    validatedName();
+    validatedEmail();
+    validatedMessage();
+
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    handleErrors();
-    console.log("formError", formError);
+    validatedName();
+    validatedEmail();
+    validatedMessage();
 
-    // setFormData({ name: "", email: "", message: "" });
+    if (!inputNameError && !inputEmailError && !inputMessageError) {
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }
   };
 
   return (
@@ -61,8 +104,8 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       className="bg-white space-y-4 p-4 border border-indigo-500 rounded-xl shadow-md"
     >
-      {formError.name && (
-        <span className="text-xs text-red-500 ml-[9px]">{formError.name}</span>
+      {inputNameError && (
+        <span className="text-xs text-red-500 ml-[9px]">{inputNameError}</span>
       )}
 
       <Input
@@ -71,10 +114,11 @@ export default function ContactForm() {
         placeholder="Nom…"
         value={formData.name}
         onChange={handleChange}
+        onBlur={validatedName}
       />
 
-      {formError.email && (
-        <span className="text-xs text-red-500 ml-[9px]">{formError.email}</span>
+      {inputEmailError && (
+        <span className="text-xs text-red-500 ml-[9px]">{inputEmailError}</span>
       )}
 
       <Input
@@ -83,11 +127,12 @@ export default function ContactForm() {
         placeholder="Email…"
         value={formData.email}
         onChange={handleChange}
+        onBlur={validatedEmail}
       />
 
-      {formError.message && (
+      {inputMessageError && (
         <span className="text-xs text-red-500 ml-[9px]">
-          {formError.message}
+          {inputMessageError}
         </span>
       )}
 
@@ -96,6 +141,7 @@ export default function ContactForm() {
         placeholder="Message…"
         value={formData.message}
         onChange={handleChange}
+        onBlur={validatedMessage}
       />
 
       <div className="flex justify-end">

@@ -6,6 +6,7 @@ interface InputProps {
   placeholder: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
 export default function Input({
@@ -14,6 +15,7 @@ export default function Input({
   placeholder,
   value,
   onChange,
+  onBlur,
 }: InputProps) {
   return (
     <input
@@ -22,7 +24,7 @@ export default function Input({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      onBlur={(e) => console.log(e.currentTarget.value)}
+      onBlur={onBlur}
       className="bg-indigo-100 w-full p-2 border border-indigo-700 rounded-xl focus:border-2 transition duration-300"
     />
   );
