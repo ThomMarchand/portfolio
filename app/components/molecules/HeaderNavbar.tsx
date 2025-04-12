@@ -7,7 +7,7 @@ export default function HeaderNavbar() {
 
       <div className="text-xs font-medium xs:flex sm:text-sm lg:text-lg xl:text-3xl">
         <p>Developpeur</p>
-        <p className="ml-5">JavaScript</p>
+        <p className="ml-3 lg:ml-4 xl:ml-6">JavaScript</p>
       </div>
 
       <p className="text-xs sm:text-sm font-medium lg:text-lg xl:text-3xl">

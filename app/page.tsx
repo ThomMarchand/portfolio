@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import profilPic from "@/public/images/profil.png";
 
-import Navbar from "@/app/components/molecules/Navbar";
+import Navbar from "@/app/components/organisms/Navbar";
 import SectionAbout from "@/app/components/templates/SectionAbout";
 import SectionSkills from "@/app/components/templates/SectionSkills";
 import SectionProject from "@/app/components/templates/SectionProject";
