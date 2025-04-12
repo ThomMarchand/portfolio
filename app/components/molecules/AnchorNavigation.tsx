@@ -5,6 +5,7 @@ import { useState } from "react";
 import IconChevronRight from "@/app/components/atoms/icons/IconChevronRight";
 import IconChevronDown from "@/app/components/atoms/icons/IconChevronDown";
 import IconPencilSquare from "@/app/components/atoms/icons/IconPencilSquare";
+import IconUser from "@/app/components/atoms/icons/IconUser";
 
 export default function AnchorNavigation() {
   const [openSkills, setOpenSkills] = useState(false);
@@ -45,8 +46,11 @@ export default function AnchorNavigation() {
 
   return (
     <div className="cursor-pointer flex flex-col text-xs gap-2 sm:text-sm lg:pl-3 xl:gap-6 xl:text-2xl xl:pl-8">
-      <p className="ml-2 xl:ml-4" onClick={() => scrollToAboutSection()}>
-        À propos
+      <p
+        className="flex ml-1 md:ml-1.5 xl:ml-2.5"
+        onClick={() => scrollToAboutSection()}
+      >
+        <IconUser /> <span className="pl-[5px] xl:pl-2">À propos</span>
       </p>
 
       <div>
@@ -84,7 +88,7 @@ export default function AnchorNavigation() {
       </div>
 
       <p
-        className="flex ml-2 xl:ml-4"
+        className="flex ml-1 md:ml-1.5 xl:ml-3"
         onClick={() => scrollToSection("contact")}
       >
         <IconPencilSquare /> <span className="pl-[5px] xl:pl-2">Contact</span>
