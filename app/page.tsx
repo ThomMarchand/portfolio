@@ -14,7 +14,7 @@ export default function Home() {
       <Image
         src={profilPic}
         alt="Picture of the author"
-        className="mb-10 size-40 mt-56 md:mt-4 md:mr-10 md:absolute md:size-32 lg:size-40"
+        className="mb-10 size-40 mt-62 md:mt-4 md:mr-10 md:absolute md:size-32 lg:size-40"
       />
 
       <div className="md:flex">
