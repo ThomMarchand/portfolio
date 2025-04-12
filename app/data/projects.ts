@@ -7,7 +7,7 @@ export const justCoaching = {
 
     highlights: [
       {
-        title: "Refactorisation de composants d'affichage",
+        title: "Refactorisation",
         description:
           "Refactorisation des composants d'affichage afin d'utiliser la bibliothèque de composants commune à l'ensemble de l'application.",
       },
@@ -62,14 +62,14 @@ export const justCoaching = {
 
     highlights: [
       {
-        title: "Développement de l'interface utilisateur",
+        title: "Design",
         description:
           "Développement de l'interface utilisateur de la visioconférence.",
       },
       {
         title: "Documentation",
         description:
-          "Configuration d’une bibliothèque de documentation automatique pour le projet de visioconférence.",
+          "Recherche d’un outil de génération de documentation automatique, puis configuration de ce dernier.",
       },
     ],
   },
