@@ -165,7 +165,9 @@ export default function ContactForm() {
       className="bg-white space-y-4 p-4 border border-indigo-500 rounded-xl shadow-md"
     >
       {inputNameError && (
-        <span className="text-xs text-red-500 ml-[9px]">{inputNameError}</span>
+        <span className="text-xs text-green-600 ml-[9px]">
+          {inputNameError}
+        </span>
       )}
 
       <Input
@@ -177,7 +179,9 @@ export default function ContactForm() {
       />
 
       {inputEmailError && (
-        <span className="text-xs text-red-500 ml-[9px]">{inputEmailError}</span>
+        <span className="text-xs text-green-600 ml-[9px]">
+          {inputEmailError}
+        </span>
       )}
 
       <Input
@@ -189,7 +193,7 @@ export default function ContactForm() {
       />
 
       {inputMessageError && (
-        <span className="text-xs text-red-500 ml-[9px]">
+        <span className="text-xs text-green-600 ml-[9px]">
           {inputMessageError}
         </span>
       )}
