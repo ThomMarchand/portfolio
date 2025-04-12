@@ -19,6 +19,7 @@ export default function ContactForm() {
   const [inputNameError, setInputNameError] = useState("");
   const [inputEmailError, setInputEmailError] = useState("");
   const [inputMessageError, setInputMessageError] = useState("");
+  const [status, setStatus] = useState("");
 
   const validatedName = (name: string) => {
     if (!name) {
@@ -93,8 +94,6 @@ export default function ContactForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
-    console.log("handleChange", e.target.value);
-
     switch (e.target.name) {
       case "name":
         validatedName(e.target.value);
@@ -112,7 +111,7 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     validatedName(formData.name);
@@ -124,11 +123,30 @@ export default function ContactForm() {
       validatedEmail(formData.email) &&
       validatedName(formData.name)
     ) {
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
+      setStatus("Envoi en cours…");
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
+
+      const result = await response.json();
+      console.log(result);
+
+      if (response.ok) {
+        setStatus(result.message);
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setStatus(result.message);
+      }
     }
   };
 
@@ -175,14 +193,16 @@ export default function ContactForm() {
       />
 
       <div className="flex justify-end">
-        <button
-          type="submit"
-          className={`px-4 py-2 rounded-xl bg-indigo-500 text-white hover:bg-indigo-800 transition duration-300`}
-        >
-          Envoyer
-        </button>
+        <div className="flex flex-col items-end gap-5">
+          <button
+            type="submit"
+            className={`px-4 py-2 rounded-xl bg-indigo-500 text-white hover:bg-indigo-800 transition duration-300`}
+          >
+            Envoyer
+          </button>
+          {status && <p className="text-green-600 font-bold">{status}</p>}
+        </div>
       </div>
-      {/* {status && <p>{status}</p>} */}
     </form>
   );
 }
