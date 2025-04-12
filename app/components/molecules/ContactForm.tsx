@@ -20,65 +20,94 @@ export default function ContactForm() {
   const [inputEmailError, setInputEmailError] = useState("");
   const [inputMessageError, setInputMessageError] = useState("");
 
-  const validatedName = () => {
-    const { name } = formData;
+  const validatedName = (name: string) => {
     if (!name) {
-      return setInputNameError("Le nom est requis");
+      setInputNameError("Le nom est requis");
+
+      return false;
     }
 
     if (name.length < 2) {
-      return setInputNameError("Le nom doit contenir plus de 2 caractères");
+      setInputNameError("Le nom doit contenir plus de 2 caractères");
+
+      return false;
     }
 
     if (name.length > 50) {
-      return setInputNameError("Le nom doit contenir au maximum 50 caractères");
+      setInputNameError("Le nom doit contenir au maximum 50 caractères");
+
+      return false;
     }
 
-    return setInputNameError("");
+    setInputNameError("");
+
+    return true;
   };
 
-  const validatedEmail = () => {
-    const { email } = formData;
+  const validatedEmail = (email?: string) => {
     const regex = /^(?![a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$).+$/;
 
     if (!email) {
-      return setInputEmailError("L'email est requis");
+      setInputEmailError("L'email est requis");
+
+      return false;
     }
 
     if (regex.test(email)) {
-      return setInputEmailError("L'email est invalide");
+      setInputEmailError("L'email est invalide");
+
+      return false;
     }
 
-    return setInputEmailError("");
+    setInputEmailError("");
+
+    return true;
   };
 
-  const validatedMessage = () => {
-    const { message } = formData;
+  const validatedMessage = (message: string) => {
     if (!message) {
-      return setInputMessageError("Le message est requis");
+      setInputMessageError("Le message est requis");
+
+      return false;
     }
 
     if (message.length < 10) {
-      return setInputMessageError(
-        "Le message doit contenir au moins 10 caractères"
-      );
+      setInputMessageError("Le message doit contenir au moins 10 caractères");
+
+      return false;
     }
 
     if (message.length > 1000) {
-      return setInputMessageError(
+      setInputMessageError(
         "Le message doit contenir au maximum 1000 caractères"
       );
+
+      return false;
     }
 
-    return setInputMessageError("");
+    setInputMessageError("");
+
+    return true;
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
-    validatedName();
-    validatedEmail();
-    validatedMessage();
+    console.log("handleChange", e.target.value);
+
+    switch (e.target.name) {
+      case "name":
+        validatedName(e.target.value);
+        break;
+
+      case "email":
+        validatedEmail(e.target.value);
+        break;
+
+      case "message":
+        validatedMessage(e.target.value);
+        break;
+    }
 
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -86,11 +115,15 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    validatedName();
-    validatedEmail();
-    validatedMessage();
+    validatedName(formData.name);
+    validatedEmail(formData.email);
+    validatedMessage(formData.message);
 
-    if (!inputNameError && !inputEmailError && !inputMessageError) {
+    if (
+      validatedMessage(formData.message) &&
+      validatedEmail(formData.email) &&
+      validatedName(formData.name)
+    ) {
       setFormData({
         name: "",
         email: "",
@@ -113,8 +146,7 @@ export default function ContactForm() {
         name="name"
         placeholder="Nom…"
         value={formData.name}
-        onChange={handleChange}
-        onBlur={validatedName}
+        onInput={handleChange}
       />
 
       {inputEmailError && (
@@ -126,8 +158,7 @@ export default function ContactForm() {
         name="email"
         placeholder="Email…"
         value={formData.email}
-        onChange={handleChange}
-        onBlur={validatedEmail}
+        onInput={handleChange}
       />
 
       {inputMessageError && (
@@ -140,8 +171,7 @@ export default function ContactForm() {
         name="message"
         placeholder="Message…"
         value={formData.message}
-        onChange={handleChange}
-        onBlur={validatedMessage}
+        onInput={handleChange}
       />
 
       <div className="flex justify-end">
