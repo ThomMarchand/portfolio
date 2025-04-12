@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 const Input = dynamic(() => import("@/app/components/atoms/Input"), {
@@ -20,6 +20,14 @@ export default function ContactForm() {
   const [inputEmailError, setInputEmailError] = useState("");
   const [inputMessageError, setInputMessageError] = useState("");
   const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setStatus("");
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [status]);
 
   const validatedName = (name: string) => {
     if (!name) {
@@ -134,10 +142,11 @@ export default function ContactForm() {
       });
 
       const result = await response.json();
-      console.log(result);
 
       if (response.ok) {
         setStatus(result.message);
+
+        // resetStatus();
 
         setFormData({
           name: "",
