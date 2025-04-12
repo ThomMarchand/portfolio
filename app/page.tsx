@@ -10,7 +10,7 @@ import SectionContact from "@/app/components/templates/SectionContact";
 
 export default function Home() {
   return (
-    <main className="text-indigo-950  md:static flex flex-col items-center md:items-end">
+    <main className="text-indigo-950 md:relative flex flex-col items-center md:items-end">
       <Image
         src={profilPic}
         alt="Picture of the author"

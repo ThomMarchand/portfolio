@@ -6,10 +6,6 @@
   --shadow-3xl: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-html {
-  overflow-y: hidden;
-}
-
 body {
   background: oklch(0.93 0.034 272.788);
   font-family: monospace, Helvetica, sans-serif;

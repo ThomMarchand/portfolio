@@ -146,8 +146,6 @@ export default function ContactForm() {
       if (response.ok) {
         setStatus(result.message);
 
-        // resetStatus();
-
         setFormData({
           name: "",
           email: "",
