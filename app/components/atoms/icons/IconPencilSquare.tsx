@@ -16,4 +16,3 @@ export default function IconPencilSquare() {
     </svg>
   );
 }
-// size-5 sm:size-6 xl:size-8

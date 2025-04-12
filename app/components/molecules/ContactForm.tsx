@@ -53,7 +53,7 @@ export default function ContactForm() {
     return true;
   };
 
-  const validatedEmail = (email?: string) => {
+  const validatedEmail = (email: string) => {
     const regex = /^(?![a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$).+$/;
 
     if (!email) {
