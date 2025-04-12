@@ -7,7 +7,7 @@ import DisplayItem from "@/app/components/atoms/DisplayItem";
 export default function WildCodeSchool() {
   const { back, server, front, tools } = wildCodeOnline.technos;
   return (
-    <section className="mb-30">
+    <section className="mb-10">
       <div>
         <Title id="wild" renderAs="h3">
           Wild Code School

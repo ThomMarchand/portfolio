@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import IconChevronRight from "@/app/components/atoms/icons/IconChevronRight";
 import IconChevronDown from "@/app/components/atoms/icons/IconChevronDown";
+import IconPencilSquare from "@/app/components/atoms/icons/IconPencilSquare";
 
 export default function AnchorNavigation() {
   const [openSkills, setOpenSkills] = useState(false);
@@ -57,6 +58,7 @@ export default function AnchorNavigation() {
             <p className="pl-4" onClick={() => scrollToSection("skills")}>
               Hard Skills
             </p>
+
             <p className="pl-4" onClick={() => scrollToSection("soft-skills")}>
               Soft Skills
             </p>
@@ -73,12 +75,20 @@ export default function AnchorNavigation() {
             <p className="pl-4" onClick={() => scrollToSection("jc")}>
               Just Coaching
             </p>
+
             <p className="pl-4" onClick={() => scrollToSection("wild")}>
               Wild Code {window.innerWidth < 350 ? "…" : "Online"}
             </p>
           </>
         )}
       </div>
+
+      <p
+        className="flex ml-2 xl:ml-4"
+        onClick={() => scrollToSection("contact")}
+      >
+        <IconPencilSquare /> <span className="pl-[5px] xl:pl-2">Contact</span>
+      </p>
     </div>
   );
 }

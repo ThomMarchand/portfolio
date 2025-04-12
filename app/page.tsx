@@ -6,14 +6,15 @@ import Navbar from "@/app/components/molecules/Navbar";
 import SectionAbout from "@/app/components/templates/SectionAbout";
 import SectionSkills from "@/app/components/templates/SectionSkills";
 import SectionProject from "@/app/components/templates/SectionProject";
+import SectionContact from "@/app/components/templates/SectionContact";
 
 export default function Home() {
   return (
-    <main className="text-indigo-950  md:static flex flex-col items-center md:items-end">
+    <main className="text-indigo-950 md:relative flex flex-col items-center md:items-end">
       <Image
         src={profilPic}
         alt="Picture of the author"
-        className="mb-10 size-40 mt-56 md:mt-4 md:mr-10 md:absolute md:size-32 lg:size-40"
+        className="mb-10 size-40 mt-62 md:mt-4 md:mr-10 md:absolute md:size-32 lg:size-40"
       />
 
       <div className="md:flex">
@@ -25,6 +26,8 @@ export default function Home() {
           <SectionSkills />
 
           <SectionProject />
+
+          <SectionContact />
         </div>
       </div>
     </main>
