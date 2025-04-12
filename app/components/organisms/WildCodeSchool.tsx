@@ -79,47 +79,47 @@ export default function WildCodeSchool() {
               facilement.
             </Text>
 
-            <Text textCenter={false}>Dans ce projet, j’ai réalisé:</Text>
+            <Text textCenter={false}>Dans ce projet, j’ai:</Text>
           </div>
         </div>
 
         <div className="mt-10 p-5 bg-white border border-indigo-500 rounded-2xl xs:w-11/12 xs:flex xs:flex-col xs:mx-auto xl:w-fit">
           <DisplayItem
-            item="J’ai contribué à la gestion et
+            item="contribué à la gestion et
               au suivi du développement,"
             icon="cornerDownRight"
             displayText
           />
 
           <DisplayItem
-            item="J'ai réalisé la modélisation des données en
+            item="réalisé la modélisation des données en
               utilisant UML et Merise,"
             icon="cornerDownRight"
             displayText
           />
 
           <DisplayItem
-            item="J’ai implémenté de
+            item="implémenté de
               nouvelles fonctionnalités,"
             icon="cornerDownRight"
             displayText
           />
 
           <DisplayItem
-            item="J’ai fait évoluer l’architecture en
+            item="fait évoluer l’architecture en
               adoptant le modèle MVC,"
             icon="cornerDownRight"
             displayText
           />
 
           <DisplayItem
-            item="J’ai mis en place l’intégration continue (CI),"
+            item="mis en place l’intégration continue (CI),"
             icon="cornerDownRight"
             displayText
           />
 
           <DisplayItem
-            item="J'ai réalisé des tests unitaires et d’intégration."
+            item="réalisé des tests unitaires et d’intégration."
             icon="cornerDownRight"
             displayText
           />

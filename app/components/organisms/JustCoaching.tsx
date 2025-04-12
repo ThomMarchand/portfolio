@@ -20,19 +20,19 @@ export default function JustCoaching() {
           <div className="">
             <Text textCenter={false}>
               J’ai rejoint &quot;Just Coaching&quot; dans le cadre d&apos;une
-              alternance en Octobre 2023, puis en CDI depuis novembre 2024 en
+              alternance en octobre 2023, puis en CDI depuis novembre 2024 en
               tant que développeur web.
             </Text>
 
             <Text textCenter={false}>
-              J’y interviens sur le développement de diverses features:
+              J’y interviens sur le développement de diverses fonctionnalités:
             </Text>
           </div>
         </div>
 
         <div className="p-5 bg-white border border-indigo-500 rounded-2xl mt-7 xs:w-fit xs:flex xs:flex-col xs:mx-auto">
           <DisplayItem
-            item="API: c'est l'interface logicielle qui permet de &quot;connecter&quot; le fonctionnement des applications suivantes:"
+            item="API: c'est l'interface logicielle qui permet de &quot;connecter&quot; le back-end aux différents services front-end:"
             icon="cornerUpRight"
             displayText
           />

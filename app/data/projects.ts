@@ -3,7 +3,7 @@ export const justCoaching = {
     description:
       "Le manager (CRM) permet à l'entreprise de gérer les clients ainsi que les coachs. J’interviens sur le développement de nouvelles fonctionnalités, la correction de bugs (fix, hotfix) et l’amélioration continue des performances.",
 
-    technos: ["Vue.js", "axios", "Bootstrap"],
+    technos: ["Vue.js", "axios", "Bootstrap", "Sass"],
 
     highlights: [
       {
@@ -20,15 +20,8 @@ export const justCoaching = {
   },
   api: {
     description:
-      "L'API permet aux autres applications de gérer les différentes données. J’interviens sur le développement de nouvelles fonctionnalités, la correction de bugs (fix, hotfix) et l’amélioration continue des performances.",
-    technos: [
-      "Architecture REST",
-      "Node.js",
-      "Express",
-      "RethinkDB",
-      "ThinkyORM",
-      "Docker",
-    ],
+      "L'API (architecture REST) permet aux autres applications de gérer les différentes données (CRUD). J’interviens sur le développement de nouvelles fonctionnalités, la correction de bugs (fix, hotfix) et l’amélioration continue des performances.",
+    technos: ["Node.js", "Express", "RethinkDB", "ThinkyORM", "Docker"],
     highlights: [
       {
         title: "Synchronisation avec Brevo (outil marketing)",
@@ -38,18 +31,18 @@ export const justCoaching = {
       {
         title: "Optimisation de requêtes",
         description:
-          "Optimisation de requêtes pour réduire le temps de réponse de l'API. Par exemple, diminution du temps de réponse de 37 secondes et 180kB pour la récupération des données des commandes.",
+          "Réduire le temps de réponse de l'API. Par exemple, diminution du temps de réponse de 37 secondes et 180kB pour la récupération des données des commandes.",
       },
       {
         title: "Création de nouvelles routes",
         description:
-          "Création de nouvelles routes pour permettre l'application client de récupérer les données nécessaires à leur bon fonctionnement.",
+          "Création de nouvelles routes pour permettre à l'application client de récupérer les données nécessaires à son bon fonctionnement.",
       },
     ],
   },
   visio: {
     description:
-      "Permet d'effectuer des visioconférences à deux ou en groupe. J'interviens sur le développement de nouvelles fonctionnalités ainsi que sur la réalisation de tests unitaires.",
+      "L'application est un monolith qui permet d'effectuer des visioconférences à deux ou en groupe (Google meet, Zoom,…). J'interviens sur le développement de nouvelles fonctionnalités ainsi que sur la réalisation de tests unitaires.",
 
     technos: [
       "Monolith",
