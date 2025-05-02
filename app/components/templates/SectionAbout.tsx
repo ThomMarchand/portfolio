@@ -36,16 +36,18 @@ export default function SectionAbout() {
       </p>
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg">
-        Ah oui! J’allais oublier un point important: ma vie professionnelle ne
-        commence pas en septembre 2022 ! Elle est déjà riche de 20 années
-        d’expériences professionnelles:
+        Ah oui! J’allais oublier un point important: ,
+        <strong>
+          ma vie professionnelle ne commence pas en septembre 2022 !
+        </strong>{" "}
+        Elle est déjà riche de 20 années d’expériences professionnelles:
       </p>
 
       <div className="p-5 bg-white border border-indigo-500 rounded-2xl mt-7 xs:w-10/12 xs:flex xs:flex-col xs:mx-auto">
         <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
           <IconCornerUpRight />{" "}
           <span className="flex flex-col pl-2 w-fit">
-            Mon parcours compagnonique à duré 6 années durant lesquels je me
+            Mon parcours compagnonique à duré 6 années durant lesquelles je me
             suis formé en carrosserie (réparation et construction) au sein de
             diverses structures (Groupe national et PME).
           </span>
@@ -55,7 +57,7 @@ export default function SectionAbout() {
           <IconCornerUpRight />{" "}
           <span className="flex flex-col pl-2 w-fit">
             Pendant mes années Euromaster (leader européen de la distribution de
-            pneumtiques – filiale du groupe Michelin) j&apos;ai travaillé dans
+            pneumatiques – filiale du groupe Michelin) j&apos;ai travaillé dans
             un département de services aux clients autour du pneu industriel.
           </span>
         </p>
