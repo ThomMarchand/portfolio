@@ -36,7 +36,7 @@ export default function SectionAbout() {
       </p>
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg">
-        Ah oui! J’allais oublier un point important: ,
+        Ah oui! J’allais oublier un point important:
         <strong>
           ma vie professionnelle ne commence pas en septembre 2022 !
         </strong>{" "}
