@@ -36,9 +36,11 @@ export default function SectionAbout() {
       </p>
 
       <p className="text-justify text-sm 1xs:text-[15px] md:text-lg">
-        Ah oui! J’allais oublier un point important: ma vie professionnelle ne
-        commence pas en septembre 2022 ! Elle est déjà riche de 20 années
-        d’expériences professionnelles:
+        Ah oui! J’allais oublier un point important: ,
+        <strong>
+          ma vie professionnelle ne commence pas en septembre 2022 !
+        </strong>{" "}
+        Elle est déjà riche de 20 années d’expériences professionnelles:
       </p>
 
       <div className="p-5 bg-white border border-indigo-500 rounded-2xl mt-7 xs:w-10/12 xs:flex xs:flex-col xs:mx-auto">
