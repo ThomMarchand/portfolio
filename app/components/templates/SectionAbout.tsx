@@ -45,7 +45,7 @@ export default function SectionAbout() {
         <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
           <IconCornerUpRight />{" "}
           <span className="flex flex-col pl-2 w-fit">
-            Mon parcours compagnonique à duré 6 années durant lesquels je me
+            Mon parcours compagnonique à duré 6 années durant lesquelles je me
             suis formé en carrosserie (réparation et construction) au sein de
             diverses structures (Groupe national et PME).
           </span>
@@ -55,7 +55,7 @@ export default function SectionAbout() {
           <IconCornerUpRight />{" "}
           <span className="flex flex-col pl-2 w-fit">
             Pendant mes années Euromaster (leader européen de la distribution de
-            pneumtiques – filiale du groupe Michelin) j&apos;ai travaillé dans
+            pneumatiques – filiale du groupe Michelin) j&apos;ai travaillé dans
             un département de services aux clients autour du pneu industriel.
           </span>
         </p>
