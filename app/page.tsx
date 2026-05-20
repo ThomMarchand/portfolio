@@ -35,7 +35,6 @@ export default function Home() {
           justifyContent: "center",
         }}
       >
-
         <h1
           style={{
             fontFamily: "var(--font-display)",
@@ -121,7 +120,7 @@ export default function Home() {
             GitHub ↗
           </a>
           <a
-            href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-pro"
+            href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-vue"
             target="_blank"
             rel="noopener noreferrer"
             style={{

@@ -9,7 +9,7 @@ export default function IconsNavbar() {
       </a>
 
       <a
-        href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-pro"
+        href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-vue"
         target="_blank"
       >
         <IconLinkedin />

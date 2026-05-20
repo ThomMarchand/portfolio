@@ -12,7 +12,11 @@ export default function SectionContact() {
     >
       <div
         data-reveal
-        style={{ paddingTop: "5rem", paddingBottom: "5rem", textAlign: "center" }}
+        style={{
+          paddingTop: "5rem",
+          paddingBottom: "5rem",
+          textAlign: "center",
+        }}
       >
         <div
           style={{
@@ -38,7 +42,13 @@ export default function SectionContact() {
           >
             Travaillons ensemble.
           </h2>
-          <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "15px" }}>
+          <p
+            style={{
+              color: "var(--text-muted)",
+              marginBottom: "2rem",
+              fontSize: "15px",
+            }}
+          >
             Ouvert aux opportunités sur Nantes / Ancenis / Remote.
           </p>
           <div
@@ -68,7 +78,7 @@ export default function SectionContact() {
               Envoyer un email →
             </a>
             <a
-              href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-pro"
+              href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-vue"
               target="_blank"
               rel="noopener noreferrer"
               style={{
