@@ -39,7 +39,7 @@ export default function Home() {
         <h1
           style={{
             fontFamily: "var(--font-display)",
-            fontSize: "clamp(3rem, 6vw, 5.5rem)",
+            fontSize: "clamp(1.5rem, 8vw, 5.5rem)",
             fontWeight: 800,
             lineHeight: 1.0,
             letterSpacing: "-0.03em",
