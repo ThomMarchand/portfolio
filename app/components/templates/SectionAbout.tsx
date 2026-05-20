@@ -1,88 +1,164 @@
-import Title from "@/app/components/atoms/Title";
-import IconCornerUpRight from "@/app/components/atoms/icons/IconCornerUpRight";
+const sectionStyle = {
+  position: "relative" as const,
+  zIndex: 1,
+  maxWidth: "1100px",
+  margin: "0 auto",
+  padding: "0 2rem",
+};
+
+const timelineItems = [
+  {
+    color: "var(--violet)",
+    year: "2024 — aujourd'hui",
+    title: "Développeur Full-Stack (CDI)",
+    sub: "Just Coaching · Ancenis",
+  },
+  {
+    color: "var(--cyan)",
+    year: "2023 — 2024",
+    title: "Wild Code School · CDA (RNCP Niv. 6)",
+    sub: "Alternance · Concepteur Développeur d'Applications",
+  },
+  {
+    color: "var(--pink)",
+    year: "2022 — 2023",
+    title: "Autodidacte · Développement Web",
+    sub: "Front-end, bases du développement",
+  },
+  {
+    color: "var(--amber)",
+    year: "2002 — 2022",
+    title: "20 ans d'expérience terrain",
+    sub: "Compagnons du Devoir · Euromaster · Agencement",
+  },
+];
 
 export default function SectionAbout() {
   return (
-    <section id="about" className="md:scroll-mt-64 md:mt-30">
-      <Title renderAs="h2">À propos</Title>
-
-      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg mt-25 flex justify-center">
-        Créer des applications de A à Z, développer des fonctionnalités
-        performantes et enquêter sur les bugs pour identifier les origines et
-        les corriger avec précision sont des sujets ce qui me passionne.
-      </p>
-
-      <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
-        Depuis toujours, j&apos;ai un fort attachement pour l’informatique, que
-        ce soit sur le plan personnel, à travers les jeux vidéo et ma curiosité
-        pour Internet, ou dans ma vie professionnelle. Lors de mon cursus chez
-        les Compagnons du Devoir, j’ai découvert la conception assistée par
-        ordinateur (CAO) et plus tard, chez Euromaster, l’omniprésence de
-        l’informatique a renforcé mon attrait pour ce domaine.
-      </p>
-
-      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg">
-        C’est un ami administrateur système qui m’a permis de mieux comprendre
-        le métier de développeur et de réaliser qu’il m&apos;était accessible.
-      </p>
-
-      <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
-        J’ai commencé en autodidacte, en apprenant les bases du développement
-        Web à partir de septembre 2022 en construisant des applications
-        Front-end. Après environ 1 an sur ce modèle, j’ai décidé de donner une
-        autre dimension à mon apprentissage en lui donnant un objectif
-        professionnel en intégrant la formation de Concepteur Développeur
-        d’Applications en alternance à la Wild Code School fin 2023.
-      </p>
-
-      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg">
-        Ah oui! J’allais oublier un point important:{" "}
-        <strong>
-          ma vie professionnelle ne commence pas en septembre 2022 !
-        </strong>{" "}
-        Elle est déjà riche de 20 années d’expériences professionnelles:
-      </p>
-
-      <div className="p-5 bg-white border border-indigo-500 rounded-2xl mt-7 xs:w-10/12 xs:flex xs:flex-col xs:mx-auto">
-        <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
-          <IconCornerUpRight />{" "}
-          <span className="flex flex-col pl-2 w-fit">
-            Mon parcours compagnonique à duré 6 années durant lesquelles je me
-            suis formé en carrosserie (réparation et construction) au sein de
-            diverses structures (Groupe national et PME).
-          </span>
-        </p>
-
-        <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
-          <IconCornerUpRight />{" "}
-          <span className="flex flex-col pl-2 w-fit">
-            Pendant mes années Euromaster (leader européen de la distribution de
-            pneumatiques – filiale du groupe Michelin) j&apos;ai travaillé dans
-            un département de services aux clients autour du pneu industriel.
-          </span>
-        </p>
-
-        <p className="flex text-sm mt-2 1xs:text-[15px] md:text-lg">
-          <IconCornerUpRight />{" "}
-          <span className="flex flex-col pl-2 w-fit">
-            Enfin, pendant 3 ans j&apos;ai exercé dans une TPE spécialisée dans
-            l’agencement intérieur.
-          </span>
-        </p>
+    <section id="about" style={sectionStyle}>
+      <div data-reveal style={{ marginBottom: "3rem", paddingTop: "6rem" }}>
+        <div
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "11px",
+            color: "var(--violet-light)",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            marginBottom: "0.75rem",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+          }}
+        >
+          <span
+            style={{
+              width: "20px",
+              height: "1px",
+              background: "var(--violet)",
+              display: "inline-block",
+            }}
+          />
+          À propos
+        </div>
+        <h2
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
+            fontWeight: 700,
+            letterSpacing: "-0.02em",
+            color: "var(--text)",
+          }}
+        >
+          Un parcours atypique,
+          <br />
+          une force réelle.
+        </h2>
       </div>
 
-      <p className="text-justify text-sm my-10 1xs:text-[15px] md:text-lg flex justify-center">
-        Ces expériences diverses et variées témoignent de ma capacité à me
-        remettre en question et à ne jamais rester dans ma zone de confort. Les
-        compétences relationnelles que j’ai su développer tout au long de ce
-        cursus, combinées à ma passion et à ma capacité d’adaptation, sont de
-        véritables atouts que je souhaite mettre à profit dans mon futur de
-        développeur.
-      </p>
+      <div
+        data-reveal
+        className="grid grid-cols-1 md:grid-cols-2"
+        style={{ gap: "3rem", alignItems: "start", paddingBottom: "3rem" }}
+      >
+        <div>
+          <p style={{ color: "var(--text-muted)", fontSize: "15px", lineHeight: 1.8 }}>
+            Créer des applications de A à Z, développer des fonctionnalités performantes et enquêter
+            sur les bugs pour identifier les origines — c&apos;est ce qui me passionne.
+          </p>
+          <p
+            style={{ color: "var(--text-muted)", fontSize: "15px", lineHeight: 1.8, marginTop: "1rem" }}
+          >
+            Mon cursus chez les{" "}
+            <strong style={{ color: "var(--text)", fontWeight: 500 }}>
+              Compagnons du Devoir
+            </strong>{" "}
+            m&apos;a appris ce que signifie vraiment maîtriser un métier. Cette exigence, je la
+            transfère dans le code : pas de dette technique cachée, pas de bug qu&apos;on &quot;laisse
+            pour plus tard&quot;.
+          </p>
+          <blockquote
+            style={{
+              background: "rgba(124,111,247,0.07)",
+              border: "1px solid rgba(124,111,247,0.15)",
+              borderLeft: "3px solid var(--violet)",
+              borderRadius: "0 10px 10px 0",
+              padding: "1.25rem 1.5rem",
+              marginTop: "1.5rem",
+              fontSize: "14px",
+              color: "var(--text-muted)",
+              fontStyle: "italic",
+            }}
+          >
+            &quot;Ma vie professionnelle ne commence pas en septembre 2022 — elle est riche de 20
+            années d&apos;expériences qui font de moi un développeur qui comprend les enjeux
+            métier.&quot;
+          </blockquote>
+        </div>
 
-      <p className="text-justify text-sm 1xs:text-[15px] md:text-lg flex">
-        Mais revenons à mon actualité,
-      </p>
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          {timelineItems.map((item) => (
+            <div
+              key={item.year}
+              style={{
+                display: "flex",
+                gap: "1rem",
+                padding: "1.1rem 1.25rem",
+                background: "var(--surface)",
+                border: "1px solid var(--border)",
+                borderRadius: "10px",
+              }}
+            >
+              <span
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  borderRadius: "50%",
+                  background: item.color,
+                  flexShrink: 0,
+                  marginTop: "7px",
+                  display: "inline-block",
+                }}
+              />
+              <div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "11px",
+                    color: "var(--text-dim)",
+                    marginBottom: "2px",
+                  }}
+                >
+                  {item.year}
+                </div>
+                <div style={{ fontSize: "14px", fontWeight: 500, color: "var(--text)" }}>
+                  {item.title}
+                </div>
+                <div style={{ fontSize: "12px", color: "var(--text-muted)" }}>{item.sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

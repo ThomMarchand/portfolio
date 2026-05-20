@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Thomas Marchand",
-  description: "Présentation de Thomas Marchand, développeur web",
+  description: "Développeur Full-Stack · Node.js · TypeScript · AdonisJS",
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="md:overflow-y-hidden">
+    <html lang="fr">
       <body>{children}</body>
     </html>
   );

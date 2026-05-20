@@ -1,122 +1,172 @@
-import { knowSkills, softSkills, useSkills } from "@/app/data/skills";
-
-import DisplayItem from "@/app/components/atoms/DisplayItem";
-import Title from "@/app/components/atoms/Title";
+const skillCategories = [
+  {
+    title: "Back-End",
+    color: "var(--violet-light)",
+    dot: "var(--violet)",
+    primary: ["Node.js", "TypeScript", "AdonisJS", "Express", "RethinkDB", "PostgreSQL", "REST API"],
+    secondary: [],
+  },
+  {
+    title: "Front-End",
+    color: "var(--cyan)",
+    dot: "var(--cyan)",
+    primary: ["Vue.js", "Next.js", "React Native", "Tailwind", "Sass"],
+    secondary: [],
+  },
+  {
+    title: "DevOps & Outils",
+    color: "var(--pink)",
+    dot: "var(--pink)",
+    primary: ["Docker", "Git / GitHub", "NGINX", "Caddy", "macOS", "Ubuntu"],
+    secondary: [],
+  },
+  {
+    title: "En apprentissage",
+    color: "var(--amber)",
+    dot: "var(--amber)",
+    primary: [],
+    secondary: ["Java", "Maven", "JDBC", "MVC Java"],
+  },
+  {
+    title: "Je connais",
+    color: "var(--text-muted)",
+    dot: "var(--text-dim)",
+    primary: [],
+    secondary: ["GraphQL", "Apollo", "TypeORM", "Playwright", "Jest", "Figma"],
+  },
+  {
+    title: "Méthodes",
+    color: "var(--text-muted)",
+    dot: "var(--text-dim)",
+    primary: [],
+    secondary: ["Scrum", "Kanban", "Tests unitaires", "CI/CD", "MVC"],
+  },
+];
 
 export default function SectionSkills() {
   return (
-    <section className="my-20">
-      <Title renderAs="h2">Compétences</Title>
-
-      <Title renderAs="h3" id="skills">
-        Hard skills
-      </Title>
-
-      <div className="2xl:flex 2xl:justify-around">
-        <div className="py-5 bg-white border border-indigo-500 my-7 rounded-2xl 2xl:w-5/12">
-          <h4 id="use" className="flex justify-center text-2xl font-semibold">
-            J&apos;utilise
-          </h4>
-
-          <div className="flex justify-evenly text-sm 1xs:text-[15px] sm:justify-around md:text-lg ">
-            <div>
-              <Title renderAs="h5">Technos:</Title>
-
-              <div>
-                {useSkills.technos.map((skill) => (
-                  <DisplayItem key={skill} item={skill} icon="sparkles" />
-                ))}
-              </div>
-
-              <Title renderAs="h5">Versionning:</Title>
-
-              <div>
-                {useSkills.versioning.map((skill) => (
-                  <DisplayItem key={skill} item={skill} icon="sparkles" />
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <Title renderAs="h5">Outils:</Title>
-
-              <div>
-                {useSkills.tools.map((skill) => (
-                  <DisplayItem key={skill} item={skill} icon="sparkles" />
-                ))}
-              </div>
-
-              <Title renderAs="h5">Gestion:</Title>
-
-              <div>
-                {useSkills.management.map((skill) => (
-                  <DisplayItem key={skill} item={skill} icon="sparkles" />
-                ))}
-              </div>
-            </div>
-          </div>
+    <section
+      id="skills"
+      style={{
+        position: "relative",
+        zIndex: 1,
+        maxWidth: "1100px",
+        margin: "0 auto",
+        padding: "0 2rem",
+      }}
+    >
+      <div data-reveal style={{ marginBottom: "3rem", paddingTop: "6rem" }}>
+        <div
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "11px",
+            color: "var(--violet-light)",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            marginBottom: "0.75rem",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+          }}
+        >
+          <span
+            style={{
+              width: "20px",
+              height: "1px",
+              background: "var(--violet)",
+              display: "inline-block",
+            }}
+          />
+          Compétences
         </div>
-
-        <div className="py-5 bg-white border border-indigo-500 my-7 rounded-2xl 2xl:w-5/12">
-          <h4
-            id="know"
-            className="flex justify-center text-2xl font-semibold mt-4"
-          >
-            Je connais
-          </h4>
-
-          <div className="flex justify-evenly items-center text-sm 1xs:text-[15px] sm:justify-around md:text-lg ">
-            <div>
-              <Title renderAs="h5">Technos:</Title>
-
-              <div>
-                {knowSkills.technos.map((skill) => (
-                  <DisplayItem key={skill} item={skill} icon="beaker" />
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <Title renderAs="h5">Outils:</Title>
-
-              <div>
-                {knowSkills.tools.map((skill) => (
-                  <DisplayItem key={skill} item={skill} icon="beaker" />
-                ))}
-              </div>
-
-              <Title renderAs="h5">Serveur:</Title>
-
-              <div>
-                {knowSkills.server.map((skill) => (
-                  <DisplayItem key={skill} item={skill} icon="beaker" />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
+            fontWeight: 700,
+            letterSpacing: "-0.02em",
+            color: "var(--text)",
+          }}
+        >
+          Stack & outils.
+        </h2>
       </div>
 
-      <div className="">
-        <Title renderAs="h3" id="soft-skills">
-          Soft Skills
-        </Title>
-
-        <div className="xs:flex xs:flex-col xs:items-center">
-          <div className="py-5 bg-white border border-indigo-500 my-7 rounded-2xl pl-4 text-sm xs:w-fit xs:px-10 1xs:text-[15px] md:text-lg 2xl:w-3xl 2xl:flex 2xl:justify-around">
-            <div>
-              {softSkills.transversal.map((skill) => (
-                <DisplayItem key={skill} item={skill} icon="cornerUpRight" />
-              ))}
+      <div
+        data-reveal
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        style={{ gap: "1.25rem", paddingBottom: "3rem" }}
+      >
+        {skillCategories.map((cat) => (
+          <div
+            key={cat.title}
+            style={{
+              background: "var(--surface)",
+              border: "1px solid var(--border)",
+              borderRadius: "14px",
+              padding: "1.5rem",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "11px",
+                textTransform: "uppercase",
+                letterSpacing: "0.08em",
+                fontWeight: 600,
+                marginBottom: "1rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                color: cat.color,
+              }}
+            >
+              <span
+                style={{
+                  width: "6px",
+                  height: "6px",
+                  borderRadius: "50%",
+                  background: cat.dot,
+                  display: "inline-block",
+                }}
+              />
+              {cat.title}
             </div>
-
-            <div>
-              {softSkills.soft.map((skill) => (
-                <DisplayItem key={skill} item={skill} icon="cornerUpRight" />
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+              {cat.primary.map((tag) => (
+                <span
+                  key={tag}
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "11px",
+                    padding: "4px 10px",
+                    borderRadius: "6px",
+                    border: "1px solid rgba(124,111,247,0.3)",
+                    background: "rgba(124,111,247,0.07)",
+                    color: "var(--violet-light)",
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+              {cat.secondary.map((tag) => (
+                <span
+                  key={tag}
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "11px",
+                    padding: "4px 10px",
+                    borderRadius: "6px",
+                    border: "1px solid var(--border)",
+                    background: "rgba(255,255,255,0.03)",
+                    color: "var(--text-muted)",
+                  }}
+                >
+                  {tag}
+                </span>
               ))}
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );
