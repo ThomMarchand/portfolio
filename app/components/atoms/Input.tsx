@@ -22,7 +22,16 @@ export default function Input({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="bg-indigo-100 w-full p-2 border border-indigo-700 rounded-xl focus:border-2 transition duration-300"
+      style={{
+        background: "var(--surface)",
+        border: "1px solid var(--border)",
+        borderRadius: "10px",
+        color: "var(--text)",
+        width: "100%",
+        padding: "10px 14px",
+        fontSize: "14px",
+        outline: "none",
+      }}
     />
   );
 }

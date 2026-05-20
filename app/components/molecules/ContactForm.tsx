@@ -119,7 +119,7 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     validatedName(formData.name);
@@ -160,14 +160,13 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white space-y-4 p-4 border border-indigo-500 rounded-xl shadow-md"
+      style={{ display: "flex", flexDirection: "column", gap: "12px" }}
     >
       {inputNameError && (
-        <span className="text-xs text-green-600 ml-[9px]">
+        <span style={{ fontSize: "12px", color: "#f87171", marginLeft: "4px" }}>
           {inputNameError}
         </span>
       )}
-
       <Input
         type="text"
         name="name"
@@ -177,11 +176,10 @@ export default function ContactForm() {
       />
 
       {inputEmailError && (
-        <span className="text-xs text-green-600 ml-[9px]">
+        <span style={{ fontSize: "12px", color: "#f87171", marginLeft: "4px" }}>
           {inputEmailError}
         </span>
       )}
-
       <Input
         type="text"
         name="email"
@@ -191,11 +189,10 @@ export default function ContactForm() {
       />
 
       {inputMessageError && (
-        <span className="text-xs text-green-600 ml-[9px]">
+        <span style={{ fontSize: "12px", color: "#f87171", marginLeft: "4px" }}>
           {inputMessageError}
         </span>
       )}
-
       <TextArea
         name="message"
         placeholder="Message…"
@@ -203,16 +200,34 @@ export default function ContactForm() {
         onChange={handleChange}
       />
 
-      <div className="flex justify-end">
-        <div className="flex flex-col items-end gap-5">
-          <button
-            type="submit"
-            className={`px-4 py-2 rounded-xl bg-indigo-500 text-white hover:bg-indigo-800 transition duration-300`}
-          >
-            Envoyer
-          </button>
-          {status && <p className="text-green-600 font-bold">{status}</p>}
-        </div>
+      <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "1rem" }}>
+        {status && (
+          <p style={{
+              fontSize: "13px",
+              fontWeight: 600,
+              background: "var(--grad)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}>
+            {status}
+          </p>
+        )}
+        <button
+          type="submit"
+          style={{
+            padding: "10px 24px",
+            background: "var(--grad)",
+            border: "none",
+            borderRadius: "10px",
+            color: "#fff",
+            fontWeight: 600,
+            fontSize: "14px",
+            cursor: "pointer",
+          }}
+        >
+          Envoyer →
+        </button>
       </div>
     </form>
   );
