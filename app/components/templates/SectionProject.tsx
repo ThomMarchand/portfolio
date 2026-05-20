@@ -8,7 +8,7 @@ function StackTag({ label }: { label: string }) {
         borderRadius: "5px",
         background: "rgba(255,255,255,0.04)",
         border: "1px solid var(--border)",
-        color: "var(--text-dim)",
+        color: "#9faabf",
       }}
     >
       {label}
@@ -48,7 +48,7 @@ function SectionHeader() {
           fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
           fontWeight: 700,
           letterSpacing: "-0.02em",
-          color: "var(--text)",
+          color: "var(--text-muted)",
         }}
       >
         Ce que j&apos;ai construit.
@@ -126,7 +126,7 @@ export default function SectionProject() {
                 fontFamily: "var(--font-display)",
                 fontSize: "1.3rem",
                 fontWeight: 700,
-                color: "var(--text)",
+                color: "var(--text-muted)",
                 marginBottom: "0.5rem",
                 letterSpacing: "-0.01em",
               }}
@@ -162,7 +162,7 @@ export default function SectionProject() {
               >
                 −37s
               </span>
-              <span style={{ fontSize: "14px", color: "var(--text-dim)" }}>
+              <span style={{ fontSize: "14px", color: "#9faabf" }}>
                 de temps de réponse sur la route commandes
               </span>
             </div>
@@ -182,7 +182,7 @@ export default function SectionProject() {
               >
                 4
               </span>
-              <span style={{ fontSize: "14px", color: "var(--text-dim)" }}>
+              <span style={{ fontSize: "14px", color: "#9faabf" }}>
                 applications interconnectées
               </span>
             </div>
@@ -209,7 +209,7 @@ export default function SectionProject() {
               >
                 <div
                   style={{
-                    color: "var(--text-dim)",
+                    color: "#9faabf",
                     fontSize: "14px",
                     marginBottom: "4px",
                     textTransform: "uppercase",
@@ -259,7 +259,7 @@ export default function SectionProject() {
                 fontFamily: "var(--font-display)",
                 fontSize: "1.3rem",
                 fontWeight: 700,
-                color: "var(--text)",
+                color: "var(--text-muted)",
                 marginBottom: "0.5rem",
                 letterSpacing: "-0.01em",
               }}
@@ -308,7 +308,7 @@ export default function SectionProject() {
                 fontFamily: "var(--font-display)",
                 fontSize: "1.3rem",
                 fontWeight: 700,
-                color: "var(--text)",
+                color: "var(--text-muted)",
                 marginBottom: "0.5rem",
                 letterSpacing: "-0.01em",
               }}
