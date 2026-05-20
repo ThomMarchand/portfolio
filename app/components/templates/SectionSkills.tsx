@@ -59,7 +59,7 @@ export default function SectionSkills() {
         <div
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "11px",
+            fontSize: "13px",
             color: "var(--violet-light)",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
@@ -109,7 +109,7 @@ export default function SectionSkills() {
           >
             <div
               style={{
-                fontSize: "11px",
+                fontSize: "13px",
                 textTransform: "uppercase",
                 letterSpacing: "0.08em",
                 fontWeight: 600,
@@ -137,7 +137,7 @@ export default function SectionSkills() {
                   key={tag}
                   style={{
                     fontFamily: "var(--font-mono)",
-                    fontSize: "11px",
+                    fontSize: "13px",
                     padding: "4px 10px",
                     borderRadius: "6px",
                     border: "1px solid rgba(124,111,247,0.3)",
@@ -153,7 +153,7 @@ export default function SectionSkills() {
                   key={tag}
                   style={{
                     fontFamily: "var(--font-mono)",
-                    fontSize: "11px",
+                    fontSize: "13px",
                     padding: "4px 10px",
                     borderRadius: "6px",
                     border: "1px solid var(--border)",

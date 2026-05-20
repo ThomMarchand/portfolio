@@ -90,6 +90,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (min-width: 768px) {
+  body {
+    font-size: 25px;
+  }
+}
+
 body::before {
   content: "";
   position: fixed;

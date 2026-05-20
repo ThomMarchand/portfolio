@@ -50,7 +50,7 @@ export default function Navbar() {
           style={{
             fontFamily: "var(--font-display)",
             fontWeight: 700,
-            fontSize: "16px",
+            fontSize: "20px",
             letterSpacing: "-0.02em",
           }}
         >
@@ -69,7 +69,7 @@ export default function Navbar() {
                 style={{
                   color: "var(--text-muted)",
                   textDecoration: "none",
-                  fontSize: "13px",
+                  fontSize: "16px",
                   fontWeight: 500,
                   letterSpacing: "0.02em",
                 }}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 borderRadius: "8px",
                 color: "var(--text)",
                 textDecoration: "none",
-                fontSize: "13px",
+                fontSize: "16px",
                 fontWeight: 500,
               }}
             >

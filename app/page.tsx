@@ -173,7 +173,7 @@ export default function Home() {
               </div>
               <div
                 style={{
-                  fontSize: "11px",
+                  fontSize: "13px",
                   color: "var(--text-dim)",
                   textTransform: "uppercase",
                   letterSpacing: "0.06em",

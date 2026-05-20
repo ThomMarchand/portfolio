@@ -40,7 +40,7 @@ export default function SectionAbout() {
         <div
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "11px",
+            fontSize: "13px",
             color: "var(--violet-light)",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
@@ -143,7 +143,7 @@ export default function SectionAbout() {
                 <div
                   style={{
                     fontFamily: "var(--font-mono)",
-                    fontSize: "11px",
+                    fontSize: "13px",
                     color: "var(--text-dim)",
                     marginBottom: "2px",
                   }}

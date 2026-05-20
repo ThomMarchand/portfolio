@@ -3,7 +3,7 @@ function StackTag({ label }: { label: string }) {
     <span
       style={{
         fontFamily: "var(--font-mono)",
-        fontSize: "10px",
+        fontSize: "14px",
         padding: "3px 8px",
         borderRadius: "5px",
         background: "rgba(255,255,255,0.04)",
@@ -22,7 +22,7 @@ function SectionHeader() {
       <div
         style={{
           fontFamily: "var(--font-mono)",
-          fontSize: "11px",
+          fontSize: "13px",
           color: "var(--violet-light)",
           letterSpacing: "0.1em",
           textTransform: "uppercase",
@@ -124,7 +124,7 @@ export default function SectionProject() {
             <div
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "1.1rem",
+                fontSize: "1.3rem",
                 fontWeight: 700,
                 color: "var(--text)",
                 marginBottom: "0.5rem",
@@ -135,7 +135,7 @@ export default function SectionProject() {
             </div>
             <p
               style={{
-                fontSize: "13.5px",
+                fontSize: "17px",
                 color: "var(--text-muted)",
                 lineHeight: 1.7,
                 marginBottom: "1.25rem",
@@ -162,7 +162,7 @@ export default function SectionProject() {
               >
                 −37s
               </span>
-              <span style={{ fontSize: "12px", color: "var(--text-dim)" }}>
+              <span style={{ fontSize: "14px", color: "var(--text-dim)" }}>
                 de temps de réponse sur la route commandes
               </span>
             </div>
@@ -182,7 +182,7 @@ export default function SectionProject() {
               >
                 4
               </span>
-              <span style={{ fontSize: "12px", color: "var(--text-dim)" }}>
+              <span style={{ fontSize: "14px", color: "var(--text-dim)" }}>
                 applications interconnectées
               </span>
             </div>
@@ -203,14 +203,14 @@ export default function SectionProject() {
                   border: "1px solid var(--border)",
                   borderRadius: "10px",
                   padding: "1rem 1.25rem",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontFamily: "var(--font-mono)",
                 }}
               >
                 <div
                   style={{
                     color: "var(--text-dim)",
-                    fontSize: "10px",
+                    fontSize: "14px",
                     marginBottom: "4px",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
@@ -257,7 +257,7 @@ export default function SectionProject() {
             <div
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "1.1rem",
+                fontSize: "1.3rem",
                 fontWeight: 700,
                 color: "var(--text)",
                 marginBottom: "0.5rem",
@@ -266,7 +266,7 @@ export default function SectionProject() {
             >
               Wild Code Online
             </div>
-            <p style={{ fontSize: "13.5px", color: "var(--text-muted)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
+            <p style={{ fontSize: "17px", color: "var(--text-muted)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
               Plateforme de code en ligne — développer, tester et partager du code facilement.
               Projet de fin d&apos;alternance avec mise en place CI, tests unitaires, intégration
               et architecture MVC.
@@ -306,7 +306,7 @@ export default function SectionProject() {
             <div
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "1.1rem",
+                fontSize: "1.3rem",
                 fontWeight: 700,
                 color: "var(--text)",
                 marginBottom: "0.5rem",
@@ -315,7 +315,7 @@ export default function SectionProject() {
             >
               CRUD User — Java
             </div>
-            <p style={{ fontSize: "13.5px", color: "var(--text-muted)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
+            <p style={{ fontSize: "17px", color: "var(--text-muted)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
               Projet personnel d&apos;apprentissage Java : architecture MVC, serveur HTTP natif,
               JDBC / SQLite, Maven. Construction from scratch pour maîtriser les fondamentaux du
               langage.
