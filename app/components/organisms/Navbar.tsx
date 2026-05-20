@@ -32,13 +32,17 @@ export default function Navbar() {
     }
   }, [scrollY]);
 
-  const style = openNavbar
+  const containerStyle = openNavbar
     ? "pt-10 sm:pt-5 md:flex md:flex-col md:justify-between md:py-10 md:inset-y-0 md:w-64 lg:w-80 xl:w-130"
     : "w-10 h-10";
 
+  const contentStyle = openNavbar
+    ? "opacity-100 transition-opacity duration-200 delay-300"
+    : "opacity-0 pointer-events-none transition-opacity duration-150";
+
   return (
     <div
-      className={`bg-indigo-900 text-indigo-50 shadow-3xl p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0  transition-all duration-1000 ease-in-out ${style}`}
+      className={`bg-indigo-900 text-indigo-50 shadow-3xl p-4 rounded-xl m-5 fixed top-0 left-0 inset-x-0 overflow-hidden transition-all duration-500 ease-in-out ${containerStyle}`}
     >
       <button
         className="absolute top-0 left-0 transform translate-x-[9px] translate-y-[9px] md:hidden"
@@ -47,17 +51,15 @@ export default function Navbar() {
         {openNavbar ? <IconBarsArrowUp /> : <IconBarsArrowDown />}
       </button>
 
-      {openNavbar && (
-        <>
-          <div className="flex justify-between xs:justify-around md:flex-col md:justify-between md:h-1/2 xl:h-7/12">
-            <HeaderNavbar />
+      <div className={contentStyle}>
+        <div className="flex justify-between xs:justify-around md:flex-col md:justify-between md:h-1/2 xl:h-7/12">
+          <HeaderNavbar />
 
-            <AnchorNavigation />
-          </div>
+          <AnchorNavigation />
+        </div>
 
-          <IconsNavbar />
-        </>
-      )}
+        <IconsNavbar />
+      </div>
     </div>
   );
 }
