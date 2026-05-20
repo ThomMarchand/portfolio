@@ -1,4 +1,3 @@
-import IconeCode from "@/app/components/atoms/icons/IconCode";
 import IconGitHub from "@/app/components/atoms/icons/IconGitHub";
 import IconLinkedin from "@/app/components/atoms/icons/IconLinkedin";
 
