@@ -173,7 +173,7 @@ export default function ContactForm() {
         name="name"
         placeholder="Nom…"
         value={formData.name}
-        onInput={handleChange}
+        onChange={handleChange}
       />
 
       {inputEmailError && (
@@ -187,7 +187,7 @@ export default function ContactForm() {
         name="email"
         placeholder="Email…"
         value={formData.email}
-        onInput={handleChange}
+        onChange={handleChange}
       />
 
       {inputMessageError && (
@@ -200,7 +200,7 @@ export default function ContactForm() {
         name="message"
         placeholder="Message…"
         value={formData.message}
-        onInput={handleChange}
+        onChange={handleChange}
       />
 
       <div className="flex justify-end">
