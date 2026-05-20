@@ -154,19 +154,6 @@ textarea {
   background: radial-gradient(ellipse, rgba(244, 114, 182, 0.06) 0%, transparent 70%);
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.4;
-  }
-}
-
-.pulse-dot {
-  animation: pulse 2s ease-in-out infinite;
-}
 
 [data-reveal] {
   opacity: 0;

@@ -35,37 +35,6 @@ export default function Home() {
           justifyContent: "center",
         }}
       >
-        <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "8px",
-            padding: "6px 14px",
-            background: "rgba(124,111,247,0.1)",
-            border: "1px solid rgba(124,111,247,0.25)",
-            borderRadius: "100px",
-            fontFamily: "var(--font-mono)",
-            fontSize: "12px",
-            color: "var(--violet-light)",
-            letterSpacing: "0.04em",
-            marginBottom: "2rem",
-            width: "fit-content",
-          }}
-        >
-          <span
-            className="pulse-dot"
-            style={{
-              width: "6px",
-              height: "6px",
-              borderRadius: "50%",
-              background: "var(--cyan)",
-              boxShadow: "0 0 8px var(--cyan)",
-              flexShrink: 0,
-              display: "inline-block",
-            }}
-          />
-          Disponible pour opportunités
-        </div>
 
         <h1
           style={{
@@ -80,7 +49,7 @@ export default function Home() {
           Développeur
           <br />
           <span className="gradient-text">Full-Stack</span>
-          <br />& Back-End.
+          <br />& DevOps.
         </h1>
 
         <p
@@ -97,9 +66,10 @@ export default function Home() {
             Node.js · TypeScript · AdonisJS
           </strong>
           .<br />
-          20 ans d&apos;expérience terrain, 2 ans de développement professionnel.
+          20 ans d&apos;expérience terrain, 2 ans de développement
+          professionnel.
           <br />
-          Compagnon du Devoir — la rigueur du métier appliquée au code.
+          Compagnon du Devoir, la rigueur du métier appliquée au code.
         </p>
 
         <div
@@ -173,7 +143,6 @@ export default function Home() {
         </div>
 
         <div
-          data-reveal
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
@@ -186,7 +155,10 @@ export default function Home() {
           }}
         >
           {metrics.map((m) => (
-            <div key={m.label} style={{ background: "var(--bg2)", padding: "1.25rem 1.5rem" }}>
+            <div
+              key={m.label}
+              style={{ background: "var(--bg2)", padding: "1.25rem 1.5rem" }}
+            >
               <div
                 className="gradient-text"
                 style={{
