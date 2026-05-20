@@ -5,10 +5,6 @@ import IconLinkedin from "@/app/components/atoms/icons/IconLinkedin";
 export default function IconsNavbar() {
   return (
     <div className="flex justify-around pt-4">
-      <a href="https://www.codewars.com/users/WhyNoThom" target="_blank">
-        <IconeCode />
-      </a>
-
       <a href="https://github.com/ThomMarchand" target="_blank">
         <IconGitHub />
       </a>
