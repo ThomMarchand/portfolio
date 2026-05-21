@@ -23,11 +23,13 @@ export default function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between px-6 py-4 max-w-[1200px] mx-auto">
-        <img
-          src="/logo+fullname.svg"
-          alt="Thomas Marchand"
-          className="h-10 block"
-        />
+        <div className="bg-blue-fusion rounded-2xl px-4 pt-2.5 pb-3">
+          <img
+            src="/logo+fullname.svg"
+            alt="Thomas Marchand"
+            className="h-10 block"
+          />
+        </div>
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
