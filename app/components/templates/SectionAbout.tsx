@@ -160,7 +160,7 @@ export default function SectionAbout() {
                   style={{
                     fontFamily: "var(--font-mono)",
                     fontSize: "13px",
-                    color: "var(--text-dim)",
+                    color: "var(--text-muted)",
                     marginBottom: "2px",
                   }}
                 >

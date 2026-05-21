@@ -211,8 +211,8 @@ export default function Home() {
       >
         <p
           style={{
-            fontSize: "12px",
-            color: "var(--text-dim)",
+            fontSize: "14px",
+            color: "var(--text-muted)",
             fontFamily: "var(--font-mono)",
           }}
         >
@@ -220,8 +220,8 @@ export default function Home() {
         </p>
         <p
           style={{
-            fontSize: "12px",
-            color: "var(--text-dim)",
+            fontSize: "14px",
+            color: "var(--text-muted)",
             fontFamily: "var(--font-mono)",
           }}
         >
