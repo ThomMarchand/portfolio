@@ -45,17 +45,11 @@ export default function Navbar() {
           margin: "0 auto",
         }}
       >
-        <span
-          className="gradient-text"
-          style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 700,
-            fontSize: "20px",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          TM
-        </span>
+        <img
+          src="/logo+fullname.svg"
+          alt="Thomas Marchand"
+          style={{ height: "48px", display: "block" }}
+        />
 
         {/* Desktop */}
         <ul
