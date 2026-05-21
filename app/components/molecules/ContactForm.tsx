@@ -20,6 +20,10 @@ export default function ContactForm() {
   const [inputEmailError, setInputEmailError] = useState("");
   const [inputMessageError, setInputMessageError] = useState("");
   const [status, setStatus] = useState("");
+  const [cooldownRemaining, setCooldownRemaining] = useState(0);
+
+  const COOLDOWN_MS = 60 * 60 * 1000;
+  const LS_KEY = "contact_last_sent";
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,6 +32,20 @@ export default function ContactForm() {
 
     return () => clearTimeout(timer);
   }, [status]);
+
+  useEffect(() => {
+    const check = () => {
+      const raw = localStorage.getItem(LS_KEY);
+      if (!raw) return setCooldownRemaining(0);
+      const elapsed = Date.now() - parseInt(raw, 10);
+      const remaining = COOLDOWN_MS - elapsed;
+      setCooldownRemaining(remaining > 0 ? remaining : 0);
+    };
+
+    check();
+    const interval = setInterval(check, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const validatedName = (name: string) => {
     if (!name) {
@@ -145,6 +163,8 @@ export default function ContactForm() {
 
       if (response.ok) {
         setStatus(result.message);
+        localStorage.setItem(LS_KEY, Date.now().toString());
+        setCooldownRemaining(COOLDOWN_MS);
 
         setFormData({
           name: "",
@@ -213,17 +233,23 @@ export default function ContactForm() {
             {status}
           </p>
         )}
+        {cooldownRemaining > 0 && (
+          <p style={{ fontSize: "12px", color: "#9ca3af" }}>
+            {`Disponible dans ${Math.ceil(cooldownRemaining / 60000)} min`}
+          </p>
+        )}
         <button
           type="submit"
+          disabled={cooldownRemaining > 0}
           style={{
             padding: "10px 24px",
-            background: "var(--grad)",
+            background: cooldownRemaining > 0 ? "#374151" : "var(--grad)",
             border: "none",
             borderRadius: "10px",
-            color: "#fff",
+            color: cooldownRemaining > 0 ? "#6b7280" : "#fff",
             fontWeight: 600,
             fontSize: "14px",
-            cursor: "pointer",
+            cursor: cooldownRemaining > 0 ? "not-allowed" : "pointer",
           }}
         >
           Envoyer →

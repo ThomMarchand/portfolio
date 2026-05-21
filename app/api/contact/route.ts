@@ -1,8 +1,25 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+const rateLimitMap = new Map<string, number>();
+const COOLDOWN_MS = 60 * 60 * 1000;
+
 export async function POST(req: Request) {
   try {
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+      req.headers.get("x-real-ip") ||
+      "unknown";
+
+    const lastSent = rateLimitMap.get(ip);
+    if (lastSent && Date.now() - lastSent < COOLDOWN_MS) {
+      const remainingMin = Math.ceil((COOLDOWN_MS - (Date.now() - lastSent)) / 60000);
+      return NextResponse.json(
+        { message: `Veuillez attendre ${remainingMin} minute(s) avant d'envoyer un nouveau message` },
+        { status: 429 }
+      );
+    }
+
     const { name, email, message } = await req.json();
 
     if (!name || !email || !message) {
@@ -26,6 +43,8 @@ export async function POST(req: Request) {
       subject: `Nouveau message de ${name}`,
       text: `De: ${name} (${email})\n\n${message}`,
     });
+
+    rateLimitMap.set(ip, Date.now());
 
     return NextResponse.json(
       { message: "Email envoyé avec succès" },
