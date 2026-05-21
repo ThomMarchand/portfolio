@@ -29,7 +29,6 @@ export default function ContactForm() {
     const timer = setTimeout(() => {
       setStatus("");
     }, 4000);
-
     return () => clearTimeout(timer);
   }, [status]);
 
@@ -41,79 +40,32 @@ export default function ContactForm() {
       const remaining = COOLDOWN_MS - elapsed;
       setCooldownRemaining(remaining > 0 ? remaining : 0);
     };
-
     check();
     const interval = setInterval(check, 1000);
     return () => clearInterval(interval);
   }, []);
 
   const validatedName = (name: string) => {
-    if (!name) {
-      setInputNameError("Le nom est requis");
-
-      return false;
-    }
-
-    if (name.length < 2) {
-      setInputNameError("Le nom doit contenir plus de 2 caractères");
-
-      return false;
-    }
-
-    if (name.length > 50) {
-      setInputNameError("Le nom doit contenir au maximum 50 caractères");
-
-      return false;
-    }
-
+    if (!name) { setInputNameError("Le nom est requis"); return false; }
+    if (name.length < 2) { setInputNameError("Le nom doit contenir plus de 2 caractères"); return false; }
+    if (name.length > 50) { setInputNameError("Le nom doit contenir au maximum 50 caractères"); return false; }
     setInputNameError("");
-
     return true;
   };
 
   const validatedEmail = (email: string) => {
     const regex = /^(?![a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$).+$/;
-
-    if (!email) {
-      setInputEmailError("L'email est requis");
-
-      return false;
-    }
-
-    if (regex.test(email)) {
-      setInputEmailError("L'email est invalide");
-
-      return false;
-    }
-
+    if (!email) { setInputEmailError("L'email est requis"); return false; }
+    if (regex.test(email)) { setInputEmailError("L'email est invalide"); return false; }
     setInputEmailError("");
-
     return true;
   };
 
   const validatedMessage = (message: string) => {
-    if (!message) {
-      setInputMessageError("Le message est requis");
-
-      return false;
-    }
-
-    if (message.length < 10) {
-      setInputMessageError("Le message doit contenir au moins 10 caractères");
-
-      return false;
-    }
-
-    if (message.length > 1000) {
-      setInputMessageError(
-        "Le message doit contenir au maximum 1000 caractères"
-      );
-
-      return false;
-    }
-
+    if (!message) { setInputMessageError("Le message est requis"); return false; }
+    if (message.length < 10) { setInputMessageError("Le message doit contenir au moins 10 caractères"); return false; }
+    if (message.length > 1000) { setInputMessageError("Le message doit contenir au maximum 1000 caractères"); return false; }
     setInputMessageError("");
-
     return true;
   };
 
@@ -121,28 +73,15 @@ export default function ContactForm() {
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
     switch (e.target.name) {
-      case "name":
-        validatedName(e.target.value);
-        break;
-
-      case "email":
-        validatedEmail(e.target.value);
-        break;
-
-      case "message":
-        validatedMessage(e.target.value);
-        break;
+      case "name": validatedName(e.target.value); break;
+      case "email": validatedEmail(e.target.value); break;
+      case "message": validatedMessage(e.target.value); break;
     }
-
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    validatedName(formData.name);
-    validatedEmail(formData.email);
-    validatedMessage(formData.message);
 
     if (
       validatedMessage(formData.message) &&
@@ -153,9 +92,7 @@ export default function ContactForm() {
 
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
@@ -165,12 +102,7 @@ export default function ContactForm() {
         setStatus(result.message);
         localStorage.setItem(LS_KEY, Date.now().toString());
         setCooldownRemaining(COOLDOWN_MS);
-
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
+        setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus(result.message);
       }
@@ -178,14 +110,9 @@ export default function ContactForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{ display: "flex", flexDirection: "column", gap: "12px" }}
-    >
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       {inputNameError && (
-        <span style={{ fontSize: "12px", color: "#f87171", marginLeft: "4px" }}>
-          {inputNameError}
-        </span>
+        <span className="font-label text-xs text-red-500 ml-1">{inputNameError}</span>
       )}
       <Input
         type="text"
@@ -196,9 +123,7 @@ export default function ContactForm() {
       />
 
       {inputEmailError && (
-        <span style={{ fontSize: "12px", color: "#f87171", marginLeft: "4px" }}>
-          {inputEmailError}
-        </span>
+        <span className="font-label text-xs text-red-500 ml-1">{inputEmailError}</span>
       )}
       <Input
         type="text"
@@ -209,9 +134,7 @@ export default function ContactForm() {
       />
 
       {inputMessageError && (
-        <span style={{ fontSize: "12px", color: "#f87171", marginLeft: "4px" }}>
-          {inputMessageError}
-        </span>
+        <span className="font-label text-xs text-red-500 ml-1">{inputMessageError}</span>
       )}
       <TextArea
         name="message"
@@ -220,37 +143,23 @@ export default function ContactForm() {
         onChange={handleChange}
       />
 
-      <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "1rem" }}>
+      <div className="flex justify-end items-center gap-3 mt-1">
         {status && (
-          <p style={{
-              fontSize: "13px",
-              fontWeight: 600,
-              background: "var(--grad)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}>
-            {status}
-          </p>
+          <p className="font-label text-sm font-semibold text-baltic-sea">{status}</p>
         )}
         {cooldownRemaining > 0 && (
-          <p style={{ fontSize: "12px", color: "#9ca3af" }}>
+          <p className="font-label text-xs text-cloud-cover">
             {`Disponible dans ${Math.ceil(cooldownRemaining / 60000)} min`}
           </p>
         )}
         <button
           type="submit"
           disabled={cooldownRemaining > 0}
-          style={{
-            padding: "10px 24px",
-            background: cooldownRemaining > 0 ? "#374151" : "var(--grad)",
-            border: "none",
-            borderRadius: "10px",
-            color: cooldownRemaining > 0 ? "#6b7280" : "#fff",
-            fontWeight: 600,
-            fontSize: "14px",
-            cursor: cooldownRemaining > 0 ? "not-allowed" : "pointer",
-          }}
+          className={`px-6 py-2.5 rounded-xl font-label font-semibold text-sm transition-colors ${
+            cooldownRemaining > 0
+              ? "bg-hematite/20 text-cloud-cover cursor-not-allowed"
+              : "bg-blue-fusion text-cloud-dancer hover:bg-blue-fusion/90 cursor-pointer"
+          }`}
         >
           Envoyer →
         </button>

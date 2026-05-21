@@ -1,112 +1,54 @@
 import ContactForm from "@/app/components/molecules/ContactForm";
+import SocialLink from "@/app/components/atoms/SocialLink";
+import { SOCIAL } from "@/app/lib/theme";
 
 export default function SectionContact() {
   return (
-    <section
-      id="contact"
-      style={{
-        position: "relative",
-        zIndex: 1,
-        maxWidth: "1100px",
-        margin: "0 auto",
-        padding: "0 2rem",
-      }}
-    >
-      <div
-        data-reveal
-        style={{
-          paddingTop: "5rem",
-          paddingBottom: "5rem",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            background: "var(--surface)",
-            border: "1px solid var(--border)",
-            borderRadius: "24px",
-            padding: "4rem 2rem",
-            maxWidth: "600px",
-            margin: "0 auto",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "2rem",
-              fontWeight: 700,
-              letterSpacing: "-0.02em",
-              marginBottom: "0.75rem",
-              color: "var(--text)",
-            }}
-          >
-            Travaillons ensemble.
-          </h2>
-          <p
-            style={{
-              color: "var(--text-muted)",
-              marginBottom: "2rem",
-              fontSize: "15px",
-            }}
-          >
-            Ouvert aux opportunités sur Nantes/ Angers / Ancenis.
-          </p>
+    <section id="contact" className="max-w-[1100px] mx-auto px-6">
+      <div data-reveal className="pt-24 pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+          {/* Left — dark panel */}
+          <div className="bg-blue-fusion rounded-3xl p-10 flex flex-col justify-between">
+            <div>
+              <p className="font-label text-xs text-quiet-violet uppercase tracking-widest mb-4 flex items-center gap-2">
+                <span className="inline-block w-5 h-px bg-quiet-violet" />
+                Contact
+              </p>
+              <h2
+                className="font-display font-bold text-cloud-dancer tracking-tight mb-4"
+                style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)" }}
+              >
+                Travaillons
+                <br />
+                ensemble.
+              </h2>
+              <p className="font-body text-cloud-dancer/60 text-sm leading-relaxed">
+                Ouvert aux opportunités sur Nantes / Angers / Ancenis.
+                <br />
+                N&apos;hésitez pas à me contacter pour discuter de votre projet.
+              </p>
+            </div>
 
-          <ContactForm />
+            <div className="flex flex-col gap-3 mt-10">
+              <SocialLink
+                href={SOCIAL.linkedin.href}
+                label="LinkedIn"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-xl font-label text-sm font-medium text-cloud-dancer hover:bg-white/20 transition-colors w-fit"
+              />
+              <SocialLink
+                href={SOCIAL.github.href}
+                label="GitHub"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-xl font-label text-sm font-medium text-cloud-dancer hover:bg-white/20 transition-colors w-fit"
+              />
+            </div>
+          </div>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "1rem",
-              flexWrap: "wrap",
-              marginTop: "2rem",
-              paddingTop: "1.5rem",
-              borderTop: "1px solid var(--border)",
-            }}
-          >
-            <a
-              href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-vue"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "10px 20px",
-                background: "transparent",
-                border: "1px solid var(--border-accent)",
-                borderRadius: "10px",
-                color: "var(--text-muted)",
-                fontSize: "13px",
-                fontWeight: 500,
-                textDecoration: "none",
-              }}
-            >
-              LinkedIn ↗
-            </a>
-            <a
-              href="https://github.com/ThomMarchand"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "10px 20px",
-                background: "transparent",
-                border: "1px solid var(--border-accent)",
-                borderRadius: "10px",
-                color: "var(--text-muted)",
-                fontSize: "13px",
-                fontWeight: 500,
-                textDecoration: "none",
-              }}
-            >
-              GitHub ↗
-            </a>
+          {/* Right — form */}
+          <div className="bg-white rounded-3xl p-8 border border-hematite/10">
+            <h3 className="font-display font-semibold text-blue-fusion text-lg mb-6">
+              Envoyer un message
+            </h3>
+            <ContactForm />
           </div>
         </div>
       </div>

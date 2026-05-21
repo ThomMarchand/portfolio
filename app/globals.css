@@ -2,79 +2,93 @@
 
 @theme {
   --breakpoint-xs: 380px;
-  --breakpoint-1xs: 500px;
+
+  /* Brand palette */
+  --color-cloud-dancer: #F0EEE9;
+  --color-veiled-vista: #C8E4CA;
+  --color-golden-mist: #D5CD94;
+  --color-baltic-sea: #7AB6D9;
+  --color-cloud-cover: #999393;
+  --color-quiet-violet: #A693AC;
+  --color-hematite: #756F6B;
+  --color-blue-fusion: #53687C;
+
+  /* Fonts */
+  --font-body: "Poppins", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-label: "Epilogue", system-ui, sans-serif;
 }
 
 @font-face {
-  font-family: "Syne";
-  src: url("/fonts/Syne-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Syne";
-  src: url("/fonts/Syne-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/DMSans-Regular.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/DMSans-Medium.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/DMSans-Bold.ttf") format("truetype");
-  font-weight: 600 700;
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "DM Mono";
-  src: url("/fonts/DMMono-Regular.ttf") format("truetype");
-  font-weight: 400 500;
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-:root {
-  --bg: #243050;
-  --bg2: #2c3a60;
-  --bg3: #334270;
-  --surface: rgba(255, 255, 255, 0.10);
-  --surface-hover: rgba(255, 255, 255, 0.16);
-  --border: rgba(255, 255, 255, 0.16);
-  --border-accent: rgba(255, 255, 255, 0.30);
-  --text: #f0f2f7;
-  --text-muted: #7a8299;
-  --text-dim: #4a5068;
-  --violet: #7c6ff7;
-  --violet-light: #a099f8;
-  --cyan: #22d4c8;
-  --cyan-light: #5ee8df;
-  --pink: #f472b6;
-  --amber: #f59e0b;
-  --grad: linear-gradient(135deg, #7c6ff7 0%, #22d4c8 100%);
-  --grad-text: linear-gradient(135deg, #a099f8 0%, #5ee8df 100%);
-  --font-display: "Syne", sans-serif;
-  --font-body: "DM Sans", sans-serif;
-  --font-mono: "DM Mono", monospace;
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("/fonts/Epilogue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("/fonts/Epilogue-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("/fonts/Epilogue-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {
@@ -82,84 +96,17 @@ html {
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
+  background-color: #F0EEE9;
+  color: #53687C;
+  font-family: "Poppins", system-ui, sans-serif;
   font-size: 15px;
   line-height: 1.7;
   overflow-x: hidden;
 }
 
-@media (min-width: 768px) {
-  body {
-    font-size: 25px;
-  }
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.4;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: linear-gradient(rgba(124, 111, 247, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124, 111, 247, 0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-  z-index: 0;
-}
-
 textarea {
   field-sizing: content;
 }
-
-.gradient-text {
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.glow {
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(80px);
-}
-
-.glow-1 {
-  width: 600px;
-  height: 600px;
-  top: -200px;
-  left: -200px;
-  background: radial-gradient(ellipse, rgba(124, 111, 247, 0.12) 0%, transparent 70%);
-}
-
-.glow-2 {
-  width: 500px;
-  height: 500px;
-  top: 20%;
-  right: -150px;
-  background: radial-gradient(ellipse, rgba(34, 212, 200, 0.08) 0%, transparent 70%);
-}
-
-.glow-3 {
-  width: 400px;
-  height: 400px;
-  bottom: 10%;
-  left: 30%;
-  background: radial-gradient(ellipse, rgba(244, 114, 182, 0.06) 0%, transparent 70%);
-}
-
 
 [data-reveal] {
   opacity: 0;

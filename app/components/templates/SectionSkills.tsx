@@ -1,92 +1,87 @@
+type TagVariant = "light" | "dark";
+
+function Tag({ label, variant }: { label: string; variant: TagVariant }) {
+  const variants: Record<TagVariant, string> = {
+    dark: "bg-white/15 text-cloud-dancer border-white/20",
+    light: "bg-blue-fusion/10 text-blue-fusion border-blue-fusion/15",
+  };
+  return (
+    <span
+      className={`font-label text-xs px-2.5 py-1 rounded-full border ${variants[variant]}`}
+    >
+      {label}
+    </span>
+  );
+}
+
 const skillCategories = [
   {
+    num: "01",
     title: "Back-End",
-    color: "var(--violet-light)",
-    dot: "var(--violet)",
-    primary: ["Node.js", "TypeScript", "AdonisJS", "Express", "RethinkDB", "PostgreSQL", "REST API"],
-    secondary: [],
+    cardBg: "bg-blue-fusion",
+    titleColor: "text-cloud-dancer",
+    numColor: "text-cloud-dancer/40",
+    tagVariant: "dark" as TagVariant,
+    tags: ["Node.js", "TypeScript", "AdonisJS", "Express", "RethinkDB", "PostgreSQL", "REST API"],
   },
   {
+    num: "02",
     title: "Front-End",
-    color: "var(--cyan)",
-    dot: "var(--cyan)",
-    primary: ["Vue.js", "Next.js", "React Native", "Tailwind", "Sass"],
-    secondary: [],
+    cardBg: "bg-veiled-vista",
+    titleColor: "text-blue-fusion",
+    numColor: "text-blue-fusion/40",
+    tagVariant: "light" as TagVariant,
+    tags: ["Vue.js", "Next.js", "React Native", "Tailwind", "Sass"],
   },
   {
+    num: "03",
     title: "DevOps & Outils",
-    color: "var(--pink)",
-    dot: "var(--pink)",
-    primary: ["Docker", "Git / GitHub", "NGINX", "Caddy", "macOS", "Ubuntu"],
-    secondary: [],
+    cardBg: "bg-golden-mist",
+    titleColor: "text-blue-fusion",
+    numColor: "text-blue-fusion/40",
+    tagVariant: "light" as TagVariant,
+    tags: ["Docker", "Git / GitHub", "NGINX", "Caddy", "macOS", "Ubuntu"],
   },
   {
-    title: "En apprentissage",
-    color: "var(--amber)",
-    dot: "var(--amber)",
-    primary: [],
-    secondary: ["Java", "Maven", "JDBC", "MVC Java"],
-  },
-  {
-    title: "Je connais",
-    color: "var(--text-muted)",
-    dot: "var(--text-dim)",
-    primary: [],
-    secondary: ["GraphQL", "Apollo", "TypeORM", "Playwright", "Jest", "Figma"],
-  },
-  {
+    num: "04",
     title: "Méthodes",
-    color: "var(--text-muted)",
-    dot: "var(--text-dim)",
-    primary: [],
-    secondary: ["Scrum", "Kanban", "Tests unitaires", "CI/CD", "MVC"],
+    cardBg: "bg-quiet-violet",
+    titleColor: "text-cloud-dancer",
+    numColor: "text-cloud-dancer/40",
+    tagVariant: "dark" as TagVariant,
+    tags: ["Scrum", "Kanban", "Tests unitaires", "CI/CD", "MVC"],
+  },
+  {
+    num: "05",
+    title: "En apprentissage",
+    cardBg: "bg-baltic-sea",
+    titleColor: "text-cloud-dancer",
+    numColor: "text-cloud-dancer/40",
+    tagVariant: "dark" as TagVariant,
+    tags: ["Java", "Maven", "JDBC", "MVC Java"],
+  },
+  {
+    num: "06",
+    title: "Je connais",
+    cardBg: "bg-white",
+    titleColor: "text-blue-fusion",
+    numColor: "text-cloud-cover/60",
+    tagVariant: "light" as TagVariant,
+    tags: ["GraphQL", "Apollo", "TypeORM", "Playwright", "Jest", "Figma"],
   },
 ];
 
 export default function SectionSkills() {
   return (
-    <section
-      id="skills"
-      style={{
-        position: "relative",
-        zIndex: 1,
-        maxWidth: "1100px",
-        margin: "0 auto",
-        padding: "0 2rem",
-      }}
-    >
-      <div data-reveal style={{ marginBottom: "3rem", paddingTop: "6rem" }}>
-        <div
-          style={{
-            fontFamily: "var(--font-mono)",
-            fontSize: "13px",
-            color: "var(--violet-light)",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            marginBottom: "0.75rem",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          }}
-        >
-          <span
-            style={{
-              width: "20px",
-              height: "1px",
-              background: "var(--violet)",
-              display: "inline-block",
-            }}
-          />
+    <section id="skills" className="max-w-[1100px] mx-auto px-6">
+      <div data-reveal className="mb-12 pt-24">
+        <p className="font-label text-xs text-quiet-violet uppercase tracking-widest mb-3 flex items-center gap-2">
+          <span className="inline-block w-5 h-px bg-quiet-violet" />
           Compétences
-        </div>
+        </p>
         <h2
-          style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-            fontWeight: 700,
-            letterSpacing: "-0.02em",
-            color: "var(--text)",
-          }}
+          className="font-display font-bold text-blue-fusion tracking-tight"
+          style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}
         >
           Stack & outils.
         </h2>
@@ -94,75 +89,24 @@ export default function SectionSkills() {
 
       <div
         data-reveal
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-        style={{ gap: "1.25rem", paddingBottom: "3rem" }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-12"
       >
         {skillCategories.map((cat) => (
           <div
             key={cat.title}
-            style={{
-              background: "var(--surface)",
-              border: "1px solid var(--border)",
-              borderRadius: "14px",
-              padding: "1.5rem",
-            }}
+            className={`${cat.cardBg} rounded-2xl p-6 border border-black/5`}
           >
-            <div
-              style={{
-                fontSize: "13px",
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-                fontWeight: 600,
-                marginBottom: "1rem",
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                color: cat.color,
-              }}
-            >
-              <span
-                style={{
-                  width: "6px",
-                  height: "6px",
-                  borderRadius: "50%",
-                  background: cat.dot,
-                  display: "inline-block",
-                }}
-              />
-              {cat.title}
+            <div className="flex items-center justify-between mb-4">
+              <p className={`font-label font-semibold text-sm uppercase tracking-wider ${cat.titleColor}`}>
+                {cat.title}
+              </p>
+              <span className={`font-label text-xs ${cat.numColor}`}>
+                {cat.num}
+              </span>
             </div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-              {cat.primary.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "13px",
-                    padding: "4px 10px",
-                    borderRadius: "6px",
-                    border: "1px solid rgba(124,111,247,0.3)",
-                    background: "rgba(124,111,247,0.07)",
-                    color: "var(--violet-light)",
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-              {cat.secondary.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "13px",
-                    padding: "4px 10px",
-                    borderRadius: "6px",
-                    border: "1px solid var(--border)",
-                    background: "rgba(255,255,255,0.03)",
-                    color: "var(--text-muted)",
-                  }}
-                >
-                  {tag}
-                </span>
+            <div className="flex flex-wrap gap-1.5">
+              {cat.tags.map((tag) => (
+                <Tag key={tag} label={tag} variant={cat.tagVariant} />
               ))}
             </div>
           </div>

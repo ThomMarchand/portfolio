@@ -22,16 +22,7 @@ export default function Input({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      style={{
-        background: "var(--surface)",
-        border: "1px solid var(--border)",
-        borderRadius: "10px",
-        color: "var(--text)",
-        width: "100%",
-        padding: "10px 14px",
-        fontSize: "14px",
-        outline: "none",
-      }}
+      className="w-full px-4 py-3 bg-cloud-dancer border border-hematite/20 rounded-xl font-body text-sm text-blue-fusion placeholder:text-cloud-cover outline-none focus:border-baltic-sea/50 transition-colors"
     />
   );
 }

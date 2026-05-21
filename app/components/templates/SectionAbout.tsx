@@ -1,75 +1,43 @@
 import { yearsSince } from "@/app/utils/yearsSince";
 
-const sectionStyle = {
-  position: "relative" as const,
-  zIndex: 1,
-  maxWidth: "1100px",
-  margin: "0 auto",
-  padding: "0 2rem",
-};
-
 const timelineItems = [
   {
-    color: "var(--violet)",
+    accent: "bg-baltic-sea",
     year: "2024 — aujourd'hui",
     title: "Développeur Full-Stack (CDI)",
     sub: "Just Coaching · Ancenis",
   },
   {
-    color: "var(--cyan)",
+    accent: "bg-veiled-vista",
     year: "2023 — 2024",
     title: "Wild Code School · CDA (RNCP Niv. 6)",
     sub: "Alternance · Concepteur Développeur d'Applications",
   },
   {
-    color: "var(--pink)",
+    accent: "bg-golden-mist",
     year: "2022 — 2023",
     title: "Autodidacte · Développement Web",
     sub: "Front-end, bases du développement",
   },
   {
-    color: "var(--amber)",
+    accent: "bg-quiet-violet",
     year: "2004 — 2022",
-    title: "20 ans d'expérience terrain",
+    title: `${yearsSince(2004)} ans d'expérience terrain`,
     sub: "Compagnons du Devoir · Euromaster · Agencement",
   },
 ];
 
 export default function SectionAbout() {
   return (
-    <section id="about" style={sectionStyle}>
-      <div data-reveal style={{ marginBottom: "3rem", paddingTop: "6rem" }}>
-        <div
-          style={{
-            fontFamily: "var(--font-mono)",
-            fontSize: "13px",
-            color: "var(--violet-light)",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            marginBottom: "0.75rem",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          }}
-        >
-          <span
-            style={{
-              width: "20px",
-              height: "1px",
-              background: "var(--violet)",
-              display: "inline-block",
-            }}
-          />
+    <section id="about" className="max-w-[1100px] mx-auto px-6">
+      <div data-reveal className="mb-12 pt-24">
+        <p className="font-label text-xs text-quiet-violet uppercase tracking-widest mb-3 flex items-center gap-2">
+          <span className="inline-block w-5 h-px bg-quiet-violet" />
           À propos
-        </div>
+        </p>
         <h2
-          style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-            fontWeight: 700,
-            letterSpacing: "-0.02em",
-            color: "var(--text)",
-          }}
+          className="font-display font-bold text-blue-fusion tracking-tight"
+          style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}
         >
           Un parcours atypique,
           <br />
@@ -79,105 +47,49 @@ export default function SectionAbout() {
 
       <div
         data-reveal
-        className="grid grid-cols-1 md:grid-cols-2"
-        style={{ gap: "3rem", alignItems: "start", paddingBottom: "3rem" }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 pb-12"
       >
         <div>
-          <p
-            style={{
-              color: "var(--text-muted)",
-              fontSize: "15px",
-              lineHeight: 1.8,
-            }}
-          >
+          <p className="font-body text-hematite text-sm leading-relaxed mb-4">
             Carrossier, conseiller pneumatiques, développeur. Le fil conducteur
-            ? Fabriquer des outils qui simplifient la vie des gens, artisans,
-            ambulanciers, transporteurs, et résoudre les problèmes avant qu'ils
-            ne bloquent quelqu'un. {yearsSince(2004)} ans de terrain et le dev
-            comme aboutissement logique de tout ça.
+            ? Fabriquer des outils qui simplifient la vie des gens et résoudre
+            les problèmes avant qu&apos;ils ne bloquent quelqu&apos;un.{" "}
+            {yearsSince(2004)} ans de terrain et le dev comme aboutissement
+            logique de tout ça.
           </p>
-          <p
-            style={{
-              color: "var(--text-muted)",
-              fontSize: "15px",
-              lineHeight: 1.8,
-              marginTop: "1rem",
-            }}
-          >
+          <p className="font-body text-hematite text-sm leading-relaxed mb-6">
             Mon cursus chez les{" "}
-            <strong style={{ color: "var(--text)", fontWeight: 500 }}>
+            <strong className="text-blue-fusion font-medium">
               Compagnons du Devoir
             </strong>{" "}
             m&apos;a appris ce que signifie vraiment maîtriser un métier. Cette
             exigence, je la transfère dans le code : pas de dette technique
             cachée, pas de bug qu&apos;on &quot;laisse pour plus tard&quot;.
           </p>
-          <blockquote
-            style={{
-              background: "rgba(124,111,247,0.07)",
-              border: "1px solid rgba(124,111,247,0.15)",
-              borderLeft: "3px solid var(--violet)",
-              borderRadius: "0 10px 10px 0",
-              padding: "1.25rem 1.5rem",
-              marginTop: "1.5rem",
-              fontSize: "14px",
-              color: "var(--text-muted)",
-              fontStyle: "italic",
-            }}
-          >
+          <blockquote className="border-l-2 border-golden-mist pl-5 bg-golden-mist/15 py-3 pr-4 rounded-r-xl font-body text-sm text-hematite italic">
             &quot;Ma vie professionnelle ne commence pas en septembre 2022, elle
             est riche de 20 années d&apos;expériences qui font de moi un
             développeur qui comprend les enjeux métier.&quot;
           </blockquote>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+        <div className="flex flex-col gap-3">
           {timelineItems.map((item) => (
             <div
               key={item.year}
-              style={{
-                display: "flex",
-                gap: "1rem",
-                padding: "1.1rem 1.25rem",
-                background: "var(--surface)",
-                border: "1px solid var(--border)",
-                borderRadius: "10px",
-              }}
+              className="flex gap-4 p-4 bg-white rounded-2xl border border-hematite/10"
             >
               <span
-                style={{
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  background: item.color,
-                  flexShrink: 0,
-                  marginTop: "7px",
-                  display: "inline-block",
-                }}
+                className={`w-2 h-2 rounded-full ${item.accent} flex-shrink-0 mt-2`}
               />
               <div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "13px",
-                    color: "var(--text-muted)",
-                    marginBottom: "2px",
-                  }}
-                >
+                <p className="font-label text-xs text-cloud-cover uppercase tracking-wider mb-1">
                   {item.year}
-                </div>
-                <div
-                  style={{
-                    fontSize: "14px",
-                    fontWeight: 500,
-                    color: "var(--text)",
-                  }}
-                >
+                </p>
+                <p className="font-display font-semibold text-sm text-blue-fusion">
                   {item.title}
-                </div>
-                <div style={{ fontSize: "12px", color: "var(--text-muted)" }}>
-                  {item.sub}
-                </div>
+                </p>
+                <p className="font-body text-xs text-hematite">{item.sub}</p>
               </div>
             </div>
           ))}

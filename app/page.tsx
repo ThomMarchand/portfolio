@@ -4,182 +4,149 @@ import SectionSkills from "@/app/components/templates/SectionSkills";
 import SectionProject from "@/app/components/templates/SectionProject";
 import SectionContact from "@/app/components/templates/SectionContact";
 import ScrollReveal from "@/app/components/atoms/ScrollReveal";
+import SocialLink from "@/app/components/atoms/SocialLink";
 import { yearsSince } from "@/app/utils/yearsSince";
+import { SOCIAL, PERSONAL } from "@/app/lib/theme";
 
 const metrics = [
   { value: String(yearsSince(2004)), label: "Ans d'exp." },
   { value: `${yearsSince(2023)}+`, label: "Ans en dev" },
   { value: "5", label: "Projets prod" },
-  { value: "CDI", label: "Statut actuel" },
+  { value: "CDI", label: "Statut" },
 ];
 
 export default function Home() {
   return (
     <>
-      <div className="glow glow-1" />
-      <div className="glow glow-2" />
-      <div className="glow glow-3" />
-
       <Navbar />
 
       <section
         id="hero"
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "80px 2rem 0",
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
+        className="relative min-h-screen flex flex-col justify-center px-6 pt-28 pb-16 max-w-[1100px] mx-auto"
       >
-        <h1
-          style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "clamp(1.5rem, 8vw, 5.5rem)",
-            fontWeight: 800,
-            lineHeight: 1.0,
-            letterSpacing: "-0.03em",
-            marginBottom: "1.5rem",
-          }}
-        >
-          Développeur
-          <br />
-          <span className="gradient-text">Full-Stack</span>
-          <br />& DevOps.
-        </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-center">
+          {/* Left */}
+          <div>
+            <div className="inline-flex items-center gap-2 bg-veiled-vista/30 text-blue-fusion border border-veiled-vista/60 rounded-full px-4 py-1.5 font-label text-sm mb-8">
+              <span className="w-2 h-2 rounded-full bg-veiled-vista inline-block" />
+              {PERSONAL.availability}
+            </div>
 
-        <p
-          style={{
-            fontSize: "17px",
-            color: "var(--text-muted)",
-            maxWidth: "560px",
-            lineHeight: 1.7,
-            marginBottom: "2.5rem",
-          }}
-        >
-          Spécialisé{" "}
-          <strong style={{ color: "var(--text)", fontWeight: 500 }}>
-            Node.js · TypeScript · AdonisJS
-          </strong>
-          .<br />
-          {yearsSince(2004)} ans d&apos;expérience terrain, {yearsSince(2023)}+
-          ans de développement professionnel.
-          <br />
-          Compagnon du Devoir, la rigueur du métier appliquée au code.
-        </p>
+            <h1
+              className="font-display font-bold text-blue-fusion tracking-tight leading-[0.95] mb-6"
+              style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}
+            >
+              Thomas
+              <br />
+              Marchand
+              <span className="text-baltic-sea">.</span>
+            </h1>
 
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "1rem",
-            marginBottom: "4rem",
-            flexWrap: "wrap",
-          }}
-        >
-          <a
-            href="#contact"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "13px 28px",
-              background: "var(--grad)",
-              borderRadius: "10px",
-              color: "#fff",
-              fontFamily: "var(--font-body)",
-              fontWeight: 600,
-              fontSize: "14px",
-              textDecoration: "none",
-              boxShadow: "0 0 32px rgba(124,111,247,0.3)",
-            }}
-          >
-            Me contacter →
-          </a>
-          <a
-            href="https://github.com/ThomMarchand"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "13px 24px",
-              background: "transparent",
-              border: "1px solid var(--border-accent)",
-              borderRadius: "10px",
-              color: "var(--text-muted)",
-              fontSize: "14px",
-              fontWeight: 500,
-              textDecoration: "none",
-            }}
-          >
-            GitHub ↗
-          </a>
-          <a
-            href="https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-vue"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "13px 24px",
-              background: "transparent",
-              border: "1px solid var(--border-accent)",
-              borderRadius: "10px",
-              color: "var(--text-muted)",
-              fontSize: "14px",
-              fontWeight: 500,
-              textDecoration: "none",
-            }}
-          >
-            LinkedIn ↗
-          </a>
+            <div className="w-14 h-1 bg-golden-mist rounded-full mb-6" />
+
+            <p className="font-body text-hematite text-lg leading-relaxed mb-2">
+              Développeur Full-Stack & DevOps
+            </p>
+            <p className="font-body text-hematite text-sm leading-relaxed mb-8">
+              Spécialisé{" "}
+              <strong className="text-blue-fusion font-medium">
+                Node.js · TypeScript · AdonisJS
+              </strong>
+              .<br />
+              {yearsSince(2004)} ans d&apos;expérience terrain,{" "}
+              {yearsSince(2023)}+ ans de développement professionnel.
+              <br />
+              Compagnons du Devoir, la rigueur du métier appliquée au code.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-fusion text-cloud-dancer rounded-xl font-label font-semibold text-sm hover:bg-blue-fusion/90 transition-colors"
+              >
+                Me contacter →
+              </a>
+              <SocialLink
+                href={SOCIAL.github.href}
+                label={SOCIAL.github.label}
+                className="inline-flex items-center gap-2 px-5 py-3 border border-hematite/30 rounded-xl text-hematite font-label text-sm hover:border-blue-fusion/40 hover:text-blue-fusion transition-colors"
+              />
+              <SocialLink
+                href={SOCIAL.linkedin.href}
+                label={SOCIAL.linkedin.label}
+                className="inline-flex items-center gap-2 px-5 py-3 border border-hematite/30 rounded-xl text-hematite font-label text-sm hover:border-blue-fusion/40 hover:text-blue-fusion transition-colors"
+              />
+            </div>
+          </div>
+
+          {/* Right — info card (desktop only) */}
+          <div className="hidden lg:flex flex-col gap-4">
+            {/* Header card — blue-fusion */}
+            <div className="bg-blue-fusion rounded-3xl p-6">
+              <p className="font-label text-xs text-cloud-dancer/50 uppercase tracking-widest mb-1">
+                {PERSONAL.location}
+              </p>
+              <p className="font-display font-semibold text-cloud-dancer text-xl">
+                {PERSONAL.name}
+              </p>
+              <p className="font-body text-cloud-dancer/60 text-sm">
+                Développeur Full-Stack
+              </p>
+            </div>
+
+            {/* Metrics grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {metrics.map((m, i) => (
+                <div
+                  key={m.label}
+                  className={`rounded-2xl p-4 ${
+                    i === 0 ? "bg-golden-mist" :
+                    i === 1 ? "bg-veiled-vista" :
+                    i === 2 ? "bg-baltic-sea" :
+                    "bg-quiet-violet"
+                  }`}
+                >
+                  <div className="font-display font-bold text-2xl text-blue-fusion">
+                    {m.value}
+                  </div>
+                  <div className="font-label text-xs text-blue-fusion/60 uppercase tracking-wider mt-1">
+                    {m.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Badge */}
+            <div className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-hematite/10">
+              <span className="text-lg">🏆</span>
+              <div>
+                <p className="font-label font-semibold text-blue-fusion text-xs">
+                  Compagnons du Devoir
+                </p>
+                <p className="font-body text-hematite text-xs">
+                  Excellence & rigueur métier
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1px",
-            background: "var(--border)",
-            border: "1px solid var(--border)",
-            borderRadius: "14px",
-            overflow: "hidden",
-            maxWidth: "640px",
-          }}
-        >
-          {metrics.map((m) => (
+        {/* Mobile metrics */}
+        <div className="lg:hidden mt-12 grid grid-cols-4 gap-3">
+          {metrics.map((m, i) => (
             <div
               key={m.label}
-              style={{ background: "var(--bg2)", padding: "1.25rem 1.5rem" }}
+              className={`rounded-2xl p-4 ${
+                i === 0 ? "bg-golden-mist" :
+                i === 1 ? "bg-veiled-vista" :
+                i === 2 ? "bg-baltic-sea" :
+                "bg-quiet-violet"
+              }`}
             >
-              <div
-                className="gradient-text"
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "1.8rem",
-                  fontWeight: 700,
-                  lineHeight: 1,
-                  marginBottom: "4px",
-                }}
-              >
+              <div className="font-display font-bold text-xl text-blue-fusion">
                 {m.value}
               </div>
-              <div
-                style={{
-                  fontSize: "13px",
-                  color: "var(--text-dim)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.06em",
-                  fontWeight: 500,
-                }}
-              >
+              <div className="font-label text-xs text-blue-fusion/60 uppercase tracking-wider mt-1">
                 {m.label}
               </div>
             </div>
@@ -187,46 +154,18 @@ export default function Home() {
         </div>
       </section>
 
-      <main style={{ position: "relative", zIndex: 1 }}>
+      <main>
         <SectionAbout />
         <SectionSkills />
         <SectionProject />
         <SectionContact />
       </main>
 
-      <footer
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "1.5rem 2rem",
-          borderTop: "1px solid var(--border)",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-          gap: "0.5rem",
-        }}
-      >
-        <p
-          style={{
-            fontSize: "14px",
-            color: "var(--text-muted)",
-            fontFamily: "var(--font-mono)",
-          }}
-        >
-          © 2025 Thomas Marchand
+      <footer className="max-w-[1100px] mx-auto px-6 py-6 border-t border-hematite/15 flex justify-between items-center flex-wrap gap-2">
+        <p className="font-label text-sm text-cloud-cover">
+          © {new Date().getFullYear()} {PERSONAL.name}
         </p>
-        <p
-          style={{
-            fontSize: "14px",
-            color: "var(--text-muted)",
-            fontFamily: "var(--font-mono)",
-          }}
-        >
-          Ancenis · Loire-Atlantique · France
-        </p>
+        <p className="font-label text-sm text-cloud-cover">{PERSONAL.location}</p>
       </footer>
 
       <ScrollReveal />

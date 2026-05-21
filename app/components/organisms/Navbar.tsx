@@ -1,12 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const links = [
-  { href: "#about", label: "À propos" },
-  { href: "#skills", label: "Compétences" },
-  { href: "#projects", label: "Projets" },
-];
+import { NAV_LINKS } from "@/app/lib/theme";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,50 +18,24 @@ export default function Navbar() {
 
   return (
     <nav
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        background: scrolled ? "rgba(8,11,20,0.92)" : "rgba(8,11,20,0.7)",
-        backdropFilter: "blur(20px)",
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
-        transition: "background 0.3s",
-      }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md border-b border-hematite/10 ${
+        scrolled ? "bg-cloud-dancer/95 shadow-sm" : "bg-cloud-dancer/80"
+      }`}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "1.25rem 2rem",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
+      <div className="flex items-center justify-between px-6 py-4 max-w-[1200px] mx-auto">
         <img
           src="/logo+fullname.svg"
           alt="Thomas Marchand"
-          style={{ height: "48px", display: "block" }}
+          className="h-10 block"
         />
 
         {/* Desktop */}
-        <ul
-          className="hidden md:flex"
-          style={{ gap: "2rem", listStyle: "none", alignItems: "center", margin: 0, padding: 0 }}
-        >
-          {links.map((link) => (
+        <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
+          {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                style={{
-                  color: "var(--text-muted)",
-                  textDecoration: "none",
-                  fontSize: "16px",
-                  fontWeight: 500,
-                  letterSpacing: "0.02em",
-                }}
+                className="font-label text-sm font-medium text-hematite hover:text-blue-fusion transition-colors"
               >
                 {link.label}
               </a>
@@ -75,37 +44,17 @@ export default function Navbar() {
           <li>
             <a
               href="#contact"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "8px 18px",
-                background: "var(--surface)",
-                border: "1px solid var(--border-accent)",
-                borderRadius: "8px",
-                color: "var(--text)",
-                textDecoration: "none",
-                fontSize: "16px",
-                fontWeight: 500,
-              }}
+              className="px-5 py-2.5 bg-blue-fusion text-cloud-dancer font-label text-sm font-semibold rounded-xl hover:bg-blue-fusion/90 transition-colors"
             >
-              Me contacter →
+              Contact →
             </a>
           </li>
         </ul>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden"
+          className="md:hidden text-hematite text-xl cursor-pointer bg-transparent border-0 p-1 leading-none"
           onClick={() => setMobileOpen(!mobileOpen)}
-          style={{
-            background: "none",
-            border: "none",
-            color: "var(--text-muted)",
-            fontSize: "20px",
-            cursor: "pointer",
-            padding: "4px",
-          }}
           aria-label="Menu"
         >
           {mobileOpen ? "✕" : "☰"}
@@ -114,27 +63,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div
-          className="md:hidden"
-          style={{
-            padding: "1rem 2rem 1.5rem",
-            borderTop: "1px solid var(--border)",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-          }}
-        >
-          {links.map((link) => (
+        <div className="md:hidden px-6 pb-5 border-t border-hematite/10 flex flex-col gap-4 pt-4">
+          {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              style={{
-                color: "var(--text-muted)",
-                textDecoration: "none",
-                fontSize: "14px",
-                fontWeight: 500,
-              }}
+              className="font-label text-sm font-medium text-hematite hover:text-blue-fusion transition-colors"
             >
               {link.label}
             </a>
@@ -142,21 +77,9 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "10px 18px",
-              background: "var(--grad)",
-              borderRadius: "8px",
-              color: "#fff",
-              textDecoration: "none",
-              fontSize: "14px",
-              fontWeight: 600,
-              width: "fit-content",
-            }}
+            className="px-5 py-2.5 bg-blue-fusion text-cloud-dancer font-label text-sm font-semibold rounded-xl w-fit"
           >
-            Me contacter →
+            Contact →
           </a>
         </div>
       )}
