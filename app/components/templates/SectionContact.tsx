@@ -51,7 +51,7 @@ export default function SectionContact() {
               fontSize: "15px",
             }}
           >
-            Ouvert aux opportunités sur Nantes / Ancenis / Remote.
+            Ouvert aux opportunités sur Nantes/ Angers / Ancenis.
           </p>
 
           <ContactForm />

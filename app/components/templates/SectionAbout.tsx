@@ -1,3 +1,5 @@
+import { yearsSince } from "@/app/utils/yearsSince";
+
 const sectionStyle = {
   position: "relative" as const,
   zIndex: 1,
@@ -27,7 +29,7 @@ const timelineItems = [
   },
   {
     color: "var(--amber)",
-    year: "2002 — 2022",
+    year: "2004 — 2022",
     title: "20 ans d'expérience terrain",
     sub: "Compagnons du Devoir · Euromaster · Agencement",
   },
@@ -81,20 +83,34 @@ export default function SectionAbout() {
         style={{ gap: "3rem", alignItems: "start", paddingBottom: "3rem" }}
       >
         <div>
-          <p style={{ color: "var(--text-muted)", fontSize: "15px", lineHeight: 1.8 }}>
-            Créer des applications de A à Z, développer des fonctionnalités performantes et enquêter
-            sur les bugs pour identifier les origines — c&apos;est ce qui me passionne.
+          <p
+            style={{
+              color: "var(--text-muted)",
+              fontSize: "15px",
+              lineHeight: 1.8,
+            }}
+          >
+            Carrossier, conseiller pneumatiques, développeur. Le fil conducteur
+            ? Fabriquer des outils qui simplifient la vie des gens, artisans,
+            ambulanciers, transporteurs, et résoudre les problèmes avant qu'ils
+            ne bloquent quelqu'un. {yearsSince(2004)} ans de terrain et le dev
+            comme aboutissement logique de tout ça.
           </p>
           <p
-            style={{ color: "var(--text-muted)", fontSize: "15px", lineHeight: 1.8, marginTop: "1rem" }}
+            style={{
+              color: "var(--text-muted)",
+              fontSize: "15px",
+              lineHeight: 1.8,
+              marginTop: "1rem",
+            }}
           >
             Mon cursus chez les{" "}
             <strong style={{ color: "var(--text)", fontWeight: 500 }}>
               Compagnons du Devoir
             </strong>{" "}
-            m&apos;a appris ce que signifie vraiment maîtriser un métier. Cette exigence, je la
-            transfère dans le code : pas de dette technique cachée, pas de bug qu&apos;on &quot;laisse
-            pour plus tard&quot;.
+            m&apos;a appris ce que signifie vraiment maîtriser un métier. Cette
+            exigence, je la transfère dans le code : pas de dette technique
+            cachée, pas de bug qu&apos;on &quot;laisse pour plus tard&quot;.
           </p>
           <blockquote
             style={{
@@ -109,9 +125,9 @@ export default function SectionAbout() {
               fontStyle: "italic",
             }}
           >
-            &quot;Ma vie professionnelle ne commence pas en septembre 2022 — elle est riche de 20
-            années d&apos;expériences qui font de moi un développeur qui comprend les enjeux
-            métier.&quot;
+            &quot;Ma vie professionnelle ne commence pas en septembre 2022, elle
+            est riche de 20 années d&apos;expériences qui font de moi un
+            développeur qui comprend les enjeux métier.&quot;
           </blockquote>
         </div>
 
@@ -150,10 +166,18 @@ export default function SectionAbout() {
                 >
                   {item.year}
                 </div>
-                <div style={{ fontSize: "14px", fontWeight: 500, color: "var(--text)" }}>
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "var(--text)",
+                  }}
+                >
                   {item.title}
                 </div>
-                <div style={{ fontSize: "12px", color: "var(--text-muted)" }}>{item.sub}</div>
+                <div style={{ fontSize: "12px", color: "var(--text-muted)" }}>
+                  {item.sub}
+                </div>
               </div>
             </div>
           ))}

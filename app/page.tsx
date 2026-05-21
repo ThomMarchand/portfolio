@@ -4,10 +4,11 @@ import SectionSkills from "@/app/components/templates/SectionSkills";
 import SectionProject from "@/app/components/templates/SectionProject";
 import SectionContact from "@/app/components/templates/SectionContact";
 import ScrollReveal from "@/app/components/atoms/ScrollReveal";
+import { yearsSince } from "@/app/utils/yearsSince";
 
 const metrics = [
-  { value: "20", label: "Ans d'exp." },
-  { value: "2+", label: "Ans en dev" },
+  { value: String(yearsSince(2004)), label: "Ans d'exp." },
+  { value: `${yearsSince(2023)}+`, label: "Ans en dev" },
   { value: "5", label: "Projets prod" },
   { value: "CDI", label: "Statut actuel" },
 ];
@@ -65,8 +66,8 @@ export default function Home() {
             Node.js · TypeScript · AdonisJS
           </strong>
           .<br />
-          20 ans d&apos;expérience terrain, 2 ans de développement
-          professionnel.
+          {yearsSince(2004)} ans d&apos;expérience terrain, {yearsSince(2023)}+
+          ans de développement professionnel.
           <br />
           Compagnon du Devoir, la rigueur du métier appliquée au code.
         </p>
