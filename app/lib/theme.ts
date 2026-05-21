@@ -18,7 +18,6 @@ export const NAV_LINKS = [
 export const PERSONAL = {
   name: "Thomas Marchand",
   location: "Ancenis · Loire-Atlantique · France",
-  availability: "Disponible pour opportunités",
 } as const;
 
 export const COLORS = {

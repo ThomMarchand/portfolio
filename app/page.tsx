@@ -27,11 +27,6 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-center">
           {/* Left */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-veiled-vista/30 text-blue-fusion border border-veiled-vista/60 rounded-full px-4 py-1.5 font-label text-sm mb-8">
-              <span className="w-2 h-2 rounded-full bg-veiled-vista inline-block" />
-              {PERSONAL.availability}
-            </div>
-
             <h1
               className="font-display font-bold text-blue-fusion tracking-tight leading-[0.95] mb-6"
               style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}
@@ -100,10 +95,13 @@ export default function Home() {
                 <div
                   key={m.label}
                   className={`rounded-2xl p-4 ${
-                    i === 0 ? "bg-golden-mist" :
-                    i === 1 ? "bg-veiled-vista" :
-                    i === 2 ? "bg-baltic-sea" :
-                    "bg-quiet-violet"
+                    i === 0
+                      ? "bg-golden-mist"
+                      : i === 1
+                        ? "bg-veiled-vista"
+                        : i === 2
+                          ? "bg-baltic-sea"
+                          : "bg-quiet-violet"
                   }`}
                 >
                   <div className="font-display font-bold text-2xl text-blue-fusion">
@@ -137,10 +135,13 @@ export default function Home() {
             <div
               key={m.label}
               className={`rounded-2xl p-4 ${
-                i === 0 ? "bg-golden-mist" :
-                i === 1 ? "bg-veiled-vista" :
-                i === 2 ? "bg-baltic-sea" :
-                "bg-quiet-violet"
+                i === 0
+                  ? "bg-golden-mist"
+                  : i === 1
+                    ? "bg-veiled-vista"
+                    : i === 2
+                      ? "bg-baltic-sea"
+                      : "bg-quiet-violet"
               }`}
             >
               <div className="font-display font-bold text-xl text-blue-fusion">
@@ -165,7 +166,9 @@ export default function Home() {
         <p className="font-label text-sm text-cloud-cover">
           © {new Date().getFullYear()} {PERSONAL.name}
         </p>
-        <p className="font-label text-sm text-cloud-cover">{PERSONAL.location}</p>
+        <p className="font-label text-sm text-cloud-cover">
+          {PERSONAL.location}
+        </p>
       </footer>
 
       <ScrollReveal />
