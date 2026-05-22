@@ -1,14 +1,3 @@
-export const SOCIAL = {
-  linkedin: {
-    href: "https://www.linkedin.com/in/thomas-marchand-developpeur-web-full-stack-front-end-back-end-france-javascript-node-react-vue",
-    label: "LinkedIn",
-  },
-  github: {
-    href: "https://github.com/ThomMarchand",
-    label: "GitHub",
-  },
-} as const;
-
 export const NAV_LINKS = [
   { href: "#about", label: "À propos" },
   { href: "#skills", label: "Compétences" },

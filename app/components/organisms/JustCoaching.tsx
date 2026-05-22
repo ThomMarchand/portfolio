@@ -1,149 +1,69 @@
-import { justCoaching } from "@/app/data/projects";
+import {
+  ARCH_BLOCKS as archBlocks,
+  JC_STACK as jcStack,
+} from "@/app/lib/constants";
 
-import Text from "@/app/components/atoms/Text";
-import Title from "@/app/components/atoms/Title";
-import DisplayItem from "@/app/components/atoms/DisplayItem";
-import CardHighlights from "@/app/components/molecules/CardHighlights";
-import CardList from "@/app/components/molecules/CardSingleList";
+import StackTag from "@/app/components/atoms/StackTag";
 
 export default function JustCoaching() {
-  const { manager, api, visio, coach, client } = justCoaching;
-
   return (
-    <section>
-      <div>
-        <Title id="jc" renderAs="h3">
-          Just Coaching
-        </Title>
+    <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-0 bg-blue-fusion rounded-3xl overflow-hidden border border-black/10">
+      <div className="p-8">
+        <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-lg mb-5">
+          ⚡
+        </div>
+        <h3 className="font-display font-bold text-cloud-dancer text-xl mb-3">
+          Just Coaching — API & Écosystème
+        </h3>
+        <p className="font-body text-cloud-dancer/70 text-sm leading-relaxed mb-5">
+          Architecture REST connectant CRM, app coach, app client et
+          visioconférence. Développement de nouvelles routes, optimisation de
+          performances et synchronisation avec des services tiers (Brevo,
+          Stripe, Apple Pay).
+        </p>
 
-        <div className="flex flex-col items-center">
-          <div className="">
-            <Text textCenter={false}>
-              J’ai rejoint &quot;Just Coaching&quot; dans le cadre d&apos;une
-              alternance en octobre 2023, puis en CDI depuis novembre 2024 en
-              tant que développeur web.
-            </Text>
-
-            <Text textCenter={false}>
-              J’y interviens sur le développement de diverses fonctionnalités:
-            </Text>
+        <div className="flex flex-col gap-2 mb-5">
+          <div className="pt-3 border-t border-white/10 flex items-baseline gap-2">
+            <span className="font-display font-bold text-2xl text-golden-mist">
+              −37s
+            </span>
+            <span className="font-label text-sm text-cloud-dancer/60">
+              de temps de réponse sur la route commandes
+            </span>
+          </div>
+          <div className="pt-3 border-t border-white/10 flex items-baseline gap-2">
+            <span className="font-display font-bold text-2xl text-golden-mist">
+              4
+            </span>
+            <span className="font-label text-sm text-cloud-dancer/60">
+              applications interconnectées
+            </span>
           </div>
         </div>
 
-        <div className="p-5 bg-white border border-indigo-500 rounded-2xl mt-7 xs:w-fit xs:flex xs:flex-col xs:mx-auto">
-          <DisplayItem
-            item="API: c'est l'interface logicielle qui permet de &quot;connecter&quot; le back-end aux différents services front-end:"
-            icon="cornerUpRight"
-            displayText
-          />
-          <div className="pl-6 1xs:pl-7">
-            <DisplayItem item="Manager (CRM)" icon="cornerDownRight" />
-            <DisplayItem item="Application Coach" icon="cornerDownRight" />
-            <DisplayItem item="Application Client" icon="cornerDownRight" />
-          </div>
-          <DisplayItem
-            item="Visioconférence"
-            icon="cornerUpRight"
-            displayText
-          />
+        <div className="flex flex-wrap gap-1.5">
+          {jcStack.map((t) => (
+            <StackTag key={t} label={t} dark />
+          ))}
         </div>
       </div>
 
-      <section id="api">
-        <Title renderAs="h3">API</Title>
-
-        <div className="sm:flex sm:flex-col sm:items-center">
-          <CardList title="Technos" itemsList={api.technos} icon="sparkles" />
-        </div>
-
-        <Text>{api.description}</Text>
-
-        <div className="mt-5">
-          <Title renderAs="h4">Réalisations marquantes</Title>
-
-          {api.highlights.map((highlight) => (
-            <CardHighlights
-              key={highlight.title}
-              title={highlight.title}
-              description={highlight.description}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section id="manager" className="my-6">
-        <Title id="jc" renderAs="h3">
-          Manager (CRM)
-        </Title>
-
-        <div className="sm:flex sm:flex-col sm:items-center">
-          <CardList
-            title="Technos"
-            itemsList={manager.technos}
-            icon="sparkles"
-          />
-        </div>
-
-        <Text>{manager.description}</Text>
-
-        <div className="mt-5">
-          <Title renderAs="h4">Réalisations marquantes</Title>
-
-          {manager.highlights.map((highlight) => (
-            <CardHighlights
-              key={highlight.title}
-              title={highlight.title}
-              description={highlight.description}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section id="coach">
-        <Title renderAs="h3">Application Coach</Title>
-
-        <div className="sm:flex sm:flex-col sm:items-center">
-          <CardList title="Technos" itemsList={coach.technos} icon="sparkles" />
-        </div>
-
-        <Text>{coach.description}</Text>
-      </section>
-
-      <section id="client" className="my-6">
-        <Title renderAs="h3">Application Client</Title>
-
-        <div className="sm:flex sm:flex-col sm:items-center">
-          <CardList
-            title="Technos"
-            itemsList={client.technos}
-            icon="sparkles"
-          />
-        </div>
-
-        <Text>{client.description}</Text>
-      </section>
-
-      <section id="visio">
-        <Title renderAs="h3">Visioconférence</Title>
-
-        <div className="sm:flex sm:flex-col sm:items-center">
-          <CardList title="Technos" itemsList={visio.technos} icon="sparkles" />
-        </div>
-
-        <Text>{visio.description}</Text>
-
-        <div className="mt-5">
-          <Title renderAs="h4">Réalisations marquantes</Title>
-
-          {visio.highlights.map((highlight) => (
-            <CardHighlights
-              key={highlight.title}
-              title={highlight.title}
-              description={highlight.description}
-            />
-          ))}
-        </div>
-      </section>
-    </section>
+      {/* Arch blocks column — slightly darker */}
+      <div className="bg-black/20 p-6 flex flex-col gap-2.5 justify-center">
+        {archBlocks.map((b) => (
+          <div
+            key={b.label}
+            className="bg-white/8 rounded-xl p-4 border border-white/10"
+          >
+            <p className="font-label text-xs text-cloud-dancer/50 uppercase tracking-wider mb-1">
+              {b.label}
+            </p>
+            <p className="font-display font-semibold text-sm text-baltic-sea">
+              {b.value}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

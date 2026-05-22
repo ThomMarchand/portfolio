@@ -1,39 +1,12 @@
 import { yearsSince } from "@/app/utils/yearsSince";
-
-const timelineItems = [
-  {
-    accent: "bg-baltic-sea",
-    year: "2024 — aujourd'hui",
-    title: "Développeur Full-Stack (CDI)",
-    sub: "Just Coaching · Ancenis",
-  },
-  {
-    accent: "bg-veiled-vista",
-    year: "2023 — 2024",
-    title: "Wild Code School · CDA (RNCP Niv. 6)",
-    sub: "Alternance · Concepteur Développeur d'Applications",
-  },
-  {
-    accent: "bg-golden-mist",
-    year: "2022 — 2023",
-    title: "Autodidacte · Développement Web",
-    sub: "Front-end, bases du développement",
-  },
-  {
-    accent: "bg-quiet-violet",
-    year: "2004 — 2022",
-    title: `${yearsSince(2004)} ans d'expérience terrain`,
-    sub: "Compagnons du Devoir · Euromaster · Agencement",
-  },
-];
+import { TIME_LINE_ITEMS as timelineItems } from "@/app/lib/constants";
 
 export default function SectionAbout() {
   return (
     <section id="about" className="max-w-[1100px] mx-auto px-6">
       <div data-reveal className="mb-12 pt-24">
         <p className="font-label text-xs text-quiet-violet uppercase tracking-widest mb-3 flex items-center gap-2">
-          <span className="inline-block w-5 h-px bg-quiet-violet" />
-          À propos
+          <span className="inline-block w-5 h-px bg-quiet-violet" />À propos
         </p>
         <h2
           className="font-display font-bold text-blue-fusion tracking-tight"
@@ -45,10 +18,7 @@ export default function SectionAbout() {
         </h2>
       </div>
 
-      <div
-        data-reveal
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 pb-12"
-      >
+      <div data-reveal className="grid grid-cols-1 md:grid-cols-2 gap-12 pb-12">
         <div>
           <p className="font-body text-hematite text-sm leading-relaxed mb-4">
             Carrossier, conseiller pneumatiques, développeur. Le fil conducteur

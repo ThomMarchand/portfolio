@@ -1,6 +1,8 @@
-import ContactForm from "@/app/components/molecules/ContactForm";
+import { SOCIAL } from "@/app/lib/constants";
+
 import SocialLink from "@/app/components/atoms/SocialLink";
-import { SOCIAL } from "@/app/lib/theme";
+
+import ContactForm from "@/app/components/molecules/ContactForm";
 
 export default function SectionContact() {
   return (
