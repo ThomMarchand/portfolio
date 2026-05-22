@@ -13,12 +13,17 @@ Portfolio personnel · Développeur Full-Stack & DevOps.
 
 ```
 app/
+├── api/
+│   └── contact/      # Route API envoi email (Nodemailer)
 ├── components/
-│   ├── atoms/        # Input, Title, Text, ScrollReveal...
-│   ├── molecules/    # ContactForm, CardHighlights, Navbar...
-│   ├── organisms/    # Navbar, WildCodeSchool
-│   └── templates/    # SectionAbout, SectionSkills, SectionProject, SectionContact
+│   ├── atoms/        # Input, TextArea, Tag, StackTag, SocialLink, ScrollReveal
+│   ├── molecules/    # ContactForm
+│   ├── organisms/    # Navbar, Footer, JustCoaching, JavaProject, WildCodeSchool
+│   └── templates/    # SectionHero, SectionAbout, SectionSkills, SectionProject, SectionContact
+├── data/             # projects, skills
+├── lib/              # constants, theme
 ├── utils/            # yearsSince
+├── globals.css
 ├── layout.tsx
 └── page.tsx
 ```
@@ -35,7 +40,11 @@ Ouvrir [http://localhost:3000](http://localhost:3000).
 
 ## Variables d'environnement
 
-Voir `.env.example`.
+| Variable     | Description                        |
+|--------------|------------------------------------|
+| `EMAIL_USER` | Adresse email expéditrice (SMTP)   |
+| `EMAIL_PASS` | Mot de passe / App password        |
+| `EMAIL_TO`   | Adresse de réception des messages  |
 
 ## Liens
 
