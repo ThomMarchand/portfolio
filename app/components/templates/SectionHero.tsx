@@ -9,7 +9,7 @@ export default function SectionHero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center px-6 pt-28 pb-16 max-w-[1100px] mx-auto"
+      className="relative px-6 pt-52 pb-12 max-w-[1100px] mx-auto"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-center">
         {/* Left */}
