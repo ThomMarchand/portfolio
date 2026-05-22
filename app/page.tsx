@@ -76,17 +76,13 @@ export default function Home() {
 
           {/* Right — info card (desktop only) */}
           <div className="hidden lg:flex flex-col gap-4">
-            {/* Header card — blue-fusion */}
-            <div className="bg-blue-fusion rounded-3xl p-6">
-              <p className="font-label text-xs text-cloud-dancer/50 uppercase tracking-widest mb-1">
-                {PERSONAL.location}
-              </p>
-              <p className="font-display font-semibold text-cloud-dancer text-xl">
-                {PERSONAL.name}
-              </p>
-              <p className="font-body text-cloud-dancer/60 text-sm">
-                Développeur Full-Stack
-              </p>
+            {/* Avatar */}
+            <div className="rounded-3xl overflow-hidden flex items-center justify-center">
+              <img
+                src="/images/avatar.png"
+                alt={PERSONAL.name}
+                className="object-cover"
+              />
             </div>
 
             {/* Metrics grid */}
@@ -129,8 +125,13 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Mobile avatar */}
+        <div className="lg:hidden mt-8 rounded-3xl overflow-hidden flex items-center justify-center">
+          <img src="/images/avatar.png" alt={PERSONAL.name} className="h-64 " />
+        </div>
+
         {/* Mobile metrics */}
-        <div className="lg:hidden mt-12 grid grid-cols-4 gap-3">
+        <div className="lg:hidden mt-6 grid grid-cols-4 gap-3">
           {metrics.map((m, i) => (
             <div
               key={m.label}
