@@ -4,14 +4,14 @@ import { TagVariant } from "@/app/components/atoms/Tag";
 export const METRICS = [
   { value: String(yearsSince(2004)), label: "Ans d'exp." },
   { value: `${yearsSince(2023)}+`, label: "Ans en dev" },
-  { value: "5", label: "Projets prod" },
+  { value: "8", label: "Projets prod" },
   { value: "CDI", label: "Statut" },
 ];
 
 export const TIME_LINE_ITEMS = [
   {
     accent: "bg-baltic-sea",
-    year: "2024 — aujourd'hui",
+    year: "2023 — aujourd'hui",
     title: "Développeur Full-Stack (CDI)",
     sub: "Just Coaching · Ancenis",
   },
@@ -41,6 +41,7 @@ export const ARCH_BLOCKS = [
   { label: "App Coach", value: "React Native + TS" },
   { label: "App Client", value: "Next.js + Tailwind" },
   { label: "Visioconférence", value: "AdonisJS + PostgreSQL" },
+  { label: "Monitoring", value: "Grafana + Sentry" },
 ];
 
 export const JC_STACK = [
@@ -53,6 +54,8 @@ export const JC_STACK = [
   "React Native",
   "Docker",
   "PostgreSQL",
+  "Grafana",
+  "Sentry",
 ];
 
 export const JAVA_STACK = ["Java", "Maven", "JDBC", "SQLite", "MVC"];
@@ -65,6 +68,7 @@ export const WCS_STACK = [
   "Jest",
   "Playwright",
   "Nginx",
+  "Caddy",
 ];
 
 export const SKILLS_CATEGORIES = [
@@ -83,6 +87,7 @@ export const SKILLS_CATEGORIES = [
       "RethinkDB",
       "PostgreSQL",
       "REST API",
+      "SQLite",
     ],
   },
   {
@@ -92,7 +97,16 @@ export const SKILLS_CATEGORIES = [
     titleColor: "text-blue-fusion",
     numColor: "text-blue-fusion/40",
     tagVariant: "light" as TagVariant,
-    tags: ["Vue.js", "Next.js", "React Native", "Tailwind", "Sass"],
+    tags: [
+      "Vue.js",
+      "Next.js",
+      "React",
+      "React Native",
+      "Shadcn UI",
+      "Tailwind",
+      "Sass",
+      "BootStap",
+    ],
   },
   {
     num: "03",
@@ -101,7 +115,19 @@ export const SKILLS_CATEGORIES = [
     titleColor: "text-blue-fusion",
     numColor: "text-blue-fusion/40",
     tagVariant: "light" as TagVariant,
-    tags: ["Docker", "Git / GitHub", "NGINX", "Caddy", "macOS", "Ubuntu"],
+    tags: [
+      "Docker",
+      "Git / GitHub",
+      "NGINX",
+      "Caddy",
+      "Traefik",
+      "Grafana",
+      "macOS",
+      "Ubuntu",
+      "Sentry",
+      "OVH",
+      "Vercel",
+    ],
   },
   {
     num: "04",
@@ -110,7 +136,16 @@ export const SKILLS_CATEGORIES = [
     titleColor: "text-cloud-dancer",
     numColor: "text-cloud-dancer/40",
     tagVariant: "dark" as TagVariant,
-    tags: ["Scrum", "Kanban", "Tests unitaires", "CI/CD", "MVC"],
+    tags: [
+      "Scrum",
+      "Kanban",
+      "Tests e2e",
+      "Tests unitaires",
+      "Tests d'intégrations",
+      "CI/CD",
+      "MVC",
+      "SOA",
+    ],
   },
   {
     num: "05",
@@ -119,7 +154,7 @@ export const SKILLS_CATEGORIES = [
     titleColor: "text-cloud-dancer",
     numColor: "text-cloud-dancer/40",
     tagVariant: "dark" as TagVariant,
-    tags: ["Java", "Maven", "JDBC", "MVC Java"],
+    tags: ["PHP", "WordPress", "Symfony"],
   },
   {
     num: "06",
@@ -128,7 +163,16 @@ export const SKILLS_CATEGORIES = [
     titleColor: "text-blue-fusion",
     numColor: "text-cloud-cover/60",
     tagVariant: "light" as TagVariant,
-    tags: ["GraphQL", "Apollo", "TypeORM", "Playwright", "Jest", "Figma"],
+    tags: [
+      "GraphQL",
+      "Apollo",
+      "TypeORM",
+      "Playwright",
+      "Jest",
+      "Figma",
+      "Java",
+      "Maven",
+    ],
   },
 ];
 

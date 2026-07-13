@@ -8,19 +8,21 @@ import StackTag from "@/app/components/atoms/StackTag";
 export default function JustCoaching() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-0 bg-blue-fusion rounded-3xl overflow-hidden border border-black/10">
-      <div className="p-8">
-        <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-lg mb-5">
-          ⚡
+      <div className="p-8 h-full flex flex-col justify-between">
+        <div>
+          <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-lg mb-5">
+            ⚡
+          </div>
+          <h3 className="font-display font-bold text-cloud-dancer text-xl mb-3">
+            Just Coaching — API & Écosystème
+          </h3>
+          <p className="font-body text-cloud-dancer/70 text-sm leading-relaxed mb-5">
+            Architecture REST connectant CRM, app coach, app client et
+            visioconférence. Développement de nouvelles routes, optimisation de
+            performances et synchronisation avec des services tiers (Brevo,
+            Stripe, Axonaut).
+          </p>
         </div>
-        <h3 className="font-display font-bold text-cloud-dancer text-xl mb-3">
-          Just Coaching — API & Écosystème
-        </h3>
-        <p className="font-body text-cloud-dancer/70 text-sm leading-relaxed mb-5">
-          Architecture REST connectant CRM, app coach, app client et
-          visioconférence. Développement de nouvelles routes, optimisation de
-          performances et synchronisation avec des services tiers (Brevo,
-          Stripe, Apple Pay).
-        </p>
 
         <div className="flex flex-col gap-2 mb-5">
           <div className="pt-3 border-t border-white/10 flex items-baseline gap-2">
@@ -31,9 +33,19 @@ export default function JustCoaching() {
               de temps de réponse sur la route commandes
             </span>
           </div>
+
           <div className="pt-3 border-t border-white/10 flex items-baseline gap-2">
             <span className="font-display font-bold text-2xl text-golden-mist">
-              4
+              Grafana
+            </span>
+            <span className="font-label text-sm text-cloud-dancer/60">
+              monitoring ajouté sur le serveur API
+            </span>
+          </div>
+
+          <div className="pt-3 border-t border-white/10 flex items-baseline gap-2">
+            <span className="font-display font-bold text-2xl text-golden-mist">
+              5
             </span>
             <span className="font-label text-sm text-cloud-dancer/60">
               applications interconnectées

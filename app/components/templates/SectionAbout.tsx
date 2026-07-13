@@ -37,9 +37,9 @@ export default function SectionAbout() {
             cachée, pas de bug qu&apos;on &quot;laisse pour plus tard&quot;.
           </p>
           <blockquote className="border-l-2 border-golden-mist pl-5 bg-golden-mist/15 py-3 pr-4 rounded-r-xl font-body text-sm text-hematite italic">
-            &quot;Ma vie professionnelle ne commence pas en septembre 2022, elle
-            est riche de 20 années d&apos;expériences qui font de moi un
-            développeur qui comprend les enjeux métier.&quot;
+            {`Ma vie professionnelle ne commence pas en septembre 2022, elle
+            est riche de ${yearsSince(2004)} années d'expériences qui font
+            de moi un développeur qui comprend les enjeux métier.`}
           </blockquote>
         </div>
 
