@@ -39,7 +39,7 @@ export default function JustCoaching() {
               Grafana
             </span>
             <span className="font-label text-sm text-cloud-dancer/60">
-              monitoring ajouté sur le serveur API
+              monitoring ajouté sur le serveur OVH (Bare Metal)
             </span>
           </div>
 
