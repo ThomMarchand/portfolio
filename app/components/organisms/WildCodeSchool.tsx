@@ -12,7 +12,7 @@ export default function WildCodeSchool() {
         Wild Code Online
       </h3>
       <p className="font-body text-hematite text-sm leading-relaxed mb-5">
-        Plateforme de code en ligne — développer, tester et partager du code
+        Plateforme de code en ligne : développer, tester et partager du code
         facilement. Projet de fin d&apos;alternance avec CI, tests unitaires,
         intégration et architecture MVC.
       </p>

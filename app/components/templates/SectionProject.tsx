@@ -1,6 +1,8 @@
 import JustCoaching from "@/app/components/organisms/JustCoaching";
 import WildCodeSchool from "@/app/components/organisms/WildCodeSchool";
 import JavaProject from "@/app/components/organisms/JavaProject";
+import DevJourney from "@/app/components/organisms/DevJourney";
+import InvestImmo from "@/app/components/organisms/InvestImmo";
 
 export default function SectionProject() {
   return (
@@ -23,6 +25,8 @@ export default function SectionProject() {
 
         {/* Secondary cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <DevJourney />
+          <InvestImmo />
           <WildCodeSchool />
           <JavaProject />
         </div>

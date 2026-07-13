@@ -71,6 +71,30 @@ export const WCS_STACK = [
   "Caddy",
 ];
 
+export const DEVJOURNEY_STACK = [
+  "WordPress",
+  "Docker",
+  "Traefik",
+  "OVH",
+  "RankMath",
+  "Google Analytics",
+];
+
+export const INVESTIMMO_STACK = [
+  "AdonisJS",
+  "TypeScript",
+  "Inertia",
+  "React",
+  "Playwright",
+  "Japa",
+  "CI/CD",
+  "Lefthook",
+  "GitHub Actions",
+  "Docker",
+  "Traefik",
+  "OVH",
+];
+
 export const SKILLS_CATEGORIES = [
   {
     num: "01",
@@ -88,6 +112,7 @@ export const SKILLS_CATEGORIES = [
       "PostgreSQL",
       "REST API",
       "SQLite",
+      "Japa"
     ],
   },
   {
@@ -106,6 +131,7 @@ export const SKILLS_CATEGORIES = [
       "Tailwind",
       "Sass",
       "BootStap",
+      "Playwright",
     ],
   },
   {
